@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.Collections.Generic;
 using System.Linq;
@@ -66,7 +66,7 @@ namespace Pk3DSRNGTool
         #region Form Loading
         private void MainForm_Load(object sender, EventArgs e)
         {
-            Updater.CheckUpdate();
+            //Updater.CheckUpdate();
             Type dgvtype = typeof(DataGridView);
             System.Reflection.PropertyInfo dgvPropertyInfo = dgvtype.GetProperty("DoubleBuffered", System.Reflection.BindingFlags.SetProperty
                  | System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
@@ -301,7 +301,7 @@ namespace Pk3DSRNGTool
             gen7tool?.TranslateInterface(lang);
             ntrhelper?.TranslateInterface(lang);
             miscrngtool?.Translate();
-            Text = Text + $" v{Updater.CurrentVersion}" + "Beta";
+            Text = Text + $" v{Updater.CurrentVersion}" + " - Fork";
 
             naturestr = getStringList("Natures", curlanguage);
             hpstr = getStringList("Types", curlanguage);
@@ -1627,6 +1627,7 @@ namespace Pk3DSRNGTool
                 OtherTSVs = OtherTSVList.ToArray()
             };
         }
+
         #endregion
 
         #region Start Calculation
