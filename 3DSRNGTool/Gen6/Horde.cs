@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using Pk3DSRNGTool.RNG;
 using static Pk3DSRNGTool.Core.WildRNG;
 
@@ -7,6 +7,7 @@ namespace Pk3DSRNGTool
     public class Horde
     {
         // Result
+        public byte Extra = 3;
         public byte Lead;
         public bool Sync => Lead < 50;
         public byte Slot;
@@ -23,11 +24,18 @@ namespace Pk3DSRNGTool
         // RNG
         private static TinyMT rng;
         private static byte Rand(ulong n) => (byte)((rng.Nextuint() * n) >> 32);
-        public Horde(uint[] src, int PKMNUM, bool IsORAS)
+        public Horde(uint[] src, int PKMNUM, bool IsORAS, bool InCave)
         {
             rng = new TinyMT(src);
 
-            for (int i = 3 * PKMNUM + (IsORAS ? 15 : 27); i > 0; i--)
+            if (!InCave)
+            {
+                if (IsORAS)
+                    Extra = 15;
+                else Extra = 27;
+            }
+
+            for (int i = 3 * PKMNUM + Extra; i > 0; i--)
                 rng.Next();
 
             Lead = Rand(100);
