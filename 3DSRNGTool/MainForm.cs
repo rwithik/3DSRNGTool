@@ -28,6 +28,7 @@ namespace Pk3DSRNGTool
         private bool FullInfoHorde => IsHorde && TTT.HasSeed && TTT.Method.SelectedIndex == 2; // all info of Horde is known
         private bool Gen6 => Ver < 5;
         public bool IsORAS => Ver == 2 || Ver == 3;
+        public bool IsCave;
         private bool IsTransporter => Ver == 4;
         private bool Gen7 => 5 <= Ver && Ver < 9;
         private bool IsUltra => Ver > 6;
@@ -55,6 +56,10 @@ namespace Pk3DSRNGTool
         List<Frame> Frames = new List<Frame>();
         List<Frame_ID> IDFrames = new List<Frame_ID>();
         List<int> OtherTSVList = new List<int>();
+
+        HashSet<int> caves = new HashSet<int>() 
+        { 784, 1296, 274, 792, 1304, 1816, 288, 294, 298, 812, 1324, 1836, 312, 316, 296, 802, 302, //ORAS Caves
+        56, 82, 104, 134, 140, }; //XY Caves
         public uint[] TinySeeds => TTT.Gen6Tiny;
         #endregion
 
@@ -921,6 +926,13 @@ namespace Pk3DSRNGTool
             }
             else if (Gen6)
             {
+                
+                if (caves.Contains((int)MetLocation.SelectedValue))
+                    IsCave = true;
+                else
+                    IsCave = false;
+
+
                 ea = LocationTable6.TableNow.FirstOrDefault(t => t.Locationidx == (int)MetLocation.SelectedValue);
                 if (FormPM is PKMW6 pm && pm.Type == EncounterType.Fishing)
                 {
