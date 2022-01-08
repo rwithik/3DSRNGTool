@@ -262,5 +262,35 @@ namespace Pk3DSRNGTool.Properties {
                 this["TRV"] = value;
             }
         }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public byte MinLevel
+        {
+            get
+            {
+                return ((byte)(this["minLevel"]));
+            }
+            set
+            {
+                this["minLevel"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public byte MaxLevel
+        {
+            get
+            {
+                return ((byte)(this["maxLevel"]));
+            }
+            set
+            {
+                this["maxLevel"] = value;
+            }
+        }
     }
 }
