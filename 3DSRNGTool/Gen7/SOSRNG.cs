@@ -24,7 +24,7 @@ namespace Pk3DSRNGTool
                 rt.Slot = getWeatherSlot(rand % 100);
             if (rt.Slot == 0)
                 rt.Slot = getSOSSlot(rand % 100);
-            rt.Level = (byte)(rand % 4);
+            rt.Level = (byte)(rand % (uint)(MaxLevel - MinLevel + 1) + MinLevel);
             RNGPool.Advance(1);
 
             rt.HeldItem = (byte)(rand % 100);
@@ -60,6 +60,7 @@ namespace Pk3DSRNGTool
         }
 
         public static bool Weather;
+        public static byte MinLevel, MaxLevel;
         public static byte getWeatherSlot(uint tmp)
         {
             if (tmp < 1)  // 1%
