@@ -51,6 +51,7 @@ namespace Pk3DSRNGTool
         public bool Random;
         public byte CompareType;
         public int Value;
+        public byte TargetLevel;
         public string CurrentSeed;
         public FPFacility FacilityFilter;
         public BTTrainer TrainerFilter;
@@ -79,6 +80,8 @@ namespace Pk3DSRNGTool
                 if (Sync && !f.Srt.Sync)
                     return false;
                 if (Slot.Any(n => n) && !Slot[f.Srt.Slot])
+                    return false;
+                if (!(TargetLevel == f.Srt.Level || TargetLevel == 0))
                     return false;
             }
             if (Capture && Success && !f.Crt.Gotta)
