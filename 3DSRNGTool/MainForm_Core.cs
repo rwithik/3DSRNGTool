@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -116,7 +116,7 @@ namespace Pk3DSRNGTool
             // Prepare
             if (FullInfoHorde)
             {
-                RNGPool.horde = new Horde(TTT.Gen6Tiny, (int)TTT.Parameter1.Value, IsORAS, IsCave);
+                RNGPool.horde = new Horde(TTT.Gen6Tiny, (int)TTT.Parameter1.Value, IsORAS);
                 SlotSpecies.SelectedValue = slotspecies[RNGPool.horde.Slot - 1];
             }
             if (SlotSpecies.SelectedIndex > 0)

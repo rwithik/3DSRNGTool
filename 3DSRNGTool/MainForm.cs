@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Drawing;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +28,6 @@ namespace Pk3DSRNGTool
         private bool FullInfoHorde => IsHorde && TTT.HasSeed && TTT.Method.SelectedIndex == 2; // all info of Horde is known
         private bool Gen6 => Ver < 5;
         public bool IsORAS => Ver == 2 || Ver == 3;
-        public bool IsCave;
         private bool IsTransporter => Ver == 4;
         private bool Gen7 => 5 <= Ver && Ver < 9;
         private bool IsUltra => Ver > 6;
@@ -56,10 +55,6 @@ namespace Pk3DSRNGTool
         List<Frame> Frames = new List<Frame>();
         List<Frame_ID> IDFrames = new List<Frame_ID>();
         List<int> OtherTSVList = new List<int>();
-
-        HashSet<int> caves = new HashSet<int>() 
-        { 784, 1296, 274, 792, 1304, 1816, 288, 294, 298, 812, 1324, 1836, 312, 316, 296, 802, 302, //ORAS Caves
-        56, 82, 104, 134, 140, }; //XY Caves
         public uint[] TinySeeds => TTT.Gen6Tiny;
         #endregion
 
@@ -146,12 +141,20 @@ namespace Pk3DSRNGTool
             RefreshProfile();
 
             Initializing = false;
+
+            SetLocations();
         }
 
         private void MainForm_Close(object sender, FormClosedEventArgs e)
         {
             Properties.Settings.Default.Save();
             ntrhelper?.B_Disconnect_Click(null, null);
+        }
+
+        private void SetLocations()
+        {
+            L_HA.Location = new Point(200, 192);
+            HA_MainSlot.Location = new Point(230, 190);
         }
 
         private void RefreshProfile()
@@ -306,7 +309,7 @@ namespace Pk3DSRNGTool
             gen7tool?.TranslateInterface(lang);
             ntrhelper?.TranslateInterface(lang);
             miscrngtool?.Translate();
-            Text = Text + $" v{Updater.CurrentVersion}" + " - Fork";
+            Text = Text + $" v{Updater.CurrentVersion}" + "Beta";
 
             naturestr = getStringList("Natures", curlanguage);
             hpstr = getStringList("Types", curlanguage);
@@ -483,7 +486,7 @@ namespace Pk3DSRNGTool
             L_SOSRNGFrame.Visible = L_SOSRNGSeed.Visible = SOSRNGFrame.Visible = SOSRNGSeed.Visible =
             ChainLength.Visible = L_ChainLength.Visible = gen7sos;
             var pmw6 = FormPM as PKMW6;
-            L_HordeInfo.Visible = IsHorde;
+            L_HordeInfo.Visible = L_HA.Visible = HA_MainSlot.Visible = IsHorde;
             ChainLength.Visible = L_ChainLength.Visible |= pmw6?.Type == EncounterType.PokeRadar;
             CB_HAUnlocked.Visible = CB_3rdSlotUnlocked.Visible = pmw6?.Type == EncounterType.FriendSafari;
             ChainLength.Visible = L_ChainLength.Visible |= pmw6?.Type == EncounterType.Fishing;
@@ -569,7 +572,7 @@ namespace Pk3DSRNGTool
             IVInputer.Reset();
 
             BlinkFOnly.Checked = SafeFOnly.Checked = SpecialOnly.Checked =
-            ShinyOnly.Checked = DisableFilters.Checked = false;
+            ShinyOnly.Checked = IgnoreFilters.Checked = false;
         }
 
         private void SetAsStarting_Click(object sender, EventArgs e)
@@ -926,13 +929,6 @@ namespace Pk3DSRNGTool
             }
             else if (Gen6)
             {
-                
-                if (caves.Contains((int)MetLocation.SelectedValue))
-                    IsCave = true;
-                else
-                    IsCave = false;
-
-
                 ea = LocationTable6.TableNow.FirstOrDefault(t => t.Locationidx == (int)MetLocation.SelectedValue);
                 if (FormPM is PKMW6 pm && pm.Type == EncounterType.Fishing)
                 {
@@ -1248,6 +1244,7 @@ namespace Pk3DSRNGTool
             if (Gen6)
             {
                 RNGPool.TinySynced = AssumeSynced.Checked;
+                RNGPool.HASlot = (byte)HA_MainSlot.Value;
                 switch (Method)
                 {
                     case 1: buffersize = 80; break;
@@ -1298,7 +1295,7 @@ namespace Pk3DSRNGTool
             Stats = ByStats.Checked ? Stats : null,
             ShinyOnly = ShinyOnly.Checked,
             SquareShinyOnly = SquareShinyOnly.Checked,
-            Skip = DisableFilters.Checked,
+            Skip = IgnoreFilters.Checked,
             PerfectIVs = (byte)PerfectIVs.Value,
 
             Level = (byte)Filter_Lv.Value,
@@ -1639,7 +1636,6 @@ namespace Pk3DSRNGTool
                 OtherTSVs = OtherTSVList.ToArray()
             };
         }
-
         #endregion
 
         #region Start Calculation
