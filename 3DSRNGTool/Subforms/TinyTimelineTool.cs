@@ -1,7 +1,8 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Reflection;
 using Pk3DSRNGTool.Controls;
 
 namespace Pk3DSRNGTool
@@ -27,13 +28,7 @@ namespace Pk3DSRNGTool
 
         private static readonly string[] methodlist = { "Instant Sync", "Cutscenes Sync", "Horde", "Friend Safari", "Poke Radar", "Fishing",
                                                         "Rock Smash", "Cave Shadow", "Normal Wild", "XY ID RNG", "Groudon/Kyogre", };
-
-        private static readonly string[] locationlist = { "Elsewhere", "Route 2", "Route 3", "Route 4", "Route 5", "Route 6", "Route 7", "Route 8",
-            "Route 10", "Route 11", "Route 12", "Route 14", "Route 15", "Route 16", "Route 18", "Route 19", "Route 20", "Route 21", "Route 22",
-            "Santalune Forest", "Victory Road", "Connecting Cave", "Glittering Cave", "Reflection Cave", "Azure Bay (Grass)", "Lost Hotel",
-            "Frost Cavern", "Terminus Cave", "Pokémon Village", };
-
-    public TinyTimelineTool()
+        public TinyTimelineTool()
         {
             InitializeComponent();
             MainDGV.AutoGenerateColumns = false;
@@ -51,10 +46,6 @@ namespace Pk3DSRNGTool
             Method.Items.Clear();
             Method.Items.AddRange(methodlist.Select(s => StringItem.Translate(s)).ToArray());
             Method.SelectedIndex = 0;
-
-            Location.Items.Clear();
-            Location.Items.AddRange(locationlist.Select(s => StringItem.Translate(s)).ToArray());
-            Location.SelectedIndex = 0;
         }
         public void UpdateTypeComboBox(params int[] type)
         {
@@ -180,6 +171,9 @@ namespace Pk3DSRNGTool
                 }
             }
             Method_Changed();
+            Type dgvType = MainDGV.GetType();
+            PropertyInfo pi = dgvType.GetProperty("DoubleBuffered", BindingFlags.Instance | BindingFlags.NonPublic);
+            pi.SetValue(MainDGV, true, null);
         }
 
         public TinyTimeline gettimeline()
@@ -195,7 +189,6 @@ namespace Pk3DSRNGTool
                 P2 = Parameter2.Visible ? (int)Parameter2.Value : 0,
                 IsORAS = IsORASWild,
                 Boost = Boost.Checked,
-                Cave = cavebox.Checked,
             };
             line.Add((int)Frame1.Value, (int)Type1.SelectedValue);
             var frame = Frame1.Value;
@@ -269,10 +262,8 @@ namespace Pk3DSRNGTool
 
         private void Method_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Location.Visible = Loctxt.Visible = false;
             Boost.Visible =
             L_PartySize.Visible = L_SlotNum.Visible = L_Rate.Visible = L_Length.Visible = false;
-            cavebox.Visible = false;
             ConsiderDelay.Enabled = Delay.Enabled = true;
             Cry.Enabled = CryFrame.Enabled = false;
             Cry.Checked = false;
@@ -290,7 +281,6 @@ namespace Pk3DSRNGTool
                     Cry.Enabled = CryFrame.Enabled = true;
                     break;
                 case 2: // Horde
-                    cavebox.Visible = true;
                     L_PartySize.Visible = true;
                     ConsiderDelay.Enabled = Delay.Enabled = false;
                     ConsiderDelay.Checked = false;
@@ -302,7 +292,6 @@ namespace Pk3DSRNGTool
                     Delay.Value = 6;
                     break;
                 case 4: // Pokeradar
-                    Location.Visible = Loctxt.Visible = true;
                     Boost.Visible =
                     L_PartySize.Visible =
                     L_Length.Visible = true;
@@ -313,12 +302,12 @@ namespace Pk3DSRNGTool
                     Parameter2.Value = 49;
                     UpdateTypeComboBox(0, 1);
                     Delay.Enabled = false;
-                    //ConsiderDelay.Checked = true;
+                    ConsiderDelay.Checked = true;
                     Delay.Value = 14;
                     break;
                 case 6: // Rock Smash
                     UpdateTypeComboBox(0, 1);
-                    //ConsiderDelay.Checked = true;
+                    ConsiderDelay.Checked = true;
                     break;
                 case 7: // Cave Shadow
                     TypeNum.Value = 2;
@@ -328,10 +317,8 @@ namespace Pk3DSRNGTool
                     CryFrame.Value = 32;
                     break;
                 case 8: // Normal Wilds
-                    if (!IsORASWild)
-                        Location.Visible = Loctxt.Visible = true;
                     L_Rate.Visible = true;
-                    Parameter2.Value = 13;
+                    Parameter2.Value = 1;
                     UpdateTypeComboBox(0, 1, 3, 6);
                     Delay.Value = 6;
                     break;
@@ -345,7 +332,7 @@ namespace Pk3DSRNGTool
                     L_PartySize.Visible = true;
                     UpdateTypeComboBox(0, 1, 7);
                     Delay.Value = Program.mainform.Ver == 3 ? 324 : 326;
-                    //ConsiderDelay.Checked = true;
+                    ConsiderDelay.Checked = true;
                     break;
             }
         }

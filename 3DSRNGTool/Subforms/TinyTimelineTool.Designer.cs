@@ -1,4 +1,4 @@
-namespace Pk3DSRNGTool
+﻿namespace Pk3DSRNGTool
 {
     partial class TinyTimelineTool
     {
@@ -29,11 +29,11 @@ namespace Pk3DSRNGTool
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label0 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,15 +56,9 @@ namespace Pk3DSRNGTool
             this.Type2 = new System.Windows.Forms.ComboBox();
             this.Frame2 = new System.Windows.Forms.NumericUpDown();
             this.Type1 = new System.Windows.Forms.ComboBox();
-            this.tiny3 = new Pk3DSRNGTool.Controls.HexMaskedTextBox();
-            this.tiny2 = new Pk3DSRNGTool.Controls.HexMaskedTextBox();
-            this.tiny0 = new Pk3DSRNGTool.Controls.HexMaskedTextBox();
-            this.tiny1 = new Pk3DSRNGTool.Controls.HexMaskedTextBox();
             this.B_Stop = new System.Windows.Forms.Button();
             this.B_Cali = new System.Windows.Forms.Button();
             this.GB_Adj = new System.Windows.Forms.GroupBox();
-            this.Loctxt = new System.Windows.Forms.Label();
-            this.Location = new System.Windows.Forms.ComboBox();
             this.L_SlotNum = new System.Windows.Forms.Label();
             this.L_Rate = new System.Windows.Forms.Label();
             this.L_Length = new System.Windows.Forms.Label();
@@ -95,7 +89,10 @@ namespace Pk3DSRNGTool
             this.dgv_state = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DGVToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.cavebox = new System.Windows.Forms.CheckBox();
+            this.tiny3 = new Pk3DSRNGTool.Controls.HexMaskedTextBox();
+            this.tiny2 = new Pk3DSRNGTool.Controls.HexMaskedTextBox();
+            this.tiny0 = new Pk3DSRNGTool.Controls.HexMaskedTextBox();
+            this.tiny1 = new Pk3DSRNGTool.Controls.HexMaskedTextBox();
             this.CMS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Frame1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TargetFrame)).BeginInit();
@@ -186,7 +183,7 @@ namespace Pk3DSRNGTool
             // B_Create
             // 
             this.B_Create.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.B_Create.Location = new System.Drawing.Point(118, 615);
+            this.B_Create.Location = new System.Drawing.Point(118, 549);
             this.B_Create.Name = "B_Create";
             this.B_Create.Size = new System.Drawing.Size(76, 29);
             this.B_Create.TabIndex = 110;
@@ -212,7 +209,7 @@ namespace Pk3DSRNGTool
             0,
             0,
             0});
-            this.TargetFrame.Location = new System.Drawing.Point(89, 142);
+            this.TargetFrame.Location = new System.Drawing.Point(89, 90);
             this.TargetFrame.Name = "TargetFrame";
             this.TargetFrame.Size = new System.Drawing.Size(88, 22);
             this.TargetFrame.TabIndex = 112;
@@ -221,7 +218,7 @@ namespace Pk3DSRNGTool
             // 
             this.L_TargetFrame.AutoSize = true;
             this.L_TargetFrame.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_TargetFrame.Location = new System.Drawing.Point(6, 144);
+            this.L_TargetFrame.Location = new System.Drawing.Point(4, 94);
             this.L_TargetFrame.Name = "L_TargetFrame";
             this.L_TargetFrame.Size = new System.Drawing.Size(70, 13);
             this.L_TargetFrame.TabIndex = 114;
@@ -367,54 +364,6 @@ namespace Pk3DSRNGTool
             this.Type1.Size = new System.Drawing.Size(76, 21);
             this.Type1.TabIndex = 112;
             // 
-            // tiny3
-            // 
-            this.tiny3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tiny3.Location = new System.Drawing.Point(40, 26);
-            this.tiny3.Mask = "AAAAAAAA";
-            this.tiny3.Name = "tiny3";
-            this.tiny3.Size = new System.Drawing.Size(63, 22);
-            this.tiny3.TabIndex = 100;
-            this.tiny3.Text = "00000000";
-            this.tiny3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.tiny3.Value = ((uint)(0u));
-            // 
-            // tiny2
-            // 
-            this.tiny2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tiny2.Location = new System.Drawing.Point(40, 54);
-            this.tiny2.Mask = "AAAAAAAA";
-            this.tiny2.Name = "tiny2";
-            this.tiny2.Size = new System.Drawing.Size(63, 22);
-            this.tiny2.TabIndex = 101;
-            this.tiny2.Text = "00000000";
-            this.tiny2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.tiny2.Value = ((uint)(0u));
-            // 
-            // tiny0
-            // 
-            this.tiny0.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tiny0.Location = new System.Drawing.Point(40, 111);
-            this.tiny0.Mask = "AAAAAAAA";
-            this.tiny0.Name = "tiny0";
-            this.tiny0.Size = new System.Drawing.Size(63, 22);
-            this.tiny0.TabIndex = 103;
-            this.tiny0.Text = "00000000";
-            this.tiny0.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.tiny0.Value = ((uint)(0u));
-            // 
-            // tiny1
-            // 
-            this.tiny1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tiny1.Location = new System.Drawing.Point(40, 82);
-            this.tiny1.Mask = "AAAAAAAA";
-            this.tiny1.Name = "tiny1";
-            this.tiny1.Size = new System.Drawing.Size(63, 22);
-            this.tiny1.TabIndex = 102;
-            this.tiny1.Text = "00000000";
-            this.tiny1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.tiny1.Value = ((uint)(0u));
-            // 
             // B_Stop
             // 
             this.B_Stop.Location = new System.Drawing.Point(120, 110);
@@ -438,9 +387,6 @@ namespace Pk3DSRNGTool
             // 
             // GB_Adj
             // 
-            this.GB_Adj.Controls.Add(this.cavebox);
-            this.GB_Adj.Controls.Add(this.Loctxt);
-            this.GB_Adj.Controls.Add(this.Location);
             this.GB_Adj.Controls.Add(this.L_SlotNum);
             this.GB_Adj.Controls.Add(this.L_Rate);
             this.GB_Adj.Controls.Add(this.L_Length);
@@ -460,35 +406,16 @@ namespace Pk3DSRNGTool
             this.GB_Adj.Controls.Add(this.L_PartySize);
             this.GB_Adj.Location = new System.Drawing.Point(5, 343);
             this.GB_Adj.Name = "GB_Adj";
-            this.GB_Adj.Size = new System.Drawing.Size(189, 262);
+            this.GB_Adj.Size = new System.Drawing.Size(189, 195);
             this.GB_Adj.TabIndex = 117;
             this.GB_Adj.TabStop = false;
             this.GB_Adj.Text = "Adjustment";
-            // 
-            // Loctxt
-            // 
-            this.Loctxt.AutoSize = true;
-            this.Loctxt.Location = new System.Drawing.Point(8, 71);
-            this.Loctxt.Name = "Loctxt";
-            this.Loctxt.Size = new System.Drawing.Size(48, 13);
-            this.Loctxt.TabIndex = 137;
-            this.Loctxt.Text = "Location";
-            this.Loctxt.Visible = false;
-            // 
-            // Location
-            // 
-            this.Location.FormattingEnabled = true;
-            this.Location.Location = new System.Drawing.Point(62, 68);
-            this.Location.Name = "Location";
-            this.Location.Size = new System.Drawing.Size(115, 21);
-            this.Location.TabIndex = 136;
-            this.Location.Visible = false;
             // 
             // L_SlotNum
             // 
             this.L_SlotNum.AutoSize = true;
             this.L_SlotNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_SlotNum.Location = new System.Drawing.Point(7, 104);
+            this.L_SlotNum.Location = new System.Drawing.Point(14, 60);
             this.L_SlotNum.Name = "L_SlotNum";
             this.L_SlotNum.Size = new System.Drawing.Size(25, 13);
             this.L_SlotNum.TabIndex = 133;
@@ -499,7 +426,7 @@ namespace Pk3DSRNGTool
             // 
             this.L_Rate.AutoSize = true;
             this.L_Rate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_Rate.Location = new System.Drawing.Point(88, 104);
+            this.L_Rate.Location = new System.Drawing.Point(98, 60);
             this.L_Rate.Name = "L_Rate";
             this.L_Rate.Size = new System.Drawing.Size(30, 13);
             this.L_Rate.TabIndex = 132;
@@ -510,7 +437,7 @@ namespace Pk3DSRNGTool
             // 
             this.L_Length.AutoSize = true;
             this.L_Length.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_Length.Location = new System.Drawing.Point(88, 104);
+            this.L_Length.Location = new System.Drawing.Point(97, 60);
             this.L_Length.Name = "L_Length";
             this.L_Length.Size = new System.Drawing.Size(40, 13);
             this.L_Length.TabIndex = 131;
@@ -520,7 +447,7 @@ namespace Pk3DSRNGTool
             // Parameter2
             // 
             this.Parameter2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Parameter2.Location = new System.Drawing.Point(143, 102);
+            this.Parameter2.Location = new System.Drawing.Point(144, 56);
             this.Parameter2.Name = "Parameter2";
             this.Parameter2.Size = new System.Drawing.Size(34, 22);
             this.Parameter2.TabIndex = 128;
@@ -529,7 +456,7 @@ namespace Pk3DSRNGTool
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(157, 191);
+            this.label5.Location = new System.Drawing.Point(156, 126);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(13, 13);
             this.label5.TabIndex = 127;
@@ -543,7 +470,7 @@ namespace Pk3DSRNGTool
             0,
             0,
             0});
-            this.Delay.Location = new System.Drawing.Point(104, 189);
+            this.Delay.Location = new System.Drawing.Point(107, 122);
             this.Delay.Maximum = new decimal(new int[] {
             5000,
             0,
@@ -556,7 +483,7 @@ namespace Pk3DSRNGTool
             // ConsiderDelay
             // 
             this.ConsiderDelay.AutoSize = true;
-            this.ConsiderDelay.Location = new System.Drawing.Point(6, 190);
+            this.ConsiderDelay.Location = new System.Drawing.Point(9, 125);
             this.ConsiderDelay.Name = "ConsiderDelay";
             this.ConsiderDelay.Size = new System.Drawing.Size(95, 17);
             this.ConsiderDelay.TabIndex = 125;
@@ -566,7 +493,7 @@ namespace Pk3DSRNGTool
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(157, 225);
+            this.label4.Location = new System.Drawing.Point(156, 159);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(13, 13);
             this.label4.TabIndex = 124;
@@ -575,7 +502,7 @@ namespace Pk3DSRNGTool
             // Parameter1
             // 
             this.Parameter1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Parameter1.Location = new System.Drawing.Point(43, 102);
+            this.Parameter1.Location = new System.Drawing.Point(59, 56);
             this.Parameter1.Name = "Parameter1";
             this.Parameter1.Size = new System.Drawing.Size(29, 22);
             this.Parameter1.TabIndex = 117;
@@ -584,7 +511,7 @@ namespace Pk3DSRNGTool
             // Cry
             // 
             this.Cry.AutoSize = true;
-            this.Cry.Location = new System.Drawing.Point(6, 224);
+            this.Cry.Location = new System.Drawing.Point(9, 158);
             this.Cry.Name = "Cry";
             this.Cry.Size = new System.Drawing.Size(96, 17);
             this.Cry.TabIndex = 118;
@@ -595,7 +522,7 @@ namespace Pk3DSRNGTool
             // CryFrame
             // 
             this.CryFrame.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CryFrame.Location = new System.Drawing.Point(104, 223);
+            this.CryFrame.Location = new System.Drawing.Point(107, 155);
             this.CryFrame.Name = "CryFrame";
             this.CryFrame.Size = new System.Drawing.Size(43, 22);
             this.CryFrame.TabIndex = 123;
@@ -633,7 +560,7 @@ namespace Pk3DSRNGTool
             // 
             this.L_PartySize.AutoSize = true;
             this.L_PartySize.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_PartySize.Location = new System.Drawing.Point(6, 104);
+            this.L_PartySize.Location = new System.Drawing.Point(11, 60);
             this.L_PartySize.Name = "L_PartySize";
             this.L_PartySize.Size = new System.Drawing.Size(31, 13);
             this.L_PartySize.TabIndex = 134;
@@ -648,14 +575,14 @@ namespace Pk3DSRNGTool
             this.MainDGV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.MainDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MainDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.MainDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.MainDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tiny_MTFRange,
@@ -672,27 +599,27 @@ namespace Pk3DSRNGTool
             this.dgv_state,
             this.dgv_time});
             this.MainDGV.ContextMenuStrip = this.CMS;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MainDGV.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MainDGV.DefaultCellStyle = dataGridViewCellStyle4;
             this.MainDGV.Location = new System.Drawing.Point(200, 12);
             this.MainDGV.Name = "MainDGV";
             this.MainDGV.ReadOnly = true;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.MainDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MainDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.MainDGV.RowHeadersWidth = 18;
-            this.MainDGV.Size = new System.Drawing.Size(586, 632);
+            this.MainDGV.Size = new System.Drawing.Size(586, 566);
             this.MainDGV.TabIndex = 108;
             this.MainDGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.MainDGV_CellFormatting);
             this.MainDGV.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.MainDGV_CellMouseEnter);
@@ -791,8 +718,8 @@ namespace Pk3DSRNGTool
             // dgv_state
             // 
             this.dgv_state.DataPropertyName = "Status";
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_state.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_state.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_state.HeaderText = "Tiny Status";
             this.dgv_state.Name = "dgv_state";
             this.dgv_state.ReadOnly = true;
@@ -801,29 +728,66 @@ namespace Pk3DSRNGTool
             // dgv_time
             // 
             this.dgv_time.DataPropertyName = "RealTime";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgv_time.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgv_time.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_time.HeaderText = "Real Time";
             this.dgv_time.Name = "dgv_time";
             this.dgv_time.ReadOnly = true;
             this.dgv_time.Width = 160;
             // 
-            // cavebox
+            // tiny3
             // 
-            this.cavebox.AutoSize = true;
-            this.cavebox.Location = new System.Drawing.Point(101, 104);
-            this.cavebox.Name = "cavebox";
-            this.cavebox.Size = new System.Drawing.Size(51, 17);
-            this.cavebox.TabIndex = 138;
-            this.cavebox.Text = "Cave";
-            this.cavebox.UseVisualStyleBackColor = true;
-            this.cavebox.Visible = false;
+            this.tiny3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tiny3.Location = new System.Drawing.Point(40, 26);
+            this.tiny3.Mask = "AAAAAAAA";
+            this.tiny3.Name = "tiny3";
+            this.tiny3.Size = new System.Drawing.Size(63, 22);
+            this.tiny3.TabIndex = 100;
+            this.tiny3.Text = "00000000";
+            this.tiny3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tiny3.Value = ((uint)(0u));
+            // 
+            // tiny2
+            // 
+            this.tiny2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tiny2.Location = new System.Drawing.Point(40, 54);
+            this.tiny2.Mask = "AAAAAAAA";
+            this.tiny2.Name = "tiny2";
+            this.tiny2.Size = new System.Drawing.Size(63, 22);
+            this.tiny2.TabIndex = 101;
+            this.tiny2.Text = "00000000";
+            this.tiny2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tiny2.Value = ((uint)(0u));
+            // 
+            // tiny0
+            // 
+            this.tiny0.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tiny0.Location = new System.Drawing.Point(40, 111);
+            this.tiny0.Mask = "AAAAAAAA";
+            this.tiny0.Name = "tiny0";
+            this.tiny0.Size = new System.Drawing.Size(63, 22);
+            this.tiny0.TabIndex = 103;
+            this.tiny0.Text = "00000000";
+            this.tiny0.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tiny0.Value = ((uint)(0u));
+            // 
+            // tiny1
+            // 
+            this.tiny1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tiny1.Location = new System.Drawing.Point(40, 82);
+            this.tiny1.Mask = "AAAAAAAA";
+            this.tiny1.Name = "tiny1";
+            this.tiny1.Size = new System.Drawing.Size(63, 22);
+            this.tiny1.TabIndex = 102;
+            this.tiny1.Text = "00000000";
+            this.tiny1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tiny1.Value = ((uint)(0u));
             // 
             // TinyTimelineTool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(798, 656);
+            this.ClientSize = new System.Drawing.Size(798, 590);
             this.Controls.Add(this.GB_Adj);
             this.Controls.Add(this.GB_Cali);
             this.Controls.Add(this.B_Create);
@@ -913,8 +877,5 @@ namespace Pk3DSRNGTool
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_time;
         private System.Windows.Forms.ComboBox Type4;
         private System.Windows.Forms.NumericUpDown Frame4;
-        private System.Windows.Forms.Label Loctxt;
-        private System.Windows.Forms.ComboBox Location;
-        private System.Windows.Forms.CheckBox cavebox;
     }
 }
