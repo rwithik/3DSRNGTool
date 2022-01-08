@@ -1,4 +1,4 @@
-using System.Linq;
+﻿using System.Linq;
 using System.Collections.Generic;
 using Pk3DSRNGTool.RNG;
 using Pk3DSRNGTool.Core;
@@ -117,7 +117,6 @@ namespace Pk3DSRNGTool
         public int ChainLength => P2;
         public bool Boost;
         public bool IsORAS;
-        public bool Cave;
         public void Add(int f, int t) => TimelineStatus.Add(f, t);
 
         public List<Frame_Tiny> results;
@@ -331,7 +330,7 @@ namespace Pk3DSRNGTool
         private void MarkHorde()
         {
             foreach (var rt in results)
-                rt.horde = new Horde(rt.tinystate.Status, PartySize, IsORAS, Cave);
+                rt.horde = new Horde(rt.tinystate.Status, PartySize, IsORAS);
         }
 
         private void MarkRadar()
