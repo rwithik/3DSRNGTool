@@ -34,7 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\FollowmeTogetic.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\togekiss.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -269,6 +269,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subforms\Gen6MTSeedFinder.resx">
+      <DependentUpon>Gen6MTSeedFinder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subforms\MiscRNGTool.resx">
+      <DependentUpon>MiscRNGTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subforms\TinyTimelineTool.resx">
+      <DependentUpon>TinyTimelineTool.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
