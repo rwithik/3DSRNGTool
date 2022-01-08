@@ -21,7 +21,7 @@ namespace Pk3DSRNGTool
             Range.Maximum = Value.Maximum = uint.MaxValue;
             JumpFrame.Maximum =
             StartingFrame.Maximum = MaxResults.Maximum = FuncUtil.MAXFRAME;
-            MaxResults.Value = 200000;
+            MaxResults.Value = 5000;
 
             BallBonus.DisplayMember = "Text";
             BallBonus.ValueMember = "Value";
@@ -55,6 +55,7 @@ namespace Pk3DSRNGTool
             Slot.BlankText = "-";
             Slot.CheckBoxItems[0].Checked = true;
             Slot.CheckBoxItems[0].Checked = false;
+
         }
         private void MiscRNGTool_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -101,10 +102,11 @@ namespace Pk3DSRNGTool
                 Pokerus = RB_Pokerus.Visible && RB_Pokerus.Checked && Filters.SelectedTab == TP_Misc,
                 Capture = Filters.SelectedTab == TP_Capture,
                 Success = SuccessOnly.Checked,
-                SOS = SOS,
+                SOS = IsSOS,
                 Sync = Sync.Checked,
-                HA = HA.Checked && SOS,
-                Slot = SOS ? Slot.CheckBoxItems.Select(e => e.Checked).ToArray() : null,
+                HA = HA.Checked && IsSOS,
+                TargetLevel = (byte)Desired_Level.Value,
+                Slot = IsSOS ? Slot.CheckBoxItems.Select(e => e.Checked).ToArray() : null,
                 CurrentSeed = string.IsNullOrWhiteSpace(CurrentText.Text) || Filters.SelectedTab != TP_Misc ? null : CurrentText.Text.ToUpper(),
                 Random = RB_Random.Checked && Filters.SelectedTab == TP_Misc,
                 CompareType = (byte)Compare.SelectedIndex,
@@ -148,8 +150,8 @@ namespace Pk3DSRNGTool
         private bool FestivalPlaza => filter.FacilityFilter != null;
         private bool BattleTree => filter.TrainerFilter != null;
         private bool ShowCapture => Filters.SelectedTab == TP_Capture || Filters.SelectedTab == TP_Misc;
-        private bool SOS => Filters.SelectedTab == TP_SOS || Filters.SelectedTab == TP_SOS2;
-        private bool ShowSOS => SOS || Filters.SelectedTab == TP_Misc;
+        private bool IsSOS => Filters.SelectedTab == TP_SOS || Filters.SelectedTab == TP_SOS2;
+        private bool ShowSOS => IsSOS || Filters.SelectedTab == TP_Misc;
         private ulong N;
         private int Timedelay;
         private void setupgenerator()
@@ -330,10 +332,12 @@ namespace Pk3DSRNGTool
                 L_output.Text = CB_Detail.Checked ? string.Format("Critical {0:P}  \tShake {1:P}", criticalchance, shakechance)
                     : string.Format("Critical {0:P}  \tSuccess {1:P}", criticalchance, capturechance);
             }
-            else if (SOS)
+            else if (IsSOS)
             {
                 SOSRNG.ChainLength = (int)ChainLength.Value;
                 SOSRNG.Weather = L_Weather.Checked;
+                SOSRNG.MinLevel = (byte)minLevel.Value;
+                SOSRNG.MaxLevel = (byte)maxLevel.Value;
 
                 int Rate1 = (int)CB_CallRate.SelectedValue * (int)HPBarColor.SelectedValue;
                 if (AO.Checked)
@@ -345,8 +349,8 @@ namespace Pk3DSRNGTool
                 double Rate2 = (int)CB_CallRate.SelectedValue * (Intimidate.Checked ? 0x4CCC : 0x4000) / 4096.0;
                 if (SameCaller.Checked)
                     Rate2 *= 1.5;
-                if (SupperEffective.Checked)
-                    Rate2 *= 2;
+                //if (SupperEffective.Checked)
+                    //Rate2 *= 2;
                 if (LastCallFail.Checked)
                     Rate2 *= 3;
                 if (Rate2 > 100)
@@ -492,7 +496,7 @@ namespace Pk3DSRNGTool
             dgv_hit.Visible &= Delay.Value > 1;
             dgv_pokerus.Visible = filter.Pokerus;
             dgv_capture.Visible = (RNG.SelectedIndex & 1) == 1 && ShowCapture;
-            dgv_adv.Visible = SOS;
+            dgv_adv.Visible = IsSOS;
             dgv_SOS.Visible = RNG.SelectedIndex == 1 && ShowSOS;
             dgv_randn.Visible = filter.Random;
             dgv_time.Visible = (RNG.SelectedIndex & 1) == 0;
@@ -529,7 +533,11 @@ namespace Pk3DSRNGTool
                     selected.Controls.Add(SuccessOnly);
                 }
                 if (selected == TP_SOS)
+                {
                     ShowHideTab(TP_SOS2, true, 3);
+                    minLevel.Value = Properties.Settings.Default.MinLevel;
+                    maxLevel.Value = Properties.Settings.Default.MaxLevel;
+                }
             }
             RB_Random.Checked = true;
             RB_Pokerus.Visible = (RNG.SelectedIndex & 1) == 0;
@@ -562,6 +570,15 @@ namespace Pk3DSRNGTool
         private void Method_CheckedChanged(object sender, EventArgs e)
         {
             Range.Enabled = Compare.Enabled = Value.Enabled = RB_Random.Checked;
+        }
+
+        private void minLevel_ValueChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.MinLevel = (byte)minLevel.Value;
+        }
+        private void maxLevel_ValueChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.MaxLevel = (byte)maxLevel.Value;
         }
 
         private void TTT_CheckedChanged(object sender, EventArgs e)
@@ -660,5 +677,6 @@ namespace Pk3DSRNGTool
             new ComboItem("Green >1/2", 1),
         };
         #endregion
+
     }
 }

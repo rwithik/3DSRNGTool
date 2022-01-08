@@ -123,6 +123,10 @@
             this.L_Streak = new System.Windows.Forms.Label();
             this.Streak = new System.Windows.Forms.NumericUpDown();
             this.TP_SOS = new System.Windows.Forms.TabPage();
+            this.L_Range = new System.Windows.Forms.Label();
+            this.L_LevelRange = new System.Windows.Forms.Label();
+            this.minLevel = new System.Windows.Forms.NumericUpDown();
+            this.maxLevel = new System.Windows.Forms.NumericUpDown();
             this.L_Length = new System.Windows.Forms.Label();
             this.ChainLength = new System.Windows.Forms.NumericUpDown();
             this.HPBarColor = new System.Windows.Forms.ComboBox();
@@ -136,6 +140,8 @@
             this.L_CallRate = new System.Windows.Forms.Label();
             this.CB_CallRate = new System.Windows.Forms.ComboBox();
             this.TP_SOS2 = new System.Windows.Forms.TabPage();
+            this.L_TargetLevel = new System.Windows.Forms.Label();
+            this.Desired_Level = new System.Windows.Forms.NumericUpDown();
             this.Sync = new System.Windows.Forms.CheckBox();
             this.L_Slot = new System.Windows.Forms.Label();
             this.HA = new System.Windows.Forms.CheckBox();
@@ -161,8 +167,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.TrainerID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Streak)).BeginInit();
             this.TP_SOS.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.minLevel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maxLevel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChainLength)).BeginInit();
             this.TP_SOS2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Desired_Level)).BeginInit();
             this.SuspendLayout();
             // 
             // RNGInfo
@@ -359,8 +368,8 @@
             this.DGV.RowHeadersWidth = 14;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.DGV.RowsDefaultCellStyle = dataGridViewCellStyle9;
-            this.DGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV.Size = new System.Drawing.Size(445, 458);
+            this.DGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.DGV.Size = new System.Drawing.Size(461, 507);
             this.DGV.TabIndex = 1;
             // 
             // dgv_Frame
@@ -607,7 +616,7 @@
             // 
             // B_Calc
             // 
-            this.B_Calc.Location = new System.Drawing.Point(146, 441);
+            this.B_Calc.Location = new System.Drawing.Point(146, 490);
             this.B_Calc.Name = "B_Calc";
             this.B_Calc.Size = new System.Drawing.Size(75, 29);
             this.B_Calc.TabIndex = 53;
@@ -627,7 +636,7 @@
             this.Filters.Location = new System.Drawing.Point(10, 243);
             this.Filters.Name = "Filters";
             this.Filters.SelectedIndex = 0;
-            this.Filters.Size = new System.Drawing.Size(211, 196);
+            this.Filters.Size = new System.Drawing.Size(211, 241);
             this.Filters.TabIndex = 54;
             this.Filters.SelectedIndexChanged += new System.EventHandler(this.RNG_SelectedIndexChanged);
             // 
@@ -642,7 +651,7 @@
             this.TP_Timeline.Location = new System.Drawing.Point(4, 22);
             this.TP_Timeline.Name = "TP_Timeline";
             this.TP_Timeline.Padding = new System.Windows.Forms.Padding(3);
-            this.TP_Timeline.Size = new System.Drawing.Size(203, 170);
+            this.TP_Timeline.Size = new System.Drawing.Size(203, 215);
             this.TP_Timeline.TabIndex = 1;
             this.TP_Timeline.Text = "Timeline";
             this.TP_Timeline.UseVisualStyleBackColor = true;
@@ -725,7 +734,7 @@
             this.TP_Misc.Location = new System.Drawing.Point(4, 22);
             this.TP_Misc.Name = "TP_Misc";
             this.TP_Misc.Padding = new System.Windows.Forms.Padding(3);
-            this.TP_Misc.Size = new System.Drawing.Size(203, 170);
+            this.TP_Misc.Size = new System.Drawing.Size(203, 215);
             this.TP_Misc.TabIndex = 0;
             this.TP_Misc.Text = "Misc";
             this.TP_Misc.UseVisualStyleBackColor = true;
@@ -750,7 +759,7 @@
             this.TP_Capture.Controls.Add(this.label6);
             this.TP_Capture.Location = new System.Drawing.Point(4, 22);
             this.TP_Capture.Name = "TP_Capture";
-            this.TP_Capture.Size = new System.Drawing.Size(203, 170);
+            this.TP_Capture.Size = new System.Drawing.Size(203, 215);
             this.TP_Capture.TabIndex = 2;
             this.TP_Capture.Text = "Capture";
             this.TP_Capture.UseVisualStyleBackColor = true;
@@ -765,7 +774,7 @@
             "Level 1",
             "Level 2",
             "Level 3/S/MAX"});
-            this.OPower.Location = new System.Drawing.Point(142, 103);
+            this.OPower.Location = new System.Drawing.Point(142, 120);
             this.OPower.Name = "OPower";
             this.OPower.Size = new System.Drawing.Size(57, 21);
             this.OPower.TabIndex = 119;
@@ -773,7 +782,7 @@
             // RotoCatch
             // 
             this.RotoCatch.AutoSize = true;
-            this.RotoCatch.Location = new System.Drawing.Point(150, 106);
+            this.RotoCatch.Location = new System.Drawing.Point(150, 123);
             this.RotoCatch.Name = "RotoCatch";
             this.RotoCatch.Size = new System.Drawing.Size(49, 17);
             this.RotoCatch.TabIndex = 118;
@@ -783,7 +792,7 @@
             // SuccessOnly
             // 
             this.SuccessOnly.AutoSize = true;
-            this.SuccessOnly.Location = new System.Drawing.Point(80, 13);
+            this.SuccessOnly.Location = new System.Drawing.Point(87, 18);
             this.SuccessOnly.Name = "SuccessOnly";
             this.SuccessOnly.Size = new System.Drawing.Size(91, 17);
             this.SuccessOnly.TabIndex = 117;
@@ -793,7 +802,7 @@
             // CB_Detail
             // 
             this.CB_Detail.AutoSize = true;
-            this.CB_Detail.Location = new System.Drawing.Point(9, 13);
+            this.CB_Detail.Location = new System.Drawing.Point(9, 18);
             this.CB_Detail.Name = "CB_Detail";
             this.CB_Detail.Size = new System.Drawing.Size(58, 17);
             this.CB_Detail.TabIndex = 116;
@@ -803,7 +812,7 @@
             // L_output
             // 
             this.L_output.AutoSize = true;
-            this.L_output.Location = new System.Drawing.Point(4, 137);
+            this.L_output.Location = new System.Drawing.Point(4, 154);
             this.L_output.Name = "L_output";
             this.L_output.Size = new System.Drawing.Size(47, 13);
             this.L_output.TabIndex = 62;
@@ -817,7 +826,7 @@
             "G7 SFMT (64bit)",
             "G7 SFMT (32bit)",
             "G6 MT"});
-            this.Status.Location = new System.Drawing.Point(134, 43);
+            this.Status.Location = new System.Drawing.Point(134, 60);
             this.Status.Name = "Status";
             this.Status.Size = new System.Drawing.Size(55, 21);
             this.Status.TabIndex = 61;
@@ -830,7 +839,7 @@
             "G7 SFMT (64bit)",
             "G7 SFMT (32bit)",
             "G6 MT"});
-            this.DexBonus.Location = new System.Drawing.Point(71, 103);
+            this.DexBonus.Location = new System.Drawing.Point(71, 120);
             this.DexBonus.Name = "DexBonus";
             this.DexBonus.Size = new System.Drawing.Size(65, 21);
             this.DexBonus.TabIndex = 60;
@@ -843,7 +852,7 @@
             "G7 SFMT (64bit)",
             "G7 SFMT (32bit)",
             "G6 MT"});
-            this.BallBonus.Location = new System.Drawing.Point(143, 73);
+            this.BallBonus.Location = new System.Drawing.Point(143, 90);
             this.BallBonus.Name = "BallBonus";
             this.BallBonus.Size = new System.Drawing.Size(47, 21);
             this.BallBonus.TabIndex = 52;
@@ -851,7 +860,7 @@
             // L_Dex
             // 
             this.L_Dex.AutoSize = true;
-            this.L_Dex.Location = new System.Drawing.Point(4, 107);
+            this.L_Dex.Location = new System.Drawing.Point(4, 124);
             this.L_Dex.Name = "L_Dex";
             this.L_Dex.Size = new System.Drawing.Size(63, 13);
             this.L_Dex.TabIndex = 59;
@@ -860,7 +869,7 @@
             // L_Ball
             // 
             this.L_Ball.AutoSize = true;
-            this.L_Ball.Location = new System.Drawing.Point(115, 77);
+            this.L_Ball.Location = new System.Drawing.Point(115, 94);
             this.L_Ball.Name = "L_Ball";
             this.L_Ball.Size = new System.Drawing.Size(24, 13);
             this.L_Ball.TabIndex = 58;
@@ -869,7 +878,7 @@
             // CatchRate
             // 
             this.CatchRate.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CatchRate.Location = new System.Drawing.Point(69, 72);
+            this.CatchRate.Location = new System.Drawing.Point(69, 89);
             this.CatchRate.Maximum = new decimal(new int[] {
             255,
             0,
@@ -887,7 +896,7 @@
             // L_CatchRate
             // 
             this.L_CatchRate.AutoSize = true;
-            this.L_CatchRate.Location = new System.Drawing.Point(4, 77);
+            this.L_CatchRate.Location = new System.Drawing.Point(4, 94);
             this.L_CatchRate.Name = "L_CatchRate";
             this.L_CatchRate.Size = new System.Drawing.Size(61, 13);
             this.L_CatchRate.TabIndex = 56;
@@ -896,7 +905,7 @@
             // HPMax
             // 
             this.HPMax.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HPMax.Location = new System.Drawing.Point(89, 42);
+            this.HPMax.Location = new System.Drawing.Point(89, 59);
             this.HPMax.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -915,7 +924,7 @@
             // label_HP
             // 
             this.label_HP.AutoSize = true;
-            this.label_HP.Location = new System.Drawing.Point(4, 47);
+            this.label_HP.Location = new System.Drawing.Point(4, 64);
             this.label_HP.Name = "label_HP";
             this.label_HP.Size = new System.Drawing.Size(22, 13);
             this.label_HP.TabIndex = 53;
@@ -924,7 +933,7 @@
             // HPCurr
             // 
             this.HPCurr.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HPCurr.Location = new System.Drawing.Point(29, 42);
+            this.HPCurr.Location = new System.Drawing.Point(29, 59);
             this.HPCurr.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -943,7 +952,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(74, 47);
+            this.label6.Location = new System.Drawing.Point(74, 64);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(12, 13);
             this.label6.TabIndex = 54;
@@ -965,7 +974,7 @@
             this.TP_FP.Location = new System.Drawing.Point(4, 22);
             this.TP_FP.Name = "TP_FP";
             this.TP_FP.Padding = new System.Windows.Forms.Padding(3);
-            this.TP_FP.Size = new System.Drawing.Size(203, 170);
+            this.TP_FP.Size = new System.Drawing.Size(203, 215);
             this.TP_FP.TabIndex = 3;
             this.TP_FP.Text = "Festival Plaza";
             this.TP_FP.UseVisualStyleBackColor = true;
@@ -973,7 +982,7 @@
             // B_Help
             // 
             this.B_Help.Image = global::Pk3DSRNGTool.Properties.Resources.Info;
-            this.B_Help.Location = new System.Drawing.Point(173, 142);
+            this.B_Help.Location = new System.Drawing.Point(165, 162);
             this.B_Help.Name = "B_Help";
             this.B_Help.Size = new System.Drawing.Size(27, 25);
             this.B_Help.TabIndex = 122;
@@ -1003,7 +1012,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(133, 66);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(19, 13);
+            this.label8.Size = new System.Drawing.Size(16, 13);
             this.label8.TabIndex = 61;
             this.label8.Text = "★";
             // 
@@ -1134,7 +1143,7 @@
             this.TP_BattleTree.Location = new System.Drawing.Point(4, 22);
             this.TP_BattleTree.Name = "TP_BattleTree";
             this.TP_BattleTree.Padding = new System.Windows.Forms.Padding(3);
-            this.TP_BattleTree.Size = new System.Drawing.Size(203, 170);
+            this.TP_BattleTree.Size = new System.Drawing.Size(203, 215);
             this.TP_BattleTree.TabIndex = 4;
             this.TP_BattleTree.Text = "Battle Tree";
             this.TP_BattleTree.UseVisualStyleBackColor = true;
@@ -1209,6 +1218,10 @@
             // 
             // TP_SOS
             // 
+            this.TP_SOS.Controls.Add(this.L_Range);
+            this.TP_SOS.Controls.Add(this.L_LevelRange);
+            this.TP_SOS.Controls.Add(this.minLevel);
+            this.TP_SOS.Controls.Add(this.maxLevel);
             this.TP_SOS.Controls.Add(this.L_Length);
             this.TP_SOS.Controls.Add(this.ChainLength);
             this.TP_SOS.Controls.Add(this.HPBarColor);
@@ -1224,15 +1237,71 @@
             this.TP_SOS.Location = new System.Drawing.Point(4, 22);
             this.TP_SOS.Name = "TP_SOS";
             this.TP_SOS.Padding = new System.Windows.Forms.Padding(3);
-            this.TP_SOS.Size = new System.Drawing.Size(203, 170);
+            this.TP_SOS.Size = new System.Drawing.Size(203, 215);
             this.TP_SOS.TabIndex = 5;
             this.TP_SOS.Text = "SOS";
             this.TP_SOS.UseVisualStyleBackColor = true;
             // 
+            // L_Range
+            // 
+            this.L_Range.AutoSize = true;
+            this.L_Range.Location = new System.Drawing.Point(135, 50);
+            this.L_Range.Name = "L_Range";
+            this.L_Range.Size = new System.Drawing.Size(14, 13);
+            this.L_Range.TabIndex = 71;
+            this.L_Range.Text = "~";
+            // 
+            // L_LevelRange
+            // 
+            this.L_LevelRange.AutoSize = true;
+            this.L_LevelRange.Location = new System.Drawing.Point(4, 49);
+            this.L_LevelRange.Name = "L_LevelRange";
+            this.L_LevelRange.Size = new System.Drawing.Size(68, 13);
+            this.L_LevelRange.TabIndex = 70;
+            this.L_LevelRange.Text = "Level Range";
+            // 
+            // minLevel
+            // 
+            this.minLevel.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.minLevel.Location = new System.Drawing.Point(86, 45);
+            this.minLevel.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.minLevel.Name = "minLevel";
+            this.minLevel.Size = new System.Drawing.Size(42, 22);
+            this.minLevel.TabIndex = 69;
+            this.minLevel.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.minLevel.ValueChanged += new System.EventHandler(this.minLevel_ValueChanged);
+            // 
+            // maxLevel
+            // 
+            this.maxLevel.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.maxLevel.Location = new System.Drawing.Point(156, 45);
+            this.maxLevel.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.maxLevel.Name = "maxLevel";
+            this.maxLevel.Size = new System.Drawing.Size(42, 22);
+            this.maxLevel.TabIndex = 68;
+            this.maxLevel.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.maxLevel.ValueChanged += new System.EventHandler(this.maxLevel_ValueChanged);
+            // 
             // L_Length
             // 
             this.L_Length.AutoSize = true;
-            this.L_Length.Location = new System.Drawing.Point(113, 43);
+            this.L_Length.Location = new System.Drawing.Point(110, 85);
             this.L_Length.Name = "L_Length";
             this.L_Length.Size = new System.Drawing.Size(40, 13);
             this.L_Length.TabIndex = 66;
@@ -1241,7 +1310,7 @@
             // ChainLength
             // 
             this.ChainLength.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChainLength.Location = new System.Drawing.Point(157, 39);
+            this.ChainLength.Location = new System.Drawing.Point(156, 81);
             this.ChainLength.Maximum = new decimal(new int[] {
             255,
             0,
@@ -1255,7 +1324,7 @@
             // 
             this.HPBarColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.HPBarColor.FormattingEnabled = true;
-            this.HPBarColor.Location = new System.Drawing.Point(34, 68);
+            this.HPBarColor.Location = new System.Drawing.Point(31, 114);
             this.HPBarColor.Name = "HPBarColor";
             this.HPBarColor.Size = new System.Drawing.Size(72, 21);
             this.HPBarColor.TabIndex = 65;
@@ -1263,7 +1332,7 @@
             // L_HPBarColor
             // 
             this.L_HPBarColor.AutoSize = true;
-            this.L_HPBarColor.Location = new System.Drawing.Point(6, 71);
+            this.L_HPBarColor.Location = new System.Drawing.Point(3, 117);
             this.L_HPBarColor.Name = "L_HPBarColor";
             this.L_HPBarColor.Size = new System.Drawing.Size(22, 13);
             this.L_HPBarColor.TabIndex = 64;
@@ -1272,7 +1341,7 @@
             // LastCallFail
             // 
             this.LastCallFail.AutoSize = true;
-            this.LastCallFail.Location = new System.Drawing.Point(9, 141);
+            this.LastCallFail.Location = new System.Drawing.Point(6, 192);
             this.LastCallFail.Name = "LastCallFail";
             this.LastCallFail.Size = new System.Drawing.Size(97, 17);
             this.LastCallFail.TabIndex = 63;
@@ -1282,7 +1351,7 @@
             // SupperEffective
             // 
             this.SupperEffective.AutoSize = true;
-            this.SupperEffective.Location = new System.Drawing.Point(101, 118);
+            this.SupperEffective.Location = new System.Drawing.Point(106, 191);
             this.SupperEffective.Name = "SupperEffective";
             this.SupperEffective.Size = new System.Drawing.Size(99, 17);
             this.SupperEffective.TabIndex = 62;
@@ -1292,7 +1361,7 @@
             // SameCaller
             // 
             this.SameCaller.AutoSize = true;
-            this.SameCaller.Location = new System.Drawing.Point(9, 118);
+            this.SameCaller.Location = new System.Drawing.Point(6, 169);
             this.SameCaller.Name = "SameCaller";
             this.SameCaller.Size = new System.Drawing.Size(82, 17);
             this.SameCaller.TabIndex = 61;
@@ -1302,7 +1371,7 @@
             // Intimidate
             // 
             this.Intimidate.AutoSize = true;
-            this.Intimidate.Location = new System.Drawing.Point(118, 95);
+            this.Intimidate.Location = new System.Drawing.Point(115, 146);
             this.Intimidate.Name = "Intimidate";
             this.Intimidate.Size = new System.Drawing.Size(71, 17);
             this.Intimidate.TabIndex = 60;
@@ -1314,7 +1383,7 @@
             this.AO.AutoSize = true;
             this.AO.Checked = true;
             this.AO.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.AO.Location = new System.Drawing.Point(9, 95);
+            this.AO.Location = new System.Drawing.Point(6, 146);
             this.AO.Name = "AO";
             this.AO.Size = new System.Drawing.Size(96, 17);
             this.AO.TabIndex = 59;
@@ -1324,7 +1393,7 @@
             // L_Weather
             // 
             this.L_Weather.AutoSize = true;
-            this.L_Weather.Location = new System.Drawing.Point(118, 70);
+            this.L_Weather.Location = new System.Drawing.Point(115, 116);
             this.L_Weather.Name = "L_Weather";
             this.L_Weather.Size = new System.Drawing.Size(67, 17);
             this.L_Weather.TabIndex = 55;
@@ -1334,7 +1403,7 @@
             // L_CallRate
             // 
             this.L_CallRate.AutoSize = true;
-            this.L_CallRate.Location = new System.Drawing.Point(6, 43);
+            this.L_CallRate.Location = new System.Drawing.Point(3, 85);
             this.L_CallRate.Name = "L_CallRate";
             this.L_CallRate.Size = new System.Drawing.Size(50, 13);
             this.L_CallRate.TabIndex = 57;
@@ -1344,13 +1413,15 @@
             // 
             this.CB_CallRate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CB_CallRate.FormattingEnabled = true;
-            this.CB_CallRate.Location = new System.Drawing.Point(60, 38);
+            this.CB_CallRate.Location = new System.Drawing.Point(57, 80);
             this.CB_CallRate.Name = "CB_CallRate";
             this.CB_CallRate.Size = new System.Drawing.Size(45, 21);
             this.CB_CallRate.TabIndex = 58;
             // 
             // TP_SOS2
             // 
+            this.TP_SOS2.Controls.Add(this.L_TargetLevel);
+            this.TP_SOS2.Controls.Add(this.Desired_Level);
             this.TP_SOS2.Controls.Add(this.Sync);
             this.TP_SOS2.Controls.Add(this.L_Slot);
             this.TP_SOS2.Controls.Add(this.HA);
@@ -1358,10 +1429,27 @@
             this.TP_SOS2.Location = new System.Drawing.Point(4, 22);
             this.TP_SOS2.Name = "TP_SOS2";
             this.TP_SOS2.Padding = new System.Windows.Forms.Padding(3);
-            this.TP_SOS2.Size = new System.Drawing.Size(203, 170);
+            this.TP_SOS2.Size = new System.Drawing.Size(203, 215);
             this.TP_SOS2.TabIndex = 6;
             this.TP_SOS2.Text = "SOS2";
             this.TP_SOS2.UseVisualStyleBackColor = true;
+            // 
+            // L_TargetLevel
+            // 
+            this.L_TargetLevel.AutoSize = true;
+            this.L_TargetLevel.Location = new System.Drawing.Point(17, 151);
+            this.L_TargetLevel.Name = "L_TargetLevel";
+            this.L_TargetLevel.Size = new System.Drawing.Size(33, 13);
+            this.L_TargetLevel.TabIndex = 96;
+            this.L_TargetLevel.Text = "Level";
+            // 
+            // Desired_Level
+            // 
+            this.Desired_Level.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.Desired_Level.Location = new System.Drawing.Point(65, 149);
+            this.Desired_Level.Name = "Desired_Level";
+            this.Desired_Level.Size = new System.Drawing.Size(55, 22);
+            this.Desired_Level.TabIndex = 95;
             // 
             // Sync
             // 
@@ -1398,7 +1486,7 @@
             checkBoxProperties1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Slot.CheckBoxProperties = checkBoxProperties1;
             this.Slot.DisplayMemberSingleItem = "";
-            this.Slot.DropDownHeight = 230;
+            this.Slot.DropDownHeight = 235;
             this.Slot.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Slot.FormattingEnabled = true;
             this.Slot.Items.AddRange(new object[] {
@@ -1420,12 +1508,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 482);
+            this.ClientSize = new System.Drawing.Size(700, 531);
             this.Controls.Add(this.Filters);
             this.Controls.Add(this.B_Calc);
             this.Controls.Add(this.DGV);
             this.Controls.Add(this.RNGInfo);
-            this.MinimumSize = new System.Drawing.Size(700, 520);
+            this.MinimumSize = new System.Drawing.Size(700, 570);
             this.Name = "MiscRNGTool";
             this.Text = "MiscRNGTool";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MiscRNGTool_FormClosing);
@@ -1457,9 +1545,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.Streak)).EndInit();
             this.TP_SOS.ResumeLayout(false);
             this.TP_SOS.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.minLevel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maxLevel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChainLength)).EndInit();
             this.TP_SOS2.ResumeLayout(false);
             this.TP_SOS2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Desired_Level)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1551,6 +1642,13 @@
         private System.Windows.Forms.CheckBox HA;
         private Controls.CheckBoxComboBox Slot;
         private System.Windows.Forms.CheckBox Sync;
+        private System.Windows.Forms.CheckBox TTT;
+        private System.Windows.Forms.NumericUpDown minLevel;
+        private System.Windows.Forms.NumericUpDown maxLevel;
+        private System.Windows.Forms.Label L_LevelRange;
+        private System.Windows.Forms.Label L_TargetLevel;
+        private System.Windows.Forms.NumericUpDown Desired_Level;
+        private System.Windows.Forms.Label L_Range;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_Frame;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_adv;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_hit;
@@ -1567,6 +1665,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_rand64;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_time;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_npcstatus;
-        private System.Windows.Forms.CheckBox TTT;
     }
 }
