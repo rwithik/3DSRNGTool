@@ -142,6 +142,9 @@ namespace Pk3DSRNGTool
             {
                 for (int i = 0; i < 5; i++)
                     results[i].Synchronize = RNGPool.TinySynced;
+
+                if (RNGPool.HASlot != 0)
+                        results[RNGPool.HASlot - 1].Ability = 3;
             }
 
             // Something
