@@ -214,6 +214,11 @@
             this.L_Ditto = new System.Windows.Forms.Label();
             this.TP_WildRNG = new System.Windows.Forms.TabPage();
             this.Wild_Setting = new System.Windows.Forms.GroupBox();
+            this.L_Potential = new System.Windows.Forms.Label();
+            this.Potential = new System.Windows.Forms.NumericUpDown();
+            this.CB_ForcedShiny = new System.Windows.Forms.CheckBox();
+            this.CB_NavHA = new System.Windows.Forms.CheckBox();
+            this.CB_NavUnown = new System.Windows.Forms.CheckBox();
             this.L_HA = new System.Windows.Forms.Label();
             this.HA_MainSlot = new System.Windows.Forms.NumericUpDown();
             this.L_TriggerMethod = new System.Windows.Forms.Label();
@@ -470,6 +475,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.M_IV4)).BeginInit();
             this.TP_WildRNG.SuspendLayout();
             this.Wild_Setting.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Potential)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HA_MainSlot)).BeginInit();
             this.SOSPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SOSRNGFrame)).BeginInit();
@@ -2374,6 +2380,11 @@
             // 
             // Wild_Setting
             // 
+            this.Wild_Setting.Controls.Add(this.L_Potential);
+            this.Wild_Setting.Controls.Add(this.Potential);
+            this.Wild_Setting.Controls.Add(this.CB_ForcedShiny);
+            this.Wild_Setting.Controls.Add(this.CB_NavHA);
+            this.Wild_Setting.Controls.Add(this.CB_NavUnown);
             this.Wild_Setting.Controls.Add(this.L_HA);
             this.Wild_Setting.Controls.Add(this.HA_MainSlot);
             this.Wild_Setting.Controls.Add(this.L_TriggerMethod);
@@ -2413,6 +2424,61 @@
             this.Wild_Setting.TabStop = false;
             this.Wild_Setting.Text = "Wild Encounter Setting";
             // 
+            // L_Potential
+            // 
+            this.L_Potential.AutoSize = true;
+            this.L_Potential.Location = new System.Drawing.Point(284, 36);
+            this.L_Potential.Name = "L_Potential";
+            this.L_Potential.Size = new System.Drawing.Size(60, 13);
+            this.L_Potential.TabIndex = 129;
+            this.L_Potential.Text = "Potential ★";
+            // 
+            // Potential
+            // 
+            this.Potential.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Potential.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Potential.Location = new System.Drawing.Point(345, 33);
+            this.Potential.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.Potential.Name = "Potential";
+            this.Potential.Size = new System.Drawing.Size(44, 22);
+            this.Potential.TabIndex = 128;
+            this.Potential.Visible = false;
+            // 
+            // CB_ForcedShiny
+            // 
+            this.CB_ForcedShiny.AutoSize = true;
+            this.CB_ForcedShiny.Location = new System.Drawing.Point(17, 24);
+            this.CB_ForcedShiny.Name = "CB_ForcedShiny";
+            this.CB_ForcedShiny.Size = new System.Drawing.Size(88, 17);
+            this.CB_ForcedShiny.TabIndex = 127;
+            this.CB_ForcedShiny.Text = "Forced Shiny";
+            this.CB_ForcedShiny.UseVisualStyleBackColor = true;
+            // 
+            // CB_NavHA
+            // 
+            this.CB_NavHA.AutoSize = true;
+            this.CB_NavHA.Location = new System.Drawing.Point(17, 40);
+            this.CB_NavHA.Name = "CB_NavHA";
+            this.CB_NavHA.Size = new System.Drawing.Size(41, 17);
+            this.CB_NavHA.TabIndex = 126;
+            this.CB_NavHA.Text = "HA";
+            this.CB_NavHA.UseVisualStyleBackColor = true;
+            // 
+            // CB_NavUnown
+            // 
+            this.CB_NavUnown.AutoSize = true;
+            this.CB_NavUnown.Location = new System.Drawing.Point(17, 56);
+            this.CB_NavUnown.Name = "CB_NavUnown";
+            this.CB_NavUnown.Size = new System.Drawing.Size(60, 17);
+            this.CB_NavUnown.TabIndex = 125;
+            this.CB_NavUnown.Text = "Unown";
+            this.CB_NavUnown.UseVisualStyleBackColor = true;
+            this.CB_NavUnown.CheckedChanged += new System.EventHandler(this.CB_NavUnown_CheckedChanged);
+            // 
             // L_HA
             // 
             this.L_HA.AutoSize = true;
@@ -2441,7 +2507,7 @@
             // L_TriggerMethod
             // 
             this.L_TriggerMethod.AutoSize = true;
-            this.L_TriggerMethod.Location = new System.Drawing.Point(164, 196);
+            this.L_TriggerMethod.Location = new System.Drawing.Point(198, 89);
             this.L_TriggerMethod.Name = "L_TriggerMethod";
             this.L_TriggerMethod.Size = new System.Drawing.Size(40, 13);
             this.L_TriggerMethod.TabIndex = 122;
@@ -2450,7 +2516,7 @@
             // TriggerMethod
             // 
             this.TriggerMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.TriggerMethod.Location = new System.Drawing.Point(225, 192);
+            this.TriggerMethod.Location = new System.Drawing.Point(247, 84);
             this.TriggerMethod.Name = "TriggerMethod";
             this.TriggerMethod.Size = new System.Drawing.Size(88, 21);
             this.TriggerMethod.TabIndex = 121;
@@ -2523,7 +2589,7 @@
             // 
             this.L_SOSRNGFrame.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.L_SOSRNGFrame.AutoSize = true;
-            this.L_SOSRNGFrame.Location = new System.Drawing.Point(303, 159);
+            this.L_SOSRNGFrame.Location = new System.Drawing.Point(303, 157);
             this.L_SOSRNGFrame.Name = "L_SOSRNGFrame";
             this.L_SOSRNGFrame.Size = new System.Drawing.Size(36, 13);
             this.L_SOSRNGFrame.TabIndex = 119;
@@ -2630,7 +2696,7 @@
             // Bubbling
             // 
             this.Bubbling.AutoSize = true;
-            this.Bubbling.Location = new System.Drawing.Point(194, 196);
+            this.Bubbling.Location = new System.Drawing.Point(348, 79);
             this.Bubbling.Name = "Bubbling";
             this.Bubbling.Size = new System.Drawing.Size(67, 17);
             this.Bubbling.TabIndex = 109;
@@ -2641,32 +2707,33 @@
             // Raining
             // 
             this.Raining.AutoSize = true;
-            this.Raining.Location = new System.Drawing.Point(330, 158);
+            this.Raining.Location = new System.Drawing.Point(348, 61);
             this.Raining.Name = "Raining";
-            this.Raining.Size = new System.Drawing.Size(50, 17);
+            this.Raining.Size = new System.Drawing.Size(62, 17);
             this.Raining.TabIndex = 108;
-            this.Raining.Text = "下雨";
+            this.Raining.Text = "Raining";
             this.Raining.UseVisualStyleBackColor = true;
             this.Raining.CheckedChanged += new System.EventHandler(this.Raining_CheckedChanged);
             // 
             // L_ChainLength
             // 
-            this.L_ChainLength.Location = new System.Drawing.Point(164, 196);
+            this.L_ChainLength.Location = new System.Drawing.Point(165, 195);
             this.L_ChainLength.Name = "L_ChainLength";
             this.L_ChainLength.Size = new System.Drawing.Size(78, 13);
             this.L_ChainLength.TabIndex = 99;
-            this.L_ChainLength.Text = "连锁数";
+            this.L_ChainLength.Text = "Chain Length";
             this.L_ChainLength.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.L_ChainLength.Visible = false;
             // 
             // ChainLength
             // 
             this.ChainLength.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChainLength.Location = new System.Drawing.Point(246, 192);
+            this.ChainLength.Location = new System.Drawing.Point(245, 192);
             this.ChainLength.Name = "ChainLength";
             this.ChainLength.Size = new System.Drawing.Size(44, 22);
             this.ChainLength.TabIndex = 98;
             this.ChainLength.Visible = false;
+            this.ChainLength.ValueChanged += new System.EventHandler(this.ChainLength_ValueChanged);
             // 
             // L_HordeInfo
             // 
@@ -2683,7 +2750,7 @@
             this.CB_3rdSlotUnlocked.AutoSize = true;
             this.CB_3rdSlotUnlocked.Checked = true;
             this.CB_3rdSlotUnlocked.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CB_3rdSlotUnlocked.Location = new System.Drawing.Point(167, 196);
+            this.CB_3rdSlotUnlocked.Location = new System.Drawing.Point(17, 72);
             this.CB_3rdSlotUnlocked.Name = "CB_3rdSlotUnlocked";
             this.CB_3rdSlotUnlocked.Size = new System.Drawing.Size(111, 17);
             this.CB_3rdSlotUnlocked.TabIndex = 97;
@@ -2695,7 +2762,7 @@
             this.CB_HAUnlocked.AutoSize = true;
             this.CB_HAUnlocked.Checked = true;
             this.CB_HAUnlocked.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CB_HAUnlocked.Location = new System.Drawing.Point(17, 158);
+            this.CB_HAUnlocked.Location = new System.Drawing.Point(17, 88);
             this.CB_HAUnlocked.Name = "CB_HAUnlocked";
             this.CB_HAUnlocked.Size = new System.Drawing.Size(90, 17);
             this.CB_HAUnlocked.TabIndex = 96;
@@ -2750,9 +2817,9 @@
             this.L_Lv.AutoSize = true;
             this.L_Lv.Location = new System.Drawing.Point(14, 160);
             this.L_Lv.Name = "L_Lv";
-            this.L_Lv.Size = new System.Drawing.Size(55, 13);
+            this.L_Lv.Size = new System.Drawing.Size(33, 13);
             this.L_Lv.TabIndex = 81;
-            this.L_Lv.Text = "等级范围";
+            this.L_Lv.Text = "Level";
             // 
             // Lv_min
             // 
@@ -5264,6 +5331,7 @@
             this.TP_WildRNG.ResumeLayout(false);
             this.Wild_Setting.ResumeLayout(false);
             this.Wild_Setting.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Potential)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HA_MainSlot)).EndInit();
             this.SOSPanel.ResumeLayout(false);
             this.SOSPanel.PerformLayout();
@@ -5745,6 +5813,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_tinystate;
         private System.Windows.Forms.Label L_HA;
         private System.Windows.Forms.NumericUpDown HA_MainSlot;
+        private System.Windows.Forms.Label L_Potential;
+        private System.Windows.Forms.NumericUpDown Potential;
+        private System.Windows.Forms.CheckBox CB_ForcedShiny;
+        private System.Windows.Forms.CheckBox CB_NavHA;
+        private System.Windows.Forms.CheckBox CB_NavUnown;
     }
 }
 

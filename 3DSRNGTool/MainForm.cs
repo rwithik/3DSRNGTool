@@ -28,6 +28,7 @@ namespace Pk3DSRNGTool
         private bool FullInfoHorde => IsHorde && TTT.HasSeed && TTT.Method.SelectedIndex == 2; // all info of Horde is known
         private bool Gen6 => Ver < 5;
         public bool IsORAS => Ver == 2 || Ver == 3;
+        private bool IsDexNav => (FormPM as PKMW6)?.Type == EncounterType.DexNav;
         private bool IsTransporter => Ver == 4;
         private bool Gen7 => 5 <= Ver && Ver < 9;
         private bool IsUltra => Ver > 6;
@@ -41,7 +42,7 @@ namespace Pk3DSRNGTool
         private bool gen7sos => Gen7 && Method == 2 && SOS.Checked;
         private bool SuctionCups => LeadAbility.SelectedIndex == (int)Lead.SuctionCups;
         private bool LinearDelay => IsPelago || gen7honey;
-        private bool ShowForme => Method == 2 && ea != null && slotspecies.Any(new[] { 201, 774 }.Contains);
+        private bool ShowForme => (IsDexNav && CB_NavUnown.Checked) || Method == 2 && ea != null && slotspecies.Any(new[] { 201, 774 }.Contains);
         private bool MenuMethod { get => FidgetPanel.Visible; set => FidgetPanel.Visible = value; }
         private byte lastgen;
         private EncounterArea ea;
@@ -155,6 +156,20 @@ namespace Pk3DSRNGTool
         {
             L_HA.Location = new Point(200, 192);
             HA_MainSlot.Location = new Point(230, 190);
+
+            CB_HAUnlocked.Location = new Point(17, 158);
+            TriggerMethod.Location = new Point(225, 192);
+            L_TriggerMethod.Location = new Point(164, 196);
+            Bubbling.Location = new Point(194, 196);
+            CB_3rdSlotUnlocked.Location = new Point(167, 196);
+            L_SOSRNGFrame.Location = new Point(303, 159);
+            Raining.Location = new Point(330, 158);
+
+            CB_ForcedShiny.Location = new Point(30, 130);
+            CB_NavHA.Location = new Point(180, 130);
+            CB_NavUnown.Location = new Point(300, 130);
+            L_Potential.Location = new Point(175, 195);
+            Potential.Location = new Point(245, 192);
         }
 
         private void RefreshProfile()
@@ -189,7 +204,7 @@ namespace Pk3DSRNGTool
         private void RefreshLocation()
         {
             int[] locationlist = null;
-            if (Gen6)
+            if (Gen6 && !IsDexNav)
                 locationlist = LocationTable6.getLocation(FormPM as PKMW6, Ver < 2);
             else if (Gen7)
                 locationlist = FormPM.Conceptual ? LocationTable7.getLocation(CB_Category.SelectedIndex, Ver > 6) : (FormPM as PKMW7)?.Location;
@@ -487,6 +502,9 @@ namespace Pk3DSRNGTool
             ChainLength.Visible = L_ChainLength.Visible = gen7sos;
             var pmw6 = FormPM as PKMW6;
             L_HordeInfo.Visible = L_HA.Visible = HA_MainSlot.Visible = IsHorde;
+            CB_ForcedShiny.Visible = IsDexNav || pmw6?.Type == EncounterType.PokeRadar;
+            CB_ForcedShiny.Enabled = IsDexNav || (pmw6?.Type == EncounterType.PokeRadar && ChainLength.Value > 0);
+            CB_NavHA.Visible = CB_NavUnown.Visible = L_Potential.Visible = Potential.Visible = IsDexNav;
             ChainLength.Visible = L_ChainLength.Visible |= pmw6?.Type == EncounterType.PokeRadar;
             CB_HAUnlocked.Visible = CB_3rdSlotUnlocked.Visible = pmw6?.Type == EncounterType.FriendSafari;
             ChainLength.Visible = L_ChainLength.Visible |= pmw6?.Type == EncounterType.Fishing;
@@ -821,6 +839,18 @@ namespace Pk3DSRNGTool
                 case 3: ByIVs.Checked = true; break;
                 case 4: (Gen7 ? Filter_G7TID : Filter_TID).Checked = true; break;
             }
+        }
+
+        private void ChainLength_ValueChanged(object sender, EventArgs e)
+        {
+            CB_ForcedShiny.Enabled = ChainLength.Value > 0;
+        }
+
+        private void CB_NavUnown_CheckedChanged(object sender, EventArgs e)
+        {
+            CB_NavHA.Enabled = !CB_NavUnown.Checked;
+            if (CB_NavUnown.Checked)
+                CB_NavHA.Checked = false;
         }
 
         private void CreateTimeline_CheckedChanged(object sender, EventArgs e)
@@ -1528,8 +1558,14 @@ namespace Pk3DSRNGTool
                             }
                             break;
                         case EncounterType.PokeRadar:
-                            setting6.IsShinyLocked = ChainLength.Value > 0;
-                            if (ChainLength.Value == 0) // First Encounter
+                            if (ChainLength.Value > 0)
+                            {
+                                if (CB_ForcedShiny.Checked)
+                                    setting6.IsForcedShiny6 = true;
+                                else
+                                    setting6.IsShinyLocked = true;
+                            }
+                            else //if (ChainLength.Value == 0) // First Encounter
                                 goto default;
                             setting6._ivcnt = Math.Min(3, (int)ChainLength.Value / 20);
                             setting6.SpecForm = new int[1];
@@ -1568,6 +1604,16 @@ namespace Pk3DSRNGTool
                                 setting6.SpecForm[i] = slotspecies[i - 1];
                                 setting6.SlotLevel[i] = RS_area.Level[i - 1];
                             }
+                            break;
+                        case EncounterType.DexNav:
+                            setting6.SpecForm = new int[13];
+                            if (CB_NavUnown.Checked)
+                                for (uint i = 0; i < 13; i++)
+                                    setting6.SpecForm[i] = 201;
+                            setting6.SlotLevel = new byte[13];
+                            setting6.IsForcedShiny6 = CB_ForcedShiny.Checked;
+                            setting6.DexNavHA = CB_NavHA.Checked;
+                            setting6._ivcnt = (int)Potential.Value;
                             break;
                         case EncounterType.Normal:
                             if (gen6timeline) setting6.EncounterRate = (byte)Special_th.Value;
