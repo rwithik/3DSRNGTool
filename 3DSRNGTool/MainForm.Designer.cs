@@ -2477,7 +2477,6 @@
             this.CB_NavUnown.TabIndex = 125;
             this.CB_NavUnown.Text = "Unown";
             this.CB_NavUnown.UseVisualStyleBackColor = true;
-            this.CB_NavUnown.CheckedChanged += new System.EventHandler(this.CB_NavUnown_CheckedChanged);
             // 
             // L_HA
             // 

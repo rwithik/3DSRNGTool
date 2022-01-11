@@ -846,13 +846,6 @@ namespace Pk3DSRNGTool
             CB_ForcedShiny.Enabled = ChainLength.Value > 0;
         }
 
-        private void CB_NavUnown_CheckedChanged(object sender, EventArgs e)
-        {
-            CB_NavHA.Enabled = !CB_NavUnown.Checked;
-            if (CB_NavUnown.Checked)
-                CB_NavHA.Checked = false;
-        }
-
         private void CreateTimeline_CheckedChanged(object sender, EventArgs e)
         {
             Frame_max.Visible = label7.Visible =
