@@ -1694,7 +1694,8 @@ namespace Pk3DSRNGTool
             dgv_synced.Visible = Method < 3 && FormPM.Syncable && !IsEvent;
             dgv_gender.Visible =
             dgv_nature.Visible = !IsTransporter;
-            dgv_item.Visible = dgv_Lv.Visible = dgv_slot.Visible = Method == 2 && (Gen7 || Gen6 && gen6timeline || FullInfoHorde);
+            dgv_item.Visible = Method == 2 && (Gen7 || Gen6 && gen6timeline || FullInfoHorde);
+            dgv_Lv.Visible = dgv_slot.Visible = Method == 2 && (Gen7 || Gen6 && gen6timeline || IsHorde);
             dgv_rand.Visible = Gen6 || Gen7 && Method == 3 && !MainRNGEgg.Checked;
             dgv_rand.Visible &= Advanced.Checked;
             dgv_state.Visible = Gen6 && Method < 4;
