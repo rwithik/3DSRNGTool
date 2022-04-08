@@ -2,10 +2,11 @@
 
 ### Improvements
 
-- DexNav RNG: MT state support in the main window. Accurate PID, correct gender and Unown support **(WIP)**
+- DexNav RNG: MT rng support in the main window. Accurate PID, correct gender and Unown support
 - Poke Radar RNG: Forced Shiny option for accurate PID (TinyMT dependent)
-- Horde RNG: HA selection in the main window (no Tiny Timeline Tool is needed)
-- SOS RNG **(WIP)**: Level Filtering in the Misc Tool, fixed super effective, fixed some wrong SOS allies
+- Horde RNG: HA selection in the main window instead of the Tiny Timeline Tool window
+- SOS RNG (WIP): Level Filtering in Misc Tool, fixed super effective, fixed some wrong SOS ally slots
+- User can choose which IV value (0-31) counts as perfect
 - Fixed an unhandled exception in Gen6 Main Seed Finder
 - Fixed the startup error caused by the Update checker
 
