@@ -32,17 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            Pk3DSRNGTool.Controls.CheckBoxProperties checkBoxProperties1 = new Pk3DSRNGTool.Controls.CheckBoxProperties();
-            Pk3DSRNGTool.Controls.CheckBoxProperties checkBoxProperties2 = new Pk3DSRNGTool.Controls.CheckBoxProperties();
-            Pk3DSRNGTool.Controls.CheckBoxProperties checkBoxProperties3 = new Pk3DSRNGTool.Controls.CheckBoxProperties();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -55,6 +44,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            Pk3DSRNGTool.Controls.CheckBoxProperties checkBoxProperties1 = new Pk3DSRNGTool.Controls.CheckBoxProperties();
+            Pk3DSRNGTool.Controls.CheckBoxProperties checkBoxProperties2 = new Pk3DSRNGTool.Controls.CheckBoxProperties();
+            Pk3DSRNGTool.Controls.CheckBoxProperties checkBoxProperties3 = new Pk3DSRNGTool.Controls.CheckBoxProperties();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.Advanced = new System.Windows.Forms.CheckBox();
             this.ShinyCharm = new System.Windows.Forms.CheckBox();
@@ -62,6 +62,39 @@
             this.L_Seed = new System.Windows.Forms.Label();
             this.TSV = new System.Windows.Forms.NumericUpDown();
             this.DGV = new System.Windows.Forms.DataGridView();
+            this.dgv_eggnum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_frame0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_shift = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_mark = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_adv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_H = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_A = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_B = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_C = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_D = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_S = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_synced = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_hiddenpower = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_psv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_prv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_ability = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_delay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_slot = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_Lv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_form = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_ball = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_wurmpleevo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_rand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_rand64 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_pid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_EC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_state = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_tinystate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DGVMS = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.SetAsTarget = new System.Windows.Forms.ToolStripMenuItem();
             this.SetAsCurrent = new System.Windows.Forms.ToolStripMenuItem();
@@ -346,6 +379,8 @@
             this.L_A = new System.Windows.Forms.Label();
             this.L_D = new System.Windows.Forms.Label();
             this.IVPanel = new System.Windows.Forms.Panel();
+            this.L_Perfect_Value = new System.Windows.Forms.Label();
+            this.Perfect_IV_Value = new System.Windows.Forms.NumericUpDown();
             this.PerfectIVs = new System.Windows.Forms.NumericUpDown();
             this.ivmin0 = new System.Windows.Forms.NumericUpDown();
             this.ivmax0 = new System.Windows.Forms.NumericUpDown();
@@ -364,8 +399,8 @@
             this.ivmax5 = new System.Windows.Forms.NumericUpDown();
             this.ivmax2 = new System.Windows.Forms.NumericUpDown();
             this.ivmax4 = new System.Windows.Forms.NumericUpDown();
-            this.ivmax3 = new System.Windows.Forms.NumericUpDown();
             this.L_IVRange = new System.Windows.Forms.Label();
+            this.ivmax3 = new System.Windows.Forms.NumericUpDown();
             this.IgnoreFilters = new System.Windows.Forms.CheckBox();
             this.ShinyOnly = new System.Windows.Forms.CheckBox();
             this.ParentNature = new System.Windows.Forms.ComboBox();
@@ -414,39 +449,6 @@
             this.L_TRV = new System.Windows.Forms.Label();
             this.TRV = new Pk3DSRNGTool.Controls.HexMaskedTextBox();
             this.Seed = new Pk3DSRNGTool.Controls.HexMaskedTextBox();
-            this.dgv_eggnum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_frame0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_shift = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_mark = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_adv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_H = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_A = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_B = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_C = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_D = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_S = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_synced = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_hiddenpower = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_psv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_prv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_ability = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_delay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_slot = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_Lv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_form = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_ball = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_wurmpleevo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_rand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_rand64 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_pid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_EC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_state = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_tinystate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.TSV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
             this.DGVMS.SuspendLayout();
@@ -524,6 +526,7 @@
             this.Filters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Filter_Lv)).BeginInit();
             this.IVPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Perfect_IV_Value)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PerfectIVs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ivmin0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ivmax0)).BeginInit();
@@ -693,6 +696,279 @@
             this.DGV.DragDrop += new System.Windows.Forms.DragEventHandler(this.DragDropWC);
             this.DGV.DragEnter += new System.Windows.Forms.DragEventHandler(this.DropEnter);
             this.DGV.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DGV_MouseDown);
+            // 
+            // dgv_eggnum
+            // 
+            this.dgv_eggnum.DataPropertyName = "EggNum";
+            this.dgv_eggnum.HeaderText = "Egg#";
+            this.dgv_eggnum.Name = "dgv_eggnum";
+            this.dgv_eggnum.Visible = false;
+            this.dgv_eggnum.Width = 40;
+            // 
+            // dgv_frame0
+            // 
+            this.dgv_frame0.DataPropertyName = "Frame0";
+            this.dgv_frame0.HeaderText = "帧0";
+            this.dgv_frame0.Name = "dgv_frame0";
+            this.dgv_frame0.Visible = false;
+            this.dgv_frame0.Width = 60;
+            // 
+            // dgv_Frame
+            // 
+            this.dgv_Frame.DataPropertyName = "FrameNum";
+            this.dgv_Frame.HeaderText = "帧数";
+            this.dgv_Frame.Name = "dgv_Frame";
+            this.dgv_Frame.Width = 60;
+            // 
+            // dgv_shift
+            // 
+            this.dgv_shift.DataPropertyName = "Shift";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "+#;-#;0";
+            this.dgv_shift.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_shift.HeaderText = "偏差";
+            this.dgv_shift.Name = "dgv_shift";
+            this.dgv_shift.Width = 60;
+            // 
+            // dgv_mark
+            // 
+            this.dgv_mark.DataPropertyName = "Mark";
+            this.dgv_mark.HeaderText = "眨眼";
+            this.dgv_mark.Name = "dgv_mark";
+            this.dgv_mark.Width = 40;
+            // 
+            // dgv_adv
+            // 
+            this.dgv_adv.DataPropertyName = "FrameUsed";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgv_adv.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_adv.HeaderText = "消耗";
+            this.dgv_adv.Name = "dgv_adv";
+            this.dgv_adv.Visible = false;
+            this.dgv_adv.Width = 50;
+            // 
+            // dgv_H
+            // 
+            this.dgv_H.DataPropertyName = "HP";
+            this.dgv_H.HeaderText = "HP";
+            this.dgv_H.Name = "dgv_H";
+            this.dgv_H.Width = 30;
+            // 
+            // dgv_A
+            // 
+            this.dgv_A.DataPropertyName = "Atk";
+            this.dgv_A.HeaderText = "Atk";
+            this.dgv_A.Name = "dgv_A";
+            this.dgv_A.Width = 30;
+            // 
+            // dgv_B
+            // 
+            this.dgv_B.DataPropertyName = "Def";
+            this.dgv_B.HeaderText = "Def";
+            this.dgv_B.Name = "dgv_B";
+            this.dgv_B.Width = 30;
+            // 
+            // dgv_C
+            // 
+            this.dgv_C.DataPropertyName = "SpA";
+            this.dgv_C.HeaderText = "SpA";
+            this.dgv_C.Name = "dgv_C";
+            this.dgv_C.Width = 30;
+            // 
+            // dgv_D
+            // 
+            this.dgv_D.DataPropertyName = "SpD";
+            this.dgv_D.HeaderText = "SpD";
+            this.dgv_D.Name = "dgv_D";
+            this.dgv_D.Width = 30;
+            // 
+            // dgv_S
+            // 
+            this.dgv_S.DataPropertyName = "Spe";
+            this.dgv_S.HeaderText = "Spe";
+            this.dgv_S.Name = "dgv_S";
+            this.dgv_S.Width = 30;
+            // 
+            // dgv_nature
+            // 
+            this.dgv_nature.DataPropertyName = "NatureStr";
+            this.dgv_nature.HeaderText = "Nature";
+            this.dgv_nature.Name = "dgv_nature";
+            this.dgv_nature.Width = 55;
+            // 
+            // dgv_synced
+            // 
+            this.dgv_synced.DataPropertyName = "Sync";
+            this.dgv_synced.HeaderText = "Sync";
+            this.dgv_synced.Name = "dgv_synced";
+            this.dgv_synced.Width = 45;
+            // 
+            // dgv_hiddenpower
+            // 
+            this.dgv_hiddenpower.DataPropertyName = "HiddenPower";
+            this.dgv_hiddenpower.HeaderText = "HiddenPower";
+            this.dgv_hiddenpower.Name = "dgv_hiddenpower";
+            this.dgv_hiddenpower.Width = 49;
+            // 
+            // dgv_psv
+            // 
+            this.dgv_psv.DataPropertyName = "PSV";
+            dataGridViewCellStyle4.Format = "D4";
+            this.dgv_psv.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_psv.HeaderText = "PSV";
+            this.dgv_psv.Name = "dgv_psv";
+            this.dgv_psv.Width = 40;
+            // 
+            // dgv_prv
+            // 
+            this.dgv_prv.DataPropertyName = "PRV";
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Consolas", 9F);
+            dataGridViewCellStyle5.Format = "X1";
+            this.dgv_prv.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgv_prv.HeaderText = "PRV";
+            this.dgv_prv.Name = "dgv_prv";
+            this.dgv_prv.Width = 20;
+            // 
+            // dgv_gender
+            // 
+            this.dgv_gender.DataPropertyName = "GenderStr";
+            this.dgv_gender.HeaderText = "性别";
+            this.dgv_gender.Name = "dgv_gender";
+            this.dgv_gender.Width = 45;
+            // 
+            // dgv_ability
+            // 
+            this.dgv_ability.DataPropertyName = "AbilityStr";
+            this.dgv_ability.HeaderText = "特性";
+            this.dgv_ability.Name = "dgv_ability";
+            this.dgv_ability.Width = 45;
+            // 
+            // dgv_delay
+            // 
+            this.dgv_delay.DataPropertyName = "Delay";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "+0;-#";
+            this.dgv_delay.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv_delay.HeaderText = "延时";
+            this.dgv_delay.Name = "dgv_delay";
+            this.dgv_delay.Width = 40;
+            // 
+            // dgv_slot
+            // 
+            this.dgv_slot.DataPropertyName = "Slot";
+            this.dgv_slot.HeaderText = "种类";
+            this.dgv_slot.Name = "dgv_slot";
+            this.dgv_slot.Visible = false;
+            this.dgv_slot.Width = 40;
+            // 
+            // dgv_Lv
+            // 
+            this.dgv_Lv.DataPropertyName = "Level";
+            this.dgv_Lv.HeaderText = "Lv";
+            this.dgv_Lv.Name = "dgv_Lv";
+            this.dgv_Lv.Visible = false;
+            this.dgv_Lv.Width = 40;
+            // 
+            // dgv_form
+            // 
+            this.dgv_form.DataPropertyName = "Forme";
+            this.dgv_form.HeaderText = "形态";
+            this.dgv_form.Name = "dgv_form";
+            this.dgv_form.Width = 40;
+            // 
+            // dgv_ball
+            // 
+            this.dgv_ball.DataPropertyName = "Ball";
+            this.dgv_ball.HeaderText = "球";
+            this.dgv_ball.Name = "dgv_ball";
+            this.dgv_ball.Visible = false;
+            this.dgv_ball.Width = 50;
+            // 
+            // dgv_item
+            // 
+            this.dgv_item.DataPropertyName = "Item";
+            this.dgv_item.HeaderText = "道具";
+            this.dgv_item.Name = "dgv_item";
+            this.dgv_item.Visible = false;
+            this.dgv_item.Width = 40;
+            // 
+            // dgv_wurmpleevo
+            // 
+            this.dgv_wurmpleevo.DataPropertyName = "WurmpleEvo";
+            this.dgv_wurmpleevo.HeaderText = "Wurmple";
+            this.dgv_wurmpleevo.Name = "dgv_wurmpleevo";
+            this.dgv_wurmpleevo.Visible = false;
+            this.dgv_wurmpleevo.Width = 60;
+            // 
+            // dgv_rand
+            // 
+            this.dgv_rand.DataPropertyName = "Rand";
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Consolas", 9F);
+            dataGridViewCellStyle7.Format = "X8";
+            this.dgv_rand.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dgv_rand.HeaderText = "乱数值";
+            this.dgv_rand.Name = "dgv_rand";
+            this.dgv_rand.Width = 65;
+            // 
+            // dgv_rand64
+            // 
+            this.dgv_rand64.DataPropertyName = "Rand64";
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Consolas", 9F);
+            dataGridViewCellStyle8.Format = "X16";
+            this.dgv_rand64.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgv_rand64.HeaderText = "乱数值64";
+            this.dgv_rand64.Name = "dgv_rand64";
+            this.dgv_rand64.Visible = false;
+            this.dgv_rand64.Width = 125;
+            // 
+            // dgv_pid
+            // 
+            this.dgv_pid.DataPropertyName = "PID";
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Consolas", 9F);
+            dataGridViewCellStyle9.Format = "X8";
+            this.dgv_pid.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dgv_pid.HeaderText = "PID";
+            this.dgv_pid.Name = "dgv_pid";
+            this.dgv_pid.Width = 65;
+            // 
+            // dgv_EC
+            // 
+            this.dgv_EC.DataPropertyName = "EC";
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Consolas", 9F);
+            dataGridViewCellStyle10.Format = "X8";
+            this.dgv_EC.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dgv_EC.HeaderText = "加密常数";
+            this.dgv_EC.Name = "dgv_EC";
+            this.dgv_EC.Width = 65;
+            // 
+            // dgv_state
+            // 
+            this.dgv_state.DataPropertyName = "State";
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_state.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dgv_state.HeaderText = "状态";
+            this.dgv_state.Name = "dgv_state";
+            this.dgv_state.Visible = false;
+            this.dgv_state.Width = 65;
+            // 
+            // dgv_time
+            // 
+            this.dgv_time.DataPropertyName = "RealTime";
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgv_time.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dgv_time.HeaderText = "时间";
+            this.dgv_time.Name = "dgv_time";
+            this.dgv_time.Width = 80;
+            // 
+            // dgv_tinystate
+            // 
+            this.dgv_tinystate.DataPropertyName = "TinyState";
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Consolas", 9F);
+            this.dgv_tinystate.DefaultCellStyle = dataGridViewCellStyle13;
+            this.dgv_tinystate.HeaderText = "Tiny状态";
+            this.dgv_tinystate.Name = "dgv_tinystate";
+            this.dgv_tinystate.Visible = false;
+            this.dgv_tinystate.Width = 260;
             // 
             // DGVMS
             // 
@@ -4050,7 +4326,7 @@
             // L_S
             // 
             this.L_S.AutoSize = true;
-            this.L_S.Location = new System.Drawing.Point(10, 240);
+            this.L_S.Location = new System.Drawing.Point(6, 244);
             this.L_S.Name = "L_S";
             this.L_S.Size = new System.Drawing.Size(26, 13);
             this.L_S.TabIndex = 29;
@@ -4059,7 +4335,7 @@
             // L_C
             // 
             this.L_C.AutoSize = true;
-            this.L_C.Location = new System.Drawing.Point(10, 180);
+            this.L_C.Location = new System.Drawing.Point(6, 190);
             this.L_C.Name = "L_C";
             this.L_C.Size = new System.Drawing.Size(27, 13);
             this.L_C.TabIndex = 27;
@@ -4068,7 +4344,7 @@
             // L_B
             // 
             this.L_B.AutoSize = true;
-            this.L_B.Location = new System.Drawing.Point(10, 150);
+            this.L_B.Location = new System.Drawing.Point(6, 163);
             this.L_B.Name = "L_B";
             this.L_B.Size = new System.Drawing.Size(24, 13);
             this.L_B.TabIndex = 26;
@@ -4077,7 +4353,7 @@
             // L_H
             // 
             this.L_H.AutoSize = true;
-            this.L_H.Location = new System.Drawing.Point(10, 90);
+            this.L_H.Location = new System.Drawing.Point(6, 109);
             this.L_H.Name = "L_H";
             this.L_H.Size = new System.Drawing.Size(22, 13);
             this.L_H.TabIndex = 24;
@@ -4086,7 +4362,7 @@
             // L_A
             // 
             this.L_A.AutoSize = true;
-            this.L_A.Location = new System.Drawing.Point(10, 120);
+            this.L_A.Location = new System.Drawing.Point(5, 135);
             this.L_A.Name = "L_A";
             this.L_A.Size = new System.Drawing.Size(23, 13);
             this.L_A.TabIndex = 25;
@@ -4095,7 +4371,7 @@
             // L_D
             // 
             this.L_D.AutoSize = true;
-            this.L_D.Location = new System.Drawing.Point(10, 210);
+            this.L_D.Location = new System.Drawing.Point(6, 217);
             this.L_D.Name = "L_D";
             this.L_D.Size = new System.Drawing.Size(28, 13);
             this.L_D.TabIndex = 28;
@@ -4103,6 +4379,8 @@
             // 
             // IVPanel
             // 
+            this.IVPanel.Controls.Add(this.L_Perfect_Value);
+            this.IVPanel.Controls.Add(this.Perfect_IV_Value);
             this.IVPanel.Controls.Add(this.PerfectIVs);
             this.IVPanel.Controls.Add(this.ivmin0);
             this.IVPanel.Controls.Add(this.ivmax0);
@@ -4121,17 +4399,44 @@
             this.IVPanel.Controls.Add(this.ivmax5);
             this.IVPanel.Controls.Add(this.ivmax2);
             this.IVPanel.Controls.Add(this.ivmax4);
-            this.IVPanel.Controls.Add(this.ivmax3);
             this.IVPanel.Controls.Add(this.L_IVRange);
-            this.IVPanel.Location = new System.Drawing.Point(40, 55);
+            this.IVPanel.Controls.Add(this.ivmax3);
+            this.IVPanel.Location = new System.Drawing.Point(34, 46);
             this.IVPanel.Name = "IVPanel";
-            this.IVPanel.Size = new System.Drawing.Size(147, 209);
+            this.IVPanel.Size = new System.Drawing.Size(153, 227);
             this.IVPanel.TabIndex = 24;
+            // 
+            // L_Perfect_Value
+            // 
+            this.L_Perfect_Value.AutoSize = true;
+            this.L_Perfect_Value.Location = new System.Drawing.Point(2, 7);
+            this.L_Perfect_Value.Name = "L_Perfect_Value";
+            this.L_Perfect_Value.Size = new System.Drawing.Size(83, 13);
+            this.L_Perfect_Value.TabIndex = 100;
+            this.L_Perfect_Value.Text = "Perfect IV value";
+            // 
+            // Perfect_IV_Value
+            // 
+            this.Perfect_IV_Value.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Perfect_IV_Value.Location = new System.Drawing.Point(94, 4);
+            this.Perfect_IV_Value.Maximum = new decimal(new int[] {
+            31,
+            0,
+            0,
+            0});
+            this.Perfect_IV_Value.Name = "Perfect_IV_Value";
+            this.Perfect_IV_Value.Size = new System.Drawing.Size(49, 22);
+            this.Perfect_IV_Value.TabIndex = 99;
+            this.Perfect_IV_Value.Value = new decimal(new int[] {
+            31,
+            0,
+            0,
+            0});
             // 
             // PerfectIVs
             // 
             this.PerfectIVs.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PerfectIVs.Location = new System.Drawing.Point(86, 3);
+            this.PerfectIVs.Location = new System.Drawing.Point(94, 32);
             this.PerfectIVs.Maximum = new decimal(new int[] {
             6,
             0,
@@ -4145,7 +4450,7 @@
             // ivmin0
             // 
             this.ivmin0.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ivmin0.Location = new System.Drawing.Point(11, 32);
+            this.ivmin0.Location = new System.Drawing.Point(11, 60);
             this.ivmin0.Maximum = new decimal(new int[] {
             31,
             0,
@@ -4160,7 +4465,7 @@
             // ivmax0
             // 
             this.ivmax0.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ivmax0.Location = new System.Drawing.Point(86, 32);
+            this.ivmax0.Location = new System.Drawing.Point(94, 60);
             this.ivmax0.Maximum = new decimal(new int[] {
             31,
             0,
@@ -4180,7 +4485,7 @@
             // ivmin1
             // 
             this.ivmin1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ivmin1.Location = new System.Drawing.Point(11, 62);
+            this.ivmin1.Location = new System.Drawing.Point(11, 87);
             this.ivmin1.Maximum = new decimal(new int[] {
             31,
             0,
@@ -4195,7 +4500,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(66, 188);
+            this.label6.Location = new System.Drawing.Point(70, 202);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(14, 13);
             this.label6.TabIndex = 23;
@@ -4204,7 +4509,7 @@
             // ivmin2
             // 
             this.ivmin2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ivmin2.Location = new System.Drawing.Point(11, 92);
+            this.ivmin2.Location = new System.Drawing.Point(11, 114);
             this.ivmin2.Maximum = new decimal(new int[] {
             31,
             0,
@@ -4219,7 +4524,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(66, 158);
+            this.label5.Location = new System.Drawing.Point(70, 174);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(14, 13);
             this.label5.TabIndex = 22;
@@ -4228,7 +4533,7 @@
             // ivmin3
             // 
             this.ivmin3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ivmin3.Location = new System.Drawing.Point(11, 122);
+            this.ivmin3.Location = new System.Drawing.Point(11, 141);
             this.ivmin3.Maximum = new decimal(new int[] {
             31,
             0,
@@ -4243,7 +4548,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(66, 128);
+            this.label4.Location = new System.Drawing.Point(70, 147);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(14, 13);
             this.label4.TabIndex = 21;
@@ -4252,7 +4557,7 @@
             // ivmin4
             // 
             this.ivmin4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ivmin4.Location = new System.Drawing.Point(11, 152);
+            this.ivmin4.Location = new System.Drawing.Point(11, 168);
             this.ivmin4.Maximum = new decimal(new int[] {
             31,
             0,
@@ -4267,7 +4572,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(66, 98);
+            this.label3.Location = new System.Drawing.Point(70, 120);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(14, 13);
             this.label3.TabIndex = 20;
@@ -4276,7 +4581,7 @@
             // ivmin5
             // 
             this.ivmin5.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ivmin5.Location = new System.Drawing.Point(11, 182);
+            this.ivmin5.Location = new System.Drawing.Point(11, 196);
             this.ivmin5.Maximum = new decimal(new int[] {
             31,
             0,
@@ -4291,7 +4596,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(66, 68);
+            this.label2.Location = new System.Drawing.Point(70, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(14, 13);
             this.label2.TabIndex = 19;
@@ -4300,7 +4605,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(66, 38);
+            this.label1.Location = new System.Drawing.Point(70, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(14, 13);
             this.label1.TabIndex = 18;
@@ -4309,7 +4614,7 @@
             // ivmax1
             // 
             this.ivmax1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ivmax1.Location = new System.Drawing.Point(86, 62);
+            this.ivmax1.Location = new System.Drawing.Point(94, 87);
             this.ivmax1.Maximum = new decimal(new int[] {
             31,
             0,
@@ -4329,7 +4634,7 @@
             // ivmax5
             // 
             this.ivmax5.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ivmax5.Location = new System.Drawing.Point(86, 182);
+            this.ivmax5.Location = new System.Drawing.Point(94, 196);
             this.ivmax5.Maximum = new decimal(new int[] {
             31,
             0,
@@ -4349,7 +4654,7 @@
             // ivmax2
             // 
             this.ivmax2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ivmax2.Location = new System.Drawing.Point(86, 92);
+            this.ivmax2.Location = new System.Drawing.Point(94, 114);
             this.ivmax2.Maximum = new decimal(new int[] {
             31,
             0,
@@ -4369,7 +4674,7 @@
             // ivmax4
             // 
             this.ivmax4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ivmax4.Location = new System.Drawing.Point(86, 152);
+            this.ivmax4.Location = new System.Drawing.Point(94, 168);
             this.ivmax4.Maximum = new decimal(new int[] {
             31,
             0,
@@ -4386,10 +4691,19 @@
             this.ivmax4.Click += new System.EventHandler(this.IVs_Click);
             this.ivmax4.Enter += new System.EventHandler(this.TabSelected);
             // 
+            // L_IVRange
+            // 
+            this.L_IVRange.AutoSize = true;
+            this.L_IVRange.Location = new System.Drawing.Point(3, 34);
+            this.L_IVRange.Name = "L_IVRange";
+            this.L_IVRange.Size = new System.Drawing.Size(81, 13);
+            this.L_IVRange.TabIndex = 73;
+            this.L_IVRange.Text = "# of Perfect IVs";
+            // 
             // ivmax3
             // 
             this.ivmax3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ivmax3.Location = new System.Drawing.Point(86, 122);
+            this.ivmax3.Location = new System.Drawing.Point(94, 141);
             this.ivmax3.Maximum = new decimal(new int[] {
             31,
             0,
@@ -4405,15 +4719,6 @@
             0});
             this.ivmax3.Click += new System.EventHandler(this.IVs_Click);
             this.ivmax3.Enter += new System.EventHandler(this.TabSelected);
-            // 
-            // L_IVRange
-            // 
-            this.L_IVRange.AutoSize = true;
-            this.L_IVRange.Location = new System.Drawing.Point(2, 6);
-            this.L_IVRange.Name = "L_IVRange";
-            this.L_IVRange.Size = new System.Drawing.Size(81, 13);
-            this.L_IVRange.TabIndex = 73;
-            this.L_IVRange.Text = "# of Perfect IVs";
             // 
             // IgnoreFilters
             // 
@@ -4467,7 +4772,7 @@
             // 
             // B_IVInput
             // 
-            this.B_IVInput.Location = new System.Drawing.Point(12, 57);
+            this.B_IVInput.Location = new System.Drawing.Point(4, 76);
             this.B_IVInput.Name = "B_IVInput";
             this.B_IVInput.Size = new System.Drawing.Size(24, 22);
             this.B_IVInput.TabIndex = 98;
@@ -4589,7 +4894,7 @@
             // ByIVs
             // 
             this.ByIVs.AutoSize = true;
-            this.ByIVs.Location = new System.Drawing.Point(18, 31);
+            this.ByIVs.Location = new System.Drawing.Point(18, 21);
             this.ByIVs.Name = "ByIVs";
             this.ByIVs.Size = new System.Drawing.Size(70, 17);
             this.ByIVs.TabIndex = 72;
@@ -4601,7 +4906,7 @@
             // ByStats
             // 
             this.ByStats.AutoSize = true;
-            this.ByStats.Location = new System.Drawing.Point(104, 31);
+            this.ByStats.Location = new System.Drawing.Point(104, 21);
             this.ByStats.Name = "ByStats";
             this.ByStats.Size = new System.Drawing.Size(79, 17);
             this.ByStats.TabIndex = 71;
@@ -4692,7 +4997,7 @@
             this.StatPanel.Controls.Add(this.Stat5);
             this.StatPanel.Controls.Add(this.BS_1);
             this.StatPanel.Controls.Add(this.BS_0);
-            this.StatPanel.Location = new System.Drawing.Point(40, 55);
+            this.StatPanel.Location = new System.Drawing.Point(40, 64);
             this.StatPanel.Name = "StatPanel";
             this.StatPanel.Size = new System.Drawing.Size(147, 209);
             this.StatPanel.TabIndex = 42;
@@ -4992,279 +5297,6 @@
             this.Seed.Value = ((uint)(0u));
             this.Seed.TextChanged += new System.EventHandler(this.Seed_ValueChanged);
             // 
-            // dgv_eggnum
-            // 
-            this.dgv_eggnum.DataPropertyName = "EggNum";
-            this.dgv_eggnum.HeaderText = "Egg#";
-            this.dgv_eggnum.Name = "dgv_eggnum";
-            this.dgv_eggnum.Visible = false;
-            this.dgv_eggnum.Width = 40;
-            // 
-            // dgv_frame0
-            // 
-            this.dgv_frame0.DataPropertyName = "Frame0";
-            this.dgv_frame0.HeaderText = "帧0";
-            this.dgv_frame0.Name = "dgv_frame0";
-            this.dgv_frame0.Visible = false;
-            this.dgv_frame0.Width = 60;
-            // 
-            // dgv_Frame
-            // 
-            this.dgv_Frame.DataPropertyName = "FrameNum";
-            this.dgv_Frame.HeaderText = "帧数";
-            this.dgv_Frame.Name = "dgv_Frame";
-            this.dgv_Frame.Width = 60;
-            // 
-            // dgv_shift
-            // 
-            this.dgv_shift.DataPropertyName = "Shift";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "+#;-#;0";
-            this.dgv_shift.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_shift.HeaderText = "偏差";
-            this.dgv_shift.Name = "dgv_shift";
-            this.dgv_shift.Width = 60;
-            // 
-            // dgv_mark
-            // 
-            this.dgv_mark.DataPropertyName = "Mark";
-            this.dgv_mark.HeaderText = "眨眼";
-            this.dgv_mark.Name = "dgv_mark";
-            this.dgv_mark.Width = 40;
-            // 
-            // dgv_adv
-            // 
-            this.dgv_adv.DataPropertyName = "FrameUsed";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgv_adv.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_adv.HeaderText = "消耗";
-            this.dgv_adv.Name = "dgv_adv";
-            this.dgv_adv.Visible = false;
-            this.dgv_adv.Width = 50;
-            // 
-            // dgv_H
-            // 
-            this.dgv_H.DataPropertyName = "HP";
-            this.dgv_H.HeaderText = "HP";
-            this.dgv_H.Name = "dgv_H";
-            this.dgv_H.Width = 30;
-            // 
-            // dgv_A
-            // 
-            this.dgv_A.DataPropertyName = "Atk";
-            this.dgv_A.HeaderText = "Atk";
-            this.dgv_A.Name = "dgv_A";
-            this.dgv_A.Width = 30;
-            // 
-            // dgv_B
-            // 
-            this.dgv_B.DataPropertyName = "Def";
-            this.dgv_B.HeaderText = "Def";
-            this.dgv_B.Name = "dgv_B";
-            this.dgv_B.Width = 30;
-            // 
-            // dgv_C
-            // 
-            this.dgv_C.DataPropertyName = "SpA";
-            this.dgv_C.HeaderText = "SpA";
-            this.dgv_C.Name = "dgv_C";
-            this.dgv_C.Width = 30;
-            // 
-            // dgv_D
-            // 
-            this.dgv_D.DataPropertyName = "SpD";
-            this.dgv_D.HeaderText = "SpD";
-            this.dgv_D.Name = "dgv_D";
-            this.dgv_D.Width = 30;
-            // 
-            // dgv_S
-            // 
-            this.dgv_S.DataPropertyName = "Spe";
-            this.dgv_S.HeaderText = "Spe";
-            this.dgv_S.Name = "dgv_S";
-            this.dgv_S.Width = 30;
-            // 
-            // dgv_nature
-            // 
-            this.dgv_nature.DataPropertyName = "NatureStr";
-            this.dgv_nature.HeaderText = "Nature";
-            this.dgv_nature.Name = "dgv_nature";
-            this.dgv_nature.Width = 55;
-            // 
-            // dgv_synced
-            // 
-            this.dgv_synced.DataPropertyName = "Sync";
-            this.dgv_synced.HeaderText = "Sync";
-            this.dgv_synced.Name = "dgv_synced";
-            this.dgv_synced.Width = 45;
-            // 
-            // dgv_hiddenpower
-            // 
-            this.dgv_hiddenpower.DataPropertyName = "HiddenPower";
-            this.dgv_hiddenpower.HeaderText = "HiddenPower";
-            this.dgv_hiddenpower.Name = "dgv_hiddenpower";
-            this.dgv_hiddenpower.Width = 49;
-            // 
-            // dgv_psv
-            // 
-            this.dgv_psv.DataPropertyName = "PSV";
-            dataGridViewCellStyle4.Format = "D4";
-            this.dgv_psv.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgv_psv.HeaderText = "PSV";
-            this.dgv_psv.Name = "dgv_psv";
-            this.dgv_psv.Width = 40;
-            // 
-            // dgv_prv
-            // 
-            this.dgv_prv.DataPropertyName = "PRV";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Consolas", 9F);
-            dataGridViewCellStyle5.Format = "X1";
-            this.dgv_prv.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgv_prv.HeaderText = "PRV";
-            this.dgv_prv.Name = "dgv_prv";
-            this.dgv_prv.Width = 20;
-            // 
-            // dgv_gender
-            // 
-            this.dgv_gender.DataPropertyName = "GenderStr";
-            this.dgv_gender.HeaderText = "性别";
-            this.dgv_gender.Name = "dgv_gender";
-            this.dgv_gender.Width = 45;
-            // 
-            // dgv_ability
-            // 
-            this.dgv_ability.DataPropertyName = "AbilityStr";
-            this.dgv_ability.HeaderText = "特性";
-            this.dgv_ability.Name = "dgv_ability";
-            this.dgv_ability.Width = 45;
-            // 
-            // dgv_delay
-            // 
-            this.dgv_delay.DataPropertyName = "Delay";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.Format = "+0;-#";
-            this.dgv_delay.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgv_delay.HeaderText = "延时";
-            this.dgv_delay.Name = "dgv_delay";
-            this.dgv_delay.Width = 40;
-            // 
-            // dgv_slot
-            // 
-            this.dgv_slot.DataPropertyName = "Slot";
-            this.dgv_slot.HeaderText = "种类";
-            this.dgv_slot.Name = "dgv_slot";
-            this.dgv_slot.Visible = false;
-            this.dgv_slot.Width = 40;
-            // 
-            // dgv_Lv
-            // 
-            this.dgv_Lv.DataPropertyName = "Level";
-            this.dgv_Lv.HeaderText = "Lv";
-            this.dgv_Lv.Name = "dgv_Lv";
-            this.dgv_Lv.Visible = false;
-            this.dgv_Lv.Width = 40;
-            // 
-            // dgv_form
-            // 
-            this.dgv_form.DataPropertyName = "Forme";
-            this.dgv_form.HeaderText = "形态";
-            this.dgv_form.Name = "dgv_form";
-            this.dgv_form.Width = 40;
-            // 
-            // dgv_ball
-            // 
-            this.dgv_ball.DataPropertyName = "Ball";
-            this.dgv_ball.HeaderText = "球";
-            this.dgv_ball.Name = "dgv_ball";
-            this.dgv_ball.Visible = false;
-            this.dgv_ball.Width = 50;
-            // 
-            // dgv_item
-            // 
-            this.dgv_item.DataPropertyName = "Item";
-            this.dgv_item.HeaderText = "道具";
-            this.dgv_item.Name = "dgv_item";
-            this.dgv_item.Visible = false;
-            this.dgv_item.Width = 40;
-            // 
-            // dgv_wurmpleevo
-            // 
-            this.dgv_wurmpleevo.DataPropertyName = "WurmpleEvo";
-            this.dgv_wurmpleevo.HeaderText = "Wurmple";
-            this.dgv_wurmpleevo.Name = "dgv_wurmpleevo";
-            this.dgv_wurmpleevo.Visible = false;
-            this.dgv_wurmpleevo.Width = 60;
-            // 
-            // dgv_rand
-            // 
-            this.dgv_rand.DataPropertyName = "Rand";
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Consolas", 9F);
-            dataGridViewCellStyle7.Format = "X8";
-            this.dgv_rand.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dgv_rand.HeaderText = "乱数值";
-            this.dgv_rand.Name = "dgv_rand";
-            this.dgv_rand.Width = 65;
-            // 
-            // dgv_rand64
-            // 
-            this.dgv_rand64.DataPropertyName = "Rand64";
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Consolas", 9F);
-            dataGridViewCellStyle8.Format = "X16";
-            this.dgv_rand64.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dgv_rand64.HeaderText = "乱数值64";
-            this.dgv_rand64.Name = "dgv_rand64";
-            this.dgv_rand64.Visible = false;
-            this.dgv_rand64.Width = 125;
-            // 
-            // dgv_pid
-            // 
-            this.dgv_pid.DataPropertyName = "PID";
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Consolas", 9F);
-            dataGridViewCellStyle9.Format = "X8";
-            this.dgv_pid.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dgv_pid.HeaderText = "PID";
-            this.dgv_pid.Name = "dgv_pid";
-            this.dgv_pid.Width = 65;
-            // 
-            // dgv_EC
-            // 
-            this.dgv_EC.DataPropertyName = "EC";
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Consolas", 9F);
-            dataGridViewCellStyle10.Format = "X8";
-            this.dgv_EC.DefaultCellStyle = dataGridViewCellStyle10;
-            this.dgv_EC.HeaderText = "加密常数";
-            this.dgv_EC.Name = "dgv_EC";
-            this.dgv_EC.Width = 65;
-            // 
-            // dgv_state
-            // 
-            this.dgv_state.DataPropertyName = "State";
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_state.DefaultCellStyle = dataGridViewCellStyle11;
-            this.dgv_state.HeaderText = "状态";
-            this.dgv_state.Name = "dgv_state";
-            this.dgv_state.Visible = false;
-            this.dgv_state.Width = 65;
-            // 
-            // dgv_time
-            // 
-            this.dgv_time.DataPropertyName = "RealTime";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgv_time.DefaultCellStyle = dataGridViewCellStyle12;
-            this.dgv_time.HeaderText = "时间";
-            this.dgv_time.Name = "dgv_time";
-            this.dgv_time.Width = 80;
-            // 
-            // dgv_tinystate
-            // 
-            this.dgv_tinystate.DataPropertyName = "TinyState";
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Consolas", 9F);
-            this.dgv_tinystate.DefaultCellStyle = dataGridViewCellStyle13;
-            this.dgv_tinystate.HeaderText = "Tiny状态";
-            this.dgv_tinystate.Name = "dgv_tinystate";
-            this.dgv_tinystate.Visible = false;
-            this.dgv_tinystate.Width = 260;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5392,6 +5424,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Filter_Lv)).EndInit();
             this.IVPanel.ResumeLayout(false);
             this.IVPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Perfect_IV_Value)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PerfectIVs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ivmin0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ivmax0)).EndInit();
@@ -5817,6 +5850,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_state;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_time;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_tinystate;
+        private System.Windows.Forms.NumericUpDown Perfect_IV_Value;
+        private System.Windows.Forms.Label L_Perfect_Value;
     }
 }
 

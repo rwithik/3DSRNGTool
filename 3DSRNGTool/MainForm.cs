@@ -1319,7 +1319,8 @@ namespace Pk3DSRNGTool
             ShinyOnly = ShinyOnly.Checked,
             SquareShinyOnly = SquareShinyOnly.Checked,
             Skip = IgnoreFilters.Checked,
-            PerfectIVs = (byte)PerfectIVs.Value,
+            PerfectIVValue = (byte)Perfect_IV_Value.Value,
+            PerfectIVCount = (byte)PerfectIVs.Value,
 
             Level = (byte)Filter_Lv.Value,
             Slot = new bool[IsLinux ? 1 : 0].Concat(Slot.CheckBoxItems.Select(e => Gen6 && !CreateTimeline.Checked ? false : e.Checked)).ToArray(),
@@ -1931,6 +1932,7 @@ namespace Pk3DSRNGTool
                     return;
                 case "Seed":
                     Seed.Value = (uint)data;
+                    B_Calc.PerformClick();
                     return;
                 case "EggSeed":
                     Status = (uint[])data;
