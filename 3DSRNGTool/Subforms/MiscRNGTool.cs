@@ -339,6 +339,9 @@ namespace Pk3DSRNGTool
                 SOSRNG.MinLevel = (byte)minLevel.Value;
                 SOSRNG.MaxLevel = (byte)maxLevel.Value;
 
+                for (byte i = 1; i <= 6; i++)
+                    SOSRNG.RandomIVs[i - 1] = MainFrameIVs.CheckBoxItems[i].Checked;
+
                 int Rate1 = (int)CB_CallRate.SelectedValue * (int)HPBarColor.SelectedValue;
                 if (AO.Checked)
                     Rate1 *= 2;
@@ -523,8 +526,8 @@ namespace Pk3DSRNGTool
                     HelpMdName = "BattleTree";
                 else if (selected == TP_FP)
                     HelpMdName = "FestivalPlazaFacilities";
-                else if (selected == TP_SOS)
-                    HelpMdName = "SOSCall";
+                //else if (selected == TP_SOS)
+                    //HelpMdName = "SOSCall";
                 else
                     selected.Controls.Remove(B_Help);
                 if (selected == TP_Capture || selected == TP_SOS)
