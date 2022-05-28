@@ -10,6 +10,7 @@ namespace Pk3DSRNGTool
         private static uint rand => RNGPool.getrand;
         public static byte Rate1 = 3;
         public static byte Rate2 = 3;
+        public static bool[] RandomIVs = new bool[6];
         public static SOSResult Generate()
         {
             var rt = new SOSResult();
@@ -30,8 +31,10 @@ namespace Pk3DSRNGTool
             rt.HeldItem = (byte)(rand % 100);
 
             // Chaining bonus
+            RandomIVs.CopyTo(rt.BumpedIVs, 0);
             while (rt.BumpedIVs.Count(iv => iv) < FlawlessCount)
                 rt.BumpedIVs[rand % 6] = true;
+
             rt.HA = rand % 100 < HARate;
 
             if (rt.Call1 >= Rate1)
