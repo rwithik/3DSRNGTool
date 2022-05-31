@@ -43,6 +43,7 @@ namespace Pk3DSRNGTool
     {
         public bool Capture;
         public bool SOS;
+        public bool IgnoreSOSFilters;
         public bool Success;
         public bool Sync;
         public bool[] Slot;
@@ -73,16 +74,19 @@ namespace Pk3DSRNGTool
             }
             if (SOS)
             {
-                if (Success && !f.Srt.Success)
-                    return false;
-                if (HA && !f.Srt.HA)
-                    return false;
-                if (Sync && !f.Srt.Sync)
-                    return false;
-                if (Slot.Any(n => n) && !Slot[f.Srt.Slot])
-                    return false;
-                if (!(TargetLevel == f.Srt.Level || TargetLevel == 0))
-                    return false;
+                if (!IgnoreSOSFilters)
+                {
+                    if (Success && !f.Srt.Success)
+                        return false;
+                    if (HA && !f.Srt.HA)
+                        return false;
+                    if (Sync && !f.Srt.Sync)
+                        return false;
+                    if (Slot.Any(n => n) && !Slot[f.Srt.Slot])
+                        return false;
+                    if (!(TargetLevel == f.Srt.Level || TargetLevel == 0))
+                        return false;
+                }
             }
             if (Capture && Success && !f.Crt.Gotta)
                 return false;
