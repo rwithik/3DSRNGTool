@@ -103,6 +103,7 @@ namespace Pk3DSRNGTool
                 Capture = Filters.SelectedTab == TP_Capture,
                 Success = SuccessOnly.Checked,
                 SOS = IsSOS,
+                IgnoreSOSFilters = NoSOSFilters.Checked,
                 Sync = Sync.Checked,
                 HA = HA.Checked && IsSOS,
                 TargetLevel = (byte)Desired_Level.Value,
