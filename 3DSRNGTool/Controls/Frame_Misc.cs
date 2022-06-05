@@ -8,9 +8,9 @@ namespace Pk3DSRNGTool
         public static bool X64;
         private static readonly string[] blinkmarks = { "-", "★", "?", "? ★", "E" };
 
-        public int Frame { get; set; }
+        public int Index { get; set; }
         public int frameused;
-        public int ActualFrame => Frame + frameused;
+        public int ActualFrame => Index + frameused;
         public int Advance => Srt?.Advance ?? 0;
         public int realtime = -1;
         public string Realtime => realtime > -1 ? FuncUtil.Convert2timestr(realtime / 60.0) : string.Empty;
@@ -72,21 +72,18 @@ namespace Pk3DSRNGTool
                     case 2: if (f.RandN != Value) return false; break;
                 }
             }
-            if (SOS)
+            if (SOS && !IgnoreSOSFilters)
             {
-                if (!IgnoreSOSFilters)
-                {
-                    if (Success && !f.Srt.Success)
-                        return false;
-                    if (HA && !f.Srt.HA)
-                        return false;
-                    if (Sync && !f.Srt.Sync)
-                        return false;
-                    if (Slot.Any(n => n) && !Slot[f.Srt.Slot])
-                        return false;
-                    if (!(TargetLevel == f.Srt.Level || TargetLevel == 0))
-                        return false;
-                }
+                if (Success && !f.Srt.Success)
+                    return false;
+                if (HA && !f.Srt.HA)
+                    return false;
+                if (Sync && !f.Srt.Sync)
+                    return false;
+                if (Slot.Any(n => n) && !Slot[f.Srt.Slot])
+                    return false;
+                if (!(TargetLevel == f.Srt.Level || TargetLevel == 0))
+                    return false;
             }
             if (Capture && Success && !f.Crt.Gotta)
                 return false;
