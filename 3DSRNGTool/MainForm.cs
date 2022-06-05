@@ -162,7 +162,7 @@ namespace Pk3DSRNGTool
             L_TriggerMethod.Location = new Point(164, 196);
             Bubbling.Location = new Point(194, 196);
             CB_3rdSlotUnlocked.Location = new Point(167, 196);
-            L_SOSRNGFrame.Location = new Point(303, 159);
+            L_SOSRNGIndex.Location = new Point(303, 157);
             Raining.Location = new Point(330, 158);
 
             CB_ForcedShiny.Location = new Point(30, 130);
@@ -239,6 +239,7 @@ namespace Pk3DSRNGTool
             if (0 <= tmp && tmp < SlotSpecies.Items.Count)
                 SlotSpecies.SelectedIndex = tmp;
             Weather.SelectedIndex = 0;
+            SetMiscSOSLevel();
         }
 
         private void LoadSlotSpeciesInfo()
@@ -498,7 +499,7 @@ namespace Pk3DSRNGTool
             L_Delay2.Visible = Delay2.Visible = gen7misc;
             Raining.Visible = Gen7 && !gen7sos;
             SOSPanel.Visible =
-            L_SOSRNGFrame.Visible = L_SOSRNGSeed.Visible = SOSRNGFrame.Visible = SOSRNGSeed.Visible =
+            L_SOSRNGIndex.Visible = L_SOSRNGSeed.Visible = SOSRNGFrame.Visible = SOSRNGSeed.Visible =
             ChainLength.Visible = L_ChainLength.Visible = gen7sos;
             var pmw6 = FormPM as PKMW6;
             L_HordeInfo.Visible = L_HA.Visible = HA_MainSlot.Visible = IsHorde;
@@ -968,8 +969,16 @@ namespace Pk3DSRNGTool
             if (SlotSpecies.SelectedIndex > 0 && (Filter_Lv.Value > Lv_max.Value || Filter_Lv.Value < Lv_min.Value))
                 Filter_Lv.Value = 0;
             LoadSlotSpeciesInfo();
+            SetMiscSOSLevel();
         }
-
+        private void Lv_min_ValueChanged(object sender, EventArgs e)
+        {
+            SetMiscSOSLevel();
+        }
+        private void Lv_max_ValueChanged(object sender, EventArgs e)
+        {
+            SetMiscSOSLevel();
+        }
         private void Special_th_ValueChanged(object sender, EventArgs e)
         {
             L_Rate.Visible = Special_th.Visible = Special_th.Value > 0;
@@ -1150,6 +1159,7 @@ namespace Pk3DSRNGTool
             ShinyMark.Visible = IsBank;
         }
 
+        private void SetMiscSOSLevel() => miscrngtool.UpdateInfo(LevelMin: (byte)Lv_min.Value, LevelMax: (byte)Lv_max.Value);
         private void SetPersonalInfo(int SpecForm, bool skip = false) => SetPersonalInfo(SpecForm & 0x7FF, SpecForm >> 11, skip);
 
         private void Poke_SelectedIndexChanged(object sender, EventArgs e)
@@ -2063,5 +2073,6 @@ namespace Pk3DSRNGTool
         private void MiscRNGTool_Click(object sender, EventArgs e)
             => miscrngtool.Show();
         #endregion
+
     }
 }

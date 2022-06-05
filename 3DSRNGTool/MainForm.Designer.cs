@@ -229,7 +229,7 @@
             this.L_Weather = new System.Windows.Forms.Label();
             this.Ally = new System.Windows.Forms.ComboBox();
             this.L_Ally = new System.Windows.Forms.Label();
-            this.L_SOSRNGFrame = new System.Windows.Forms.Label();
+            this.L_SOSRNGIndex = new System.Windows.Forms.Label();
             this.SOSRNGFrame = new System.Windows.Forms.NumericUpDown();
             this.SOSRNGSeed = new Pk3DSRNGTool.Controls.HexMaskedTextBox();
             this.L_SOSRNGSeed = new System.Windows.Forms.Label();
@@ -2394,7 +2394,7 @@
             this.Wild_Setting.Controls.Add(this.TriggerMethod);
             this.Wild_Setting.Controls.Add(this.SOS);
             this.Wild_Setting.Controls.Add(this.SOSPanel);
-            this.Wild_Setting.Controls.Add(this.L_SOSRNGFrame);
+            this.Wild_Setting.Controls.Add(this.L_SOSRNGIndex);
             this.Wild_Setting.Controls.Add(this.SOSRNGFrame);
             this.Wild_Setting.Controls.Add(this.SOSRNGSeed);
             this.Wild_Setting.Controls.Add(this.L_SOSRNGSeed);
@@ -2587,16 +2587,16 @@
             this.L_Ally.TabIndex = 120;
             this.L_Ally.Text = "Ally";
             // 
-            // L_SOSRNGFrame
+            // L_SOSRNGIndex
             // 
-            this.L_SOSRNGFrame.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.L_SOSRNGFrame.AutoSize = true;
-            this.L_SOSRNGFrame.Location = new System.Drawing.Point(303, 157);
-            this.L_SOSRNGFrame.Name = "L_SOSRNGFrame";
-            this.L_SOSRNGFrame.Size = new System.Drawing.Size(36, 13);
-            this.L_SOSRNGFrame.TabIndex = 119;
-            this.L_SOSRNGFrame.Text = "Frame";
-            this.L_SOSRNGFrame.Visible = false;
+            this.L_SOSRNGIndex.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.L_SOSRNGIndex.AutoSize = true;
+            this.L_SOSRNGIndex.Location = new System.Drawing.Point(303, 157);
+            this.L_SOSRNGIndex.Name = "L_SOSRNGIndex";
+            this.L_SOSRNGIndex.Size = new System.Drawing.Size(33, 13);
+            this.L_SOSRNGIndex.TabIndex = 119;
+            this.L_SOSRNGIndex.Text = "Index";
+            this.L_SOSRNGIndex.Visible = false;
             // 
             // SOSRNGFrame
             // 
@@ -2813,6 +2813,7 @@
             0,
             0,
             0});
+            this.Lv_max.ValueChanged += new System.EventHandler(this.Lv_max_ValueChanged);
             // 
             // L_Lv
             // 
@@ -2835,6 +2836,7 @@
             0,
             0,
             0});
+            this.Lv_min.ValueChanged += new System.EventHandler(this.Lv_min_ValueChanged);
             // 
             // Night
             // 
@@ -5778,7 +5780,7 @@
         private System.Windows.Forms.ComboBox LeadAbility;
         private System.Windows.Forms.ToolStripMenuItem M_MiscRNGTool;
         private System.Windows.Forms.CheckBox ShinyRemind;
-        private System.Windows.Forms.Label L_SOSRNGFrame;
+        private System.Windows.Forms.Label L_SOSRNGIndex;
         private System.Windows.Forms.NumericUpDown SOSRNGFrame;
         private Controls.HexMaskedTextBox SOSRNGSeed;
         private System.Windows.Forms.Label L_SOSRNGSeed;
