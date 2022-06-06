@@ -1,14 +1,15 @@
 # Forked from wwwwwwzx/3DSRNGTool
 
-### Improvements
+### Improvements - Modifications
 
 - DexNav RNG: MT rng support in the main window. Accurate PID (reroll), correct gender and Unown support
 - Poke Radar RNG: Forced Shiny option for accurate PID (reroll - TinyMT dependent)
 - Horde RNG: HA selection in the main window instead of the Tiny Timeline Tool
-- SOS RNG: Level/Ignore Filtering in Misc Tool, fixed super effective, account for already perfect IVs, fixed some wrong SOS ally slots
+- SOS RNG: Index path finder, level/Ignore Filtering in Misc Tool, fixed super effective, account for already perfect IVs, fixed some wrong SOS ally slots
 - User can choose which IV value (0-31) counts as perfect
 - Fixed an unhandled exception in Gen6 Main Seed Finder
 - Fixed the startup error caused by the Update checker
+- Various minor changes
 
 # [Download](https://ci.appveyor.com/project/Bambo-Rambo/3dsrngtool/build/artifacts)
 ---
