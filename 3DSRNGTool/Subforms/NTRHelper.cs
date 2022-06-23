@@ -239,6 +239,7 @@ namespace Pk3DSRNGTool
 
             }
             B_Stop_Click(null, null);
+            Program.mainform.Focus();
         }
 
         private void B_A_Click(object sender, EventArgs e)
@@ -265,6 +266,15 @@ namespace Pk3DSRNGTool
             {
                 ntrclient.CheckSocket();
                 ntrclient.PressStart();
+            }
+            catch { }
+        }
+        private void B_Select_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ntrclient.CheckSocket();
+                ntrclient.PressSelect();
             }
             catch { }
         }

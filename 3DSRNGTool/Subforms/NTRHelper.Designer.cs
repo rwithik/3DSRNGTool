@@ -69,6 +69,7 @@
             this.L_Delay_4 = new System.Windows.Forms.Label();
             this.L_Delay_5 = new System.Windows.Forms.Label();
             this.ButtonGroupBox = new System.Windows.Forms.GroupBox();
+            this.B_Select = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.StopFrame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StartFrame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Speed)).BeginInit();
@@ -222,7 +223,7 @@
             // B_Start
             // 
             this.B_Start.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.B_Start.Location = new System.Drawing.Point(195, 24);
+            this.B_Start.Location = new System.Drawing.Point(158, 25);
             this.B_Start.Name = "B_Start";
             this.B_Start.Size = new System.Drawing.Size(75, 24);
             this.B_Start.TabIndex = 128;
@@ -233,7 +234,7 @@
             // B_B
             // 
             this.B_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.B_B.Location = new System.Drawing.Point(163, 24);
+            this.B_B.Location = new System.Drawing.Point(126, 25);
             this.B_B.Name = "B_B";
             this.B_B.Size = new System.Drawing.Size(26, 25);
             this.B_B.TabIndex = 127;
@@ -244,7 +245,7 @@
             // B_MashA
             // 
             this.B_MashA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.B_MashA.Location = new System.Drawing.Point(50, 25);
+            this.B_MashA.Location = new System.Drawing.Point(13, 26);
             this.B_MashA.Name = "B_MashA";
             this.B_MashA.Size = new System.Drawing.Size(75, 25);
             this.B_MashA.TabIndex = 125;
@@ -255,7 +256,7 @@
             // B_A
             // 
             this.B_A.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.B_A.Location = new System.Drawing.Point(131, 24);
+            this.B_A.Location = new System.Drawing.Point(94, 25);
             this.B_A.Name = "B_A";
             this.B_A.Size = new System.Drawing.Size(26, 25);
             this.B_A.TabIndex = 123;
@@ -267,7 +268,7 @@
             // 
             this.B_Stop.Enabled = false;
             this.B_Stop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.B_Stop.Location = new System.Drawing.Point(203, 385);
+            this.B_Stop.Location = new System.Drawing.Point(200, 385);
             this.B_Stop.Name = "B_Stop";
             this.B_Stop.Size = new System.Drawing.Size(75, 30);
             this.B_Stop.TabIndex = 124;
@@ -278,7 +279,7 @@
             // B_Begin
             // 
             this.B_Begin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.B_Begin.Location = new System.Drawing.Point(122, 385);
+            this.B_Begin.Location = new System.Drawing.Point(119, 385);
             this.B_Begin.Name = "B_Begin";
             this.B_Begin.Size = new System.Drawing.Size(75, 30);
             this.B_Begin.TabIndex = 123;
@@ -541,6 +542,7 @@
             // 
             // ButtonGroupBox
             // 
+            this.ButtonGroupBox.Controls.Add(this.B_Select);
             this.ButtonGroupBox.Controls.Add(this.B_MashA);
             this.ButtonGroupBox.Controls.Add(this.B_A);
             this.ButtonGroupBox.Controls.Add(this.B_Start);
@@ -551,6 +553,17 @@
             this.ButtonGroupBox.TabIndex = 133;
             this.ButtonGroupBox.TabStop = false;
             this.ButtonGroupBox.Text = "Buttons";
+            // 
+            // B_Select
+            // 
+            this.B_Select.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.B_Select.Location = new System.Drawing.Point(239, 25);
+            this.B_Select.Name = "B_Select";
+            this.B_Select.Size = new System.Drawing.Size(75, 24);
+            this.B_Select.TabIndex = 129;
+            this.B_Select.Text = "Select";
+            this.B_Select.UseVisualStyleBackColor = true;
+            this.B_Select.Click += new System.EventHandler(this.B_Select_Click);
             // 
             // NTRHelper
             // 
@@ -633,5 +646,6 @@
         private System.Windows.Forms.TabPage IDTab;
         private System.Windows.Forms.Label L_ID_Adv;
         private System.Windows.Forms.GroupBox ButtonGroupBox;
+        private System.Windows.Forms.Button B_Select;
     }
 }
