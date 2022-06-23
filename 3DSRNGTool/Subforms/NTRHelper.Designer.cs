@@ -38,7 +38,6 @@
             this.IP = new System.Windows.Forms.TextBox();
             this.NTR_Timer = new System.Windows.Forms.Timer(this.components);
             this.B_Help = new System.Windows.Forms.Button();
-            this.IDBot = new System.Windows.Forms.GroupBox();
             this.JPN = new System.Windows.Forms.CheckBox();
             this.L_Speed = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,9 +50,6 @@
             this.B_Stop = new System.Windows.Forms.Button();
             this.B_Begin = new System.Windows.Forms.Button();
             this.Speed = new System.Windows.Forms.NumericUpDown();
-            this.ID_R_Button = new System.Windows.Forms.RadioButton();
-            this.Seed_R_Button = new System.Windows.Forms.RadioButton();
-            this.SeedBOT = new System.Windows.Forms.GroupBox();
             this.ORAS_Button = new System.Windows.Forms.RadioButton();
             this.XY_Button = new System.Windows.Forms.RadioButton();
             this.L_Count = new System.Windows.Forms.Label();
@@ -63,21 +59,33 @@
             this.SeedDelay3 = new System.Windows.Forms.NumericUpDown();
             this.SeedDelay2 = new System.Windows.Forms.NumericUpDown();
             this.SeedDelay1 = new System.Windows.Forms.NumericUpDown();
-            this.IDBot.SuspendLayout();
+            this.BotList = new System.Windows.Forms.TabControl();
+            this.SeedTab = new System.Windows.Forms.TabPage();
+            this.IDTab = new System.Windows.Forms.TabPage();
+            this.L_ID_Adv = new System.Windows.Forms.Label();
+            this.L_Delay_1 = new System.Windows.Forms.Label();
+            this.L_Delay_2 = new System.Windows.Forms.Label();
+            this.L_Delay_3 = new System.Windows.Forms.Label();
+            this.L_Delay_4 = new System.Windows.Forms.Label();
+            this.L_Delay_5 = new System.Windows.Forms.Label();
+            this.ButtonGroupBox = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.StopFrame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StartFrame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Speed)).BeginInit();
-            this.SeedBOT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SeedDelay5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeedDelay4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeedDelay3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeedDelay2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeedDelay1)).BeginInit();
+            this.BotList.SuspendLayout();
+            this.SeedTab.SuspendLayout();
+            this.IDTab.SuspendLayout();
+            this.ButtonGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // B_OneClick
             // 
-            this.B_OneClick.Location = new System.Drawing.Point(188, 19);
+            this.B_OneClick.Location = new System.Drawing.Point(184, 34);
             this.B_OneClick.Name = "B_OneClick";
             this.B_OneClick.Size = new System.Drawing.Size(143, 25);
             this.B_OneClick.TabIndex = 120;
@@ -88,7 +96,7 @@
             // L_NTRLog
             // 
             this.L_NTRLog.AutoSize = true;
-            this.L_NTRLog.Location = new System.Drawing.Point(280, 65);
+            this.L_NTRLog.Location = new System.Drawing.Point(276, 80);
             this.L_NTRLog.Name = "L_NTRLog";
             this.L_NTRLog.Size = new System.Drawing.Size(38, 13);
             this.L_NTRLog.TabIndex = 116;
@@ -97,7 +105,7 @@
             // B_Disconnect
             // 
             this.B_Disconnect.Enabled = false;
-            this.B_Disconnect.Location = new System.Drawing.Point(188, 59);
+            this.B_Disconnect.Location = new System.Drawing.Point(184, 74);
             this.B_Disconnect.Name = "B_Disconnect";
             this.B_Disconnect.Size = new System.Drawing.Size(69, 25);
             this.B_Disconnect.TabIndex = 117;
@@ -107,7 +115,7 @@
             // 
             // B_Connect
             // 
-            this.B_Connect.Location = new System.Drawing.Point(98, 59);
+            this.B_Connect.Location = new System.Drawing.Point(94, 74);
             this.B_Connect.Name = "B_Connect";
             this.B_Connect.Size = new System.Drawing.Size(69, 25);
             this.B_Connect.TabIndex = 114;
@@ -118,7 +126,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(49, 25);
+            this.label18.Location = new System.Drawing.Point(45, 40);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(17, 13);
             this.label18.TabIndex = 113;
@@ -127,7 +135,7 @@
             // IP
             // 
             this.IP.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IP.Location = new System.Drawing.Point(72, 21);
+            this.IP.Location = new System.Drawing.Point(68, 36);
             this.IP.Name = "IP";
             this.IP.Size = new System.Drawing.Size(102, 22);
             this.IP.TabIndex = 112;
@@ -140,32 +148,17 @@
             // B_Help
             // 
             this.B_Help.Image = global::Pk3DSRNGTool.Properties.Resources.Info;
-            this.B_Help.Location = new System.Drawing.Point(337, 19);
+            this.B_Help.Location = new System.Drawing.Point(333, 34);
             this.B_Help.Name = "B_Help";
             this.B_Help.Size = new System.Drawing.Size(27, 25);
             this.B_Help.TabIndex = 121;
             this.B_Help.UseVisualStyleBackColor = true;
             this.B_Help.Click += new System.EventHandler(this.B_Help_Click);
             // 
-            // IDBot
-            // 
-            this.IDBot.Controls.Add(this.JPN);
-            this.IDBot.Controls.Add(this.L_Speed);
-            this.IDBot.Controls.Add(this.label1);
-            this.IDBot.Controls.Add(this.StopFrame);
-            this.IDBot.Controls.Add(this.StartFrame);
-            this.IDBot.Enabled = false;
-            this.IDBot.Location = new System.Drawing.Point(69, 90);
-            this.IDBot.Name = "IDBot";
-            this.IDBot.Size = new System.Drawing.Size(335, 77);
-            this.IDBot.TabIndex = 122;
-            this.IDBot.TabStop = false;
-            this.IDBot.Text = "ID Bot";
-            // 
             // JPN
             // 
             this.JPN.AutoSize = true;
-            this.JPN.Location = new System.Drawing.Point(252, 0);
+            this.JPN.Location = new System.Drawing.Point(20, 112);
             this.JPN.Name = "JPN";
             this.JPN.Size = new System.Drawing.Size(46, 17);
             this.JPN.TabIndex = 126;
@@ -175,7 +168,7 @@
             // L_Speed
             // 
             this.L_Speed.AutoSize = true;
-            this.L_Speed.Location = new System.Drawing.Point(201, 32);
+            this.L_Speed.Location = new System.Drawing.Point(17, 73);
             this.L_Speed.Name = "L_Speed";
             this.L_Speed.Size = new System.Drawing.Size(57, 13);
             this.L_Speed.TabIndex = 123;
@@ -184,7 +177,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(97, 33);
+            this.label1.Location = new System.Drawing.Point(167, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(16, 13);
             this.label1.TabIndex = 100;
@@ -193,7 +186,7 @@
             // StopFrame
             // 
             this.StopFrame.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StopFrame.Location = new System.Drawing.Point(115, 28);
+            this.StopFrame.Location = new System.Drawing.Point(185, 25);
             this.StopFrame.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -211,7 +204,7 @@
             // StartFrame
             // 
             this.StartFrame.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StartFrame.Location = new System.Drawing.Point(18, 28);
+            this.StartFrame.Location = new System.Drawing.Point(88, 25);
             this.StartFrame.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -228,7 +221,8 @@
             // 
             // B_Start
             // 
-            this.B_Start.Location = new System.Drawing.Point(297, 357);
+            this.B_Start.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.B_Start.Location = new System.Drawing.Point(195, 24);
             this.B_Start.Name = "B_Start";
             this.B_Start.Size = new System.Drawing.Size(75, 24);
             this.B_Start.TabIndex = 128;
@@ -238,7 +232,8 @@
             // 
             // B_B
             // 
-            this.B_B.Location = new System.Drawing.Point(376, 356);
+            this.B_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.B_B.Location = new System.Drawing.Point(163, 24);
             this.B_B.Name = "B_B";
             this.B_B.Size = new System.Drawing.Size(26, 25);
             this.B_B.TabIndex = 127;
@@ -248,17 +243,19 @@
             // 
             // B_MashA
             // 
-            this.B_MashA.Location = new System.Drawing.Point(297, 326);
+            this.B_MashA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.B_MashA.Location = new System.Drawing.Point(50, 25);
             this.B_MashA.Name = "B_MashA";
             this.B_MashA.Size = new System.Drawing.Size(75, 25);
             this.B_MashA.TabIndex = 125;
-            this.B_MashA.Text = "MashA";
+            this.B_MashA.Text = "Mash A";
             this.B_MashA.UseVisualStyleBackColor = true;
             this.B_MashA.Click += new System.EventHandler(this.B_MashA_Click);
             // 
             // B_A
             // 
-            this.B_A.Location = new System.Drawing.Point(376, 326);
+            this.B_A.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.B_A.Location = new System.Drawing.Point(131, 24);
             this.B_A.Name = "B_A";
             this.B_A.Size = new System.Drawing.Size(26, 25);
             this.B_A.TabIndex = 123;
@@ -269,10 +266,10 @@
             // B_Stop
             // 
             this.B_Stop.Enabled = false;
-            this.B_Stop.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.B_Stop.Location = new System.Drawing.Point(183, 326);
+            this.B_Stop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.B_Stop.Location = new System.Drawing.Point(203, 385);
             this.B_Stop.Name = "B_Stop";
-            this.B_Stop.Size = new System.Drawing.Size(108, 55);
+            this.B_Stop.Size = new System.Drawing.Size(75, 30);
             this.B_Stop.TabIndex = 124;
             this.B_Stop.Text = "Stop";
             this.B_Stop.UseVisualStyleBackColor = true;
@@ -280,10 +277,10 @@
             // 
             // B_Begin
             // 
-            this.B_Begin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.B_Begin.Location = new System.Drawing.Point(69, 326);
+            this.B_Begin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.B_Begin.Location = new System.Drawing.Point(122, 385);
             this.B_Begin.Name = "B_Begin";
-            this.B_Begin.Size = new System.Drawing.Size(108, 55);
+            this.B_Begin.Size = new System.Drawing.Size(75, 30);
             this.B_Begin.TabIndex = 123;
             this.B_Begin.Text = "Begin";
             this.B_Begin.UseVisualStyleBackColor = true;
@@ -291,7 +288,7 @@
             // 
             // Speed
             // 
-            this.Speed.Location = new System.Drawing.Point(333, 119);
+            this.Speed.Location = new System.Drawing.Point(88, 71);
             this.Speed.Maximum = new decimal(new int[] {
             5,
             0,
@@ -306,51 +303,10 @@
             0,
             0});
             // 
-            // ID_R_Button
-            // 
-            this.ID_R_Button.AutoSize = true;
-            this.ID_R_Button.Location = new System.Drawing.Point(12, 105);
-            this.ID_R_Button.Name = "ID_R_Button";
-            this.ID_R_Button.Size = new System.Drawing.Size(36, 17);
-            this.ID_R_Button.TabIndex = 129;
-            this.ID_R_Button.Text = "ID";
-            this.ID_R_Button.UseVisualStyleBackColor = true;
-            this.ID_R_Button.CheckedChanged += new System.EventHandler(this.ID_R_Button_CheckedChanged);
-            // 
-            // Seed_R_Button
-            // 
-            this.Seed_R_Button.AutoSize = true;
-            this.Seed_R_Button.Checked = true;
-            this.Seed_R_Button.Location = new System.Drawing.Point(12, 199);
-            this.Seed_R_Button.Name = "Seed_R_Button";
-            this.Seed_R_Button.Size = new System.Drawing.Size(50, 17);
-            this.Seed_R_Button.TabIndex = 130;
-            this.Seed_R_Button.TabStop = true;
-            this.Seed_R_Button.Text = "Seed";
-            this.Seed_R_Button.UseVisualStyleBackColor = true;
-            // 
-            // SeedBOT
-            // 
-            this.SeedBOT.Controls.Add(this.ORAS_Button);
-            this.SeedBOT.Controls.Add(this.XY_Button);
-            this.SeedBOT.Controls.Add(this.L_Count);
-            this.SeedBOT.Controls.Add(this.L_Reseed);
-            this.SeedBOT.Controls.Add(this.SeedDelay5);
-            this.SeedBOT.Controls.Add(this.SeedDelay4);
-            this.SeedBOT.Controls.Add(this.SeedDelay3);
-            this.SeedBOT.Controls.Add(this.SeedDelay2);
-            this.SeedBOT.Controls.Add(this.SeedDelay1);
-            this.SeedBOT.Location = new System.Drawing.Point(69, 181);
-            this.SeedBOT.Name = "SeedBOT";
-            this.SeedBOT.Size = new System.Drawing.Size(335, 139);
-            this.SeedBOT.TabIndex = 131;
-            this.SeedBOT.TabStop = false;
-            this.SeedBOT.Text = "Seed Bot";
-            // 
             // ORAS_Button
             // 
             this.ORAS_Button.AutoSize = true;
-            this.ORAS_Button.Location = new System.Drawing.Point(158, 18);
+            this.ORAS_Button.Location = new System.Drawing.Point(240, 14);
             this.ORAS_Button.Name = "ORAS_Button";
             this.ORAS_Button.Size = new System.Drawing.Size(55, 17);
             this.ORAS_Button.TabIndex = 132;
@@ -361,7 +317,7 @@
             // 
             this.XY_Button.AutoSize = true;
             this.XY_Button.Checked = true;
-            this.XY_Button.Location = new System.Drawing.Point(97, 18);
+            this.XY_Button.Location = new System.Drawing.Point(179, 14);
             this.XY_Button.Name = "XY_Button";
             this.XY_Button.Size = new System.Drawing.Size(39, 17);
             this.XY_Button.TabIndex = 131;
@@ -373,7 +329,7 @@
             // L_Count
             // 
             this.L_Count.AutoSize = true;
-            this.L_Count.Location = new System.Drawing.Point(301, 114);
+            this.L_Count.Location = new System.Drawing.Point(268, 67);
             this.L_Count.Name = "L_Count";
             this.L_Count.Size = new System.Drawing.Size(13, 13);
             this.L_Count.TabIndex = 6;
@@ -382,7 +338,7 @@
             // L_Reseed
             // 
             this.L_Reseed.AutoSize = true;
-            this.L_Reseed.Location = new System.Drawing.Point(217, 114);
+            this.L_Reseed.Location = new System.Drawing.Point(189, 67);
             this.L_Reseed.Name = "L_Reseed";
             this.L_Reseed.Size = new System.Drawing.Size(81, 13);
             this.L_Reseed.TabIndex = 5;
@@ -391,7 +347,7 @@
             // SeedDelay5
             // 
             this.SeedDelay5.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.SeedDelay5.Location = new System.Drawing.Point(264, 68);
+            this.SeedDelay5.Location = new System.Drawing.Point(95, 121);
             this.SeedDelay5.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -409,7 +365,7 @@
             // SeedDelay4
             // 
             this.SeedDelay4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.SeedDelay4.Location = new System.Drawing.Point(203, 68);
+            this.SeedDelay4.Location = new System.Drawing.Point(95, 93);
             this.SeedDelay4.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -427,7 +383,7 @@
             // SeedDelay3
             // 
             this.SeedDelay3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.SeedDelay3.Location = new System.Drawing.Point(142, 68);
+            this.SeedDelay3.Location = new System.Drawing.Point(95, 65);
             this.SeedDelay3.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -445,7 +401,7 @@
             // SeedDelay2
             // 
             this.SeedDelay2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.SeedDelay2.Location = new System.Drawing.Point(81, 68);
+            this.SeedDelay2.Location = new System.Drawing.Point(95, 37);
             this.SeedDelay2.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -463,7 +419,7 @@
             // SeedDelay1
             // 
             this.SeedDelay1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.SeedDelay1.Location = new System.Drawing.Point(20, 68);
+            this.SeedDelay1.Location = new System.Drawing.Point(95, 9);
             this.SeedDelay1.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -478,20 +434,131 @@
             0,
             0});
             // 
+            // BotList
+            // 
+            this.BotList.Controls.Add(this.SeedTab);
+            this.BotList.Controls.Add(this.IDTab);
+            this.BotList.Location = new System.Drawing.Point(40, 118);
+            this.BotList.Name = "BotList";
+            this.BotList.SelectedIndex = 0;
+            this.BotList.Size = new System.Drawing.Size(326, 178);
+            this.BotList.TabIndex = 132;
+            // 
+            // SeedTab
+            // 
+            this.SeedTab.Controls.Add(this.ORAS_Button);
+            this.SeedTab.Controls.Add(this.L_Delay_5);
+            this.SeedTab.Controls.Add(this.XY_Button);
+            this.SeedTab.Controls.Add(this.L_Delay_4);
+            this.SeedTab.Controls.Add(this.L_Delay_3);
+            this.SeedTab.Controls.Add(this.L_Delay_2);
+            this.SeedTab.Controls.Add(this.L_Delay_1);
+            this.SeedTab.Controls.Add(this.SeedDelay4);
+            this.SeedTab.Controls.Add(this.SeedDelay1);
+            this.SeedTab.Controls.Add(this.L_Count);
+            this.SeedTab.Controls.Add(this.SeedDelay2);
+            this.SeedTab.Controls.Add(this.L_Reseed);
+            this.SeedTab.Controls.Add(this.SeedDelay3);
+            this.SeedTab.Controls.Add(this.SeedDelay5);
+            this.SeedTab.Location = new System.Drawing.Point(4, 22);
+            this.SeedTab.Name = "SeedTab";
+            this.SeedTab.Padding = new System.Windows.Forms.Padding(3);
+            this.SeedTab.Size = new System.Drawing.Size(318, 152);
+            this.SeedTab.TabIndex = 0;
+            this.SeedTab.Text = "Seed Bot";
+            this.SeedTab.UseVisualStyleBackColor = true;
+            // 
+            // IDTab
+            // 
+            this.IDTab.Controls.Add(this.L_ID_Adv);
+            this.IDTab.Controls.Add(this.JPN);
+            this.IDTab.Controls.Add(this.StopFrame);
+            this.IDTab.Controls.Add(this.Speed);
+            this.IDTab.Controls.Add(this.StartFrame);
+            this.IDTab.Controls.Add(this.label1);
+            this.IDTab.Controls.Add(this.L_Speed);
+            this.IDTab.Location = new System.Drawing.Point(4, 22);
+            this.IDTab.Name = "IDTab";
+            this.IDTab.Padding = new System.Windows.Forms.Padding(3);
+            this.IDTab.Size = new System.Drawing.Size(318, 152);
+            this.IDTab.TabIndex = 1;
+            this.IDTab.Text = "ID Bot";
+            this.IDTab.UseVisualStyleBackColor = true;
+            // 
+            // L_ID_Adv
+            // 
+            this.L_ID_Adv.AutoSize = true;
+            this.L_ID_Adv.Location = new System.Drawing.Point(17, 27);
+            this.L_ID_Adv.Name = "L_ID_Adv";
+            this.L_ID_Adv.Size = new System.Drawing.Size(55, 13);
+            this.L_ID_Adv.TabIndex = 127;
+            this.L_ID_Adv.Text = "Advances";
+            // 
+            // L_Delay_1
+            // 
+            this.L_Delay_1.AutoSize = true;
+            this.L_Delay_1.Location = new System.Drawing.Point(31, 11);
+            this.L_Delay_1.Name = "L_Delay_1";
+            this.L_Delay_1.Size = new System.Drawing.Size(43, 13);
+            this.L_Delay_1.TabIndex = 7;
+            this.L_Delay_1.Text = "Delay 1";
+            // 
+            // L_Delay_2
+            // 
+            this.L_Delay_2.AutoSize = true;
+            this.L_Delay_2.Location = new System.Drawing.Point(31, 39);
+            this.L_Delay_2.Name = "L_Delay_2";
+            this.L_Delay_2.Size = new System.Drawing.Size(43, 13);
+            this.L_Delay_2.TabIndex = 8;
+            this.L_Delay_2.Text = "Delay 2";
+            // 
+            // L_Delay_3
+            // 
+            this.L_Delay_3.AutoSize = true;
+            this.L_Delay_3.Location = new System.Drawing.Point(31, 67);
+            this.L_Delay_3.Name = "L_Delay_3";
+            this.L_Delay_3.Size = new System.Drawing.Size(43, 13);
+            this.L_Delay_3.TabIndex = 9;
+            this.L_Delay_3.Text = "Delay 3";
+            // 
+            // L_Delay_4
+            // 
+            this.L_Delay_4.AutoSize = true;
+            this.L_Delay_4.Location = new System.Drawing.Point(31, 95);
+            this.L_Delay_4.Name = "L_Delay_4";
+            this.L_Delay_4.Size = new System.Drawing.Size(43, 13);
+            this.L_Delay_4.TabIndex = 10;
+            this.L_Delay_4.Text = "Delay 4";
+            // 
+            // L_Delay_5
+            // 
+            this.L_Delay_5.AutoSize = true;
+            this.L_Delay_5.Location = new System.Drawing.Point(31, 123);
+            this.L_Delay_5.Name = "L_Delay_5";
+            this.L_Delay_5.Size = new System.Drawing.Size(43, 13);
+            this.L_Delay_5.TabIndex = 11;
+            this.L_Delay_5.Text = "Delay 5";
+            // 
+            // ButtonGroupBox
+            // 
+            this.ButtonGroupBox.Controls.Add(this.B_MashA);
+            this.ButtonGroupBox.Controls.Add(this.B_A);
+            this.ButtonGroupBox.Controls.Add(this.B_Start);
+            this.ButtonGroupBox.Controls.Add(this.B_B);
+            this.ButtonGroupBox.Location = new System.Drawing.Point(40, 302);
+            this.ButtonGroupBox.Name = "ButtonGroupBox";
+            this.ButtonGroupBox.Size = new System.Drawing.Size(324, 67);
+            this.ButtonGroupBox.TabIndex = 133;
+            this.ButtonGroupBox.TabStop = false;
+            this.ButtonGroupBox.Text = "Buttons";
+            // 
             // NTRHelper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(414, 396);
-            this.Controls.Add(this.SeedBOT);
-            this.Controls.Add(this.Seed_R_Button);
-            this.Controls.Add(this.ID_R_Button);
-            this.Controls.Add(this.B_Start);
-            this.Controls.Add(this.B_MashA);
-            this.Controls.Add(this.B_B);
-            this.Controls.Add(this.B_A);
-            this.Controls.Add(this.Speed);
-            this.Controls.Add(this.IDBot);
+            this.ClientSize = new System.Drawing.Size(414, 436);
+            this.Controls.Add(this.ButtonGroupBox);
+            this.Controls.Add(this.BotList);
             this.Controls.Add(this.B_Stop);
             this.Controls.Add(this.B_Help);
             this.Controls.Add(this.B_Begin);
@@ -501,23 +568,25 @@
             this.Controls.Add(this.B_Connect);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.IP);
-            this.MaximumSize = new System.Drawing.Size(430, 435);
-            this.MinimumSize = new System.Drawing.Size(430, 435);
+            this.MaximumSize = new System.Drawing.Size(430, 475);
+            this.MinimumSize = new System.Drawing.Size(430, 475);
             this.Name = "NTRHelper";
             this.Text = "NTRHelper";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NTRHelper_FormClosing);
-            this.IDBot.ResumeLayout(false);
-            this.IDBot.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StopFrame)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StartFrame)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Speed)).EndInit();
-            this.SeedBOT.ResumeLayout(false);
-            this.SeedBOT.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SeedDelay5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeedDelay4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeedDelay3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeedDelay2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeedDelay1)).EndInit();
+            this.BotList.ResumeLayout(false);
+            this.SeedTab.ResumeLayout(false);
+            this.SeedTab.PerformLayout();
+            this.IDTab.ResumeLayout(false);
+            this.IDTab.PerformLayout();
+            this.ButtonGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -533,7 +602,6 @@
         private System.Windows.Forms.TextBox IP;
         private System.Windows.Forms.Timer NTR_Timer;
         private System.Windows.Forms.Button B_Help;
-        private System.Windows.Forms.GroupBox IDBot;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown StopFrame;
         private System.Windows.Forms.NumericUpDown StartFrame;
@@ -546,9 +614,6 @@
         private System.Windows.Forms.CheckBox JPN;
         private System.Windows.Forms.Button B_Start;
         private System.Windows.Forms.Button B_B;
-        private System.Windows.Forms.RadioButton ID_R_Button;
-        private System.Windows.Forms.RadioButton Seed_R_Button;
-        private System.Windows.Forms.GroupBox SeedBOT;
         private System.Windows.Forms.NumericUpDown SeedDelay5;
         private System.Windows.Forms.NumericUpDown SeedDelay4;
         private System.Windows.Forms.NumericUpDown SeedDelay3;
@@ -558,5 +623,15 @@
         private System.Windows.Forms.Label L_Count;
         private System.Windows.Forms.RadioButton ORAS_Button;
         private System.Windows.Forms.RadioButton XY_Button;
+        private System.Windows.Forms.TabControl BotList;
+        private System.Windows.Forms.TabPage SeedTab;
+        private System.Windows.Forms.Label L_Delay_5;
+        private System.Windows.Forms.Label L_Delay_4;
+        private System.Windows.Forms.Label L_Delay_3;
+        private System.Windows.Forms.Label L_Delay_2;
+        private System.Windows.Forms.Label L_Delay_1;
+        private System.Windows.Forms.TabPage IDTab;
+        private System.Windows.Forms.Label L_ID_Adv;
+        private System.Windows.Forms.GroupBox ButtonGroupBox;
     }
 }

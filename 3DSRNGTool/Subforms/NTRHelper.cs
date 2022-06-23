@@ -115,11 +115,6 @@ namespace Pk3DSRNGTool
             B_Stop.Enabled = true;
         }
 
-        private void ID_R_Button_CheckedChanged(object sender, EventArgs e)
-        {
-            IDBot.Enabled = ID_R_Button.Checked;
-            SeedBOT.Enabled = !ID_R_Button.Checked;
-        }
         private void XY_Button_CheckedChanged(object sender, EventArgs e)
         {
             SeedDelay1.Value = XY_Button.Checked ? 2100 : 2500;
@@ -132,7 +127,7 @@ namespace Pk3DSRNGTool
         {
             try
             {
-                if (ID_R_Button.Checked)
+                if (BotList.SelectedIndex == 1)
                 {
                     int Ver = Program.mainform.Ver;
                     if (Ver < 2 || Ver == 4) // XY or transporter
@@ -221,18 +216,15 @@ namespace Pk3DSRNGTool
             uint Count = 0;
             while (Botting && Program.mainform.DGV.Rows.Count == 0)
             {
+
                 Count++;
                 await Task.Delay(100);
 
                 B_B.PerformClick();
                 await Task.Delay((int)SeedDelay1.Value);
 
-
-
-
                 B_Start.PerformClick();
                 await Task.Delay((int)SeedDelay2.Value);
-
 
                 B_OneClick.PerformClick();
                 await Task.Delay((int)SeedDelay3.Value);
@@ -244,9 +236,6 @@ namespace Pk3DSRNGTool
 
                 B_Disconnect.PerformClick();
                 await Task.Delay((int)SeedDelay5.Value);
-
-
-
 
             }
             B_Stop_Click(null, null);
