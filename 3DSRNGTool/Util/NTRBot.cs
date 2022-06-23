@@ -23,6 +23,7 @@ namespace Pk3DSRNGTool
         private const ushort keyA = 0xFFE;
         private const ushort keyB = 0xFFD;
         private const ushort keyStart = 0xFF7;
+        private const ushort keySelect = 0xFFB;
 
         private const uint TouchscrOff = 0x10DF24;
         private const uint touchEnter_U = 0x01707C70;
@@ -93,6 +94,7 @@ namespace Pk3DSRNGTool
         public void PressA() => QuickButton(keyA);
         public void PressB() => QuickButton(keyB);
         public void PressStart() => QuickButton(keyStart);
+        public void PressSelect() => QuickButton(keySelect);
         public void TouchCenter() => QuickTouch(touchCenter);
         public void Confirm(bool JP) => QuickTouch(JP ? touchEnter_J : touchEnter_U);
     }
