@@ -728,6 +728,7 @@ namespace Pk3DSRNGTool
         {
             Properties.Settings.Default.GameVersion = (byte)Gameversion.SelectedIndex;
             miscrngtool.UpdateInfo(updategame: !Initializing);
+            ntrhelper?.SetGame((byte)Ver);
             L_GenderList.Visible = GenderList.Visible = IsTransporter;
             byte currentgen = (byte)(Gen6 ? 6 : IsUltra ? 8 : 7);
             if (currentgen != lastgen)

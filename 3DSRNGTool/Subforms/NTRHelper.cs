@@ -23,6 +23,14 @@ namespace Pk3DSRNGTool
             this.Parent = null;
             e.Cancel = true;
         }
+        public void SetGame(byte Version)
+        {
+            if (Version < 2)
+                XY_Button.Checked = true;
+            else if (Version < 4)
+                ORAS_Button.Checked = true;
+
+        }
 
         public void Connect(bool OneClick)
         {
@@ -41,7 +49,7 @@ namespace Pk3DSRNGTool
             catch
             {
                 OnDisconnected(false);
-                FormUtil.Error("Unable to connect the console");
+                //FormUtil.Error("Unable to connect the console");
             }
         }
 
@@ -99,33 +107,55 @@ namespace Pk3DSRNGTool
         private void B_Help_Click(object sender, EventArgs e) =>
             System.Diagnostics.Process.Start(StringItem.GITHUB + "wiki/NTR-Helper-Usage");
 
-        #region IDBot
+        #region Bots
         private void Start()
         {
             ntrclient.CheckSocket();
-            B_MashA.Enabled = B_A.Enabled = B_Start.Enabled = false;
+            B_MashA.Enabled = B_A.Enabled = B_Begin.Enabled = false;
             B_Stop.Enabled = true;
         }
 
+        private void ID_R_Button_CheckedChanged(object sender, EventArgs e)
+        {
+            IDBot.Enabled = ID_R_Button.Checked;
+            SeedBOT.Enabled = !ID_R_Button.Checked;
+        }
+        private void XY_Button_CheckedChanged(object sender, EventArgs e)
+        {
+            SeedDelay1.Value = XY_Button.Checked ? 2100 : 2500;
+            SeedDelay2.Value = XY_Button.Checked ? 1300 : 1200;
+            SeedDelay3.Value = XY_Button.Checked ? 900 : 800;
+            SeedDelay4.Value = XY_Button.Checked ? 1600 : 3500;
+            SeedDelay5.Value = XY_Button.Checked ? 100 : 1000;
+        }
         private void B_Start_Click(object sender, EventArgs e)
         {
             try
             {
-                int Ver = Program.mainform.Ver;
-                if (Ver < 2 || Ver == 4) // XY or transporter
-                    return;
-                Start();
-                if (Ver > 4)
-                    G7IDBot();
-                if (Ver < 4)
-                    G6IDBot();
+                if (ID_R_Button.Checked)
+                {
+                    int Ver = Program.mainform.Ver;
+                    if (Ver < 2 || Ver == 4) // XY or transporter
+                        return;
+                    Start();
+                    if (Ver > 4)
+                        G7IDBot();
+                    if (Ver < 4)
+                        G6IDBot();
+                }
+                else
+                {
+                    Start();
+                    G6SeedBot();
+                }
+                
             }
             catch { }
         }
 
         private void B_Stop_Click(object sender, EventArgs e)
         {
-            B_MashA.Enabled = B_A.Enabled = B_Start.Enabled = true;
+            B_MashA.Enabled = B_A.Enabled = B_Begin.Enabled = true;
             B_Stop.Enabled = false;
             ntrclient.disconnect();
         }
@@ -185,9 +215,69 @@ namespace Pk3DSRNGTool
             B_Stop_Click(null, null);
         }
 
+        private async void G6SeedBot()
+        {
+            L_Count.Text = "0";
+            uint Count = 0;
+            while (Botting && Program.mainform.DGV.Rows.Count == 0)
+            {
+                Count++;
+                await Task.Delay(100);
+
+                B_B.PerformClick();
+                await Task.Delay((int)SeedDelay1.Value);
+
+
+
+
+                B_Start.PerformClick();
+                await Task.Delay((int)SeedDelay2.Value);
+
+
+                B_OneClick.PerformClick();
+                await Task.Delay((int)SeedDelay3.Value);
+
+                B_OneClick.PerformClick();
+                await Task.Delay((int)SeedDelay4.Value);
+
+                L_Count.Text = Count.ToString();
+
+                B_Disconnect.PerformClick();
+                await Task.Delay((int)SeedDelay5.Value);
+
+
+
+
+            }
+            B_Stop_Click(null, null);
+        }
+
         private void B_A_Click(object sender, EventArgs e)
         {
-            try { ntrclient.CheckSocket(); ntrclient.PressA(); } catch { }
+            try 
+            { 
+                ntrclient.CheckSocket(); 
+                ntrclient.PressA(); 
+            } 
+            catch { }
+        }
+        private void B_B_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ntrclient.CheckSocket();
+                ntrclient.PressB();
+            }
+            catch { }
+        }
+        private void B_Start_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                ntrclient.CheckSocket();
+                ntrclient.PressStart();
+            }
+            catch { }
         }
         private void B_MashA_Click(object sender, EventArgs e)
         {
@@ -202,5 +292,6 @@ namespace Pk3DSRNGTool
             }
         }
         #endregion
+
     }
 }

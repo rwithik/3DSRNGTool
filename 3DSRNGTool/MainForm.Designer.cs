@@ -5475,7 +5475,7 @@
         private System.Windows.Forms.ToolStripMenuItem SetAsCurrent;
         private System.Windows.Forms.ToolStripMenuItem SetAsAfter;
         private System.Windows.Forms.ToolTip DGVToolTip;
-        private System.Windows.Forms.DataGridView DGV;
+        public System.Windows.Forms.DataGridView DGV;
         private System.Windows.Forms.ToolStripMenuItem SetAsStarting;
         private System.Windows.Forms.MenuStrip MS_Toolkit;
         private System.Windows.Forms.ToolStripMenuItem M_Tool;
