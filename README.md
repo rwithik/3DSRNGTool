@@ -2,6 +2,7 @@
 
 ### Improvements - Modifications
 
+- Gen 6 Initial Seed Bot **(Not Completed, use at your own risk)**
 - DexNav RNG: MT rng support in the main window. Accurate PID (reroll), correct gender and Unown support
 - Poke Radar RNG: Forced Shiny option for accurate PID (reroll - TinyMT dependent)
 - Horde RNG: HA selection in the main window instead of the Tiny Timeline Tool
