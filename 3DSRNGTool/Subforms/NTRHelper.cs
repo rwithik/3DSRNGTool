@@ -117,11 +117,11 @@ namespace Pk3DSRNGTool
 
         private void XY_Button_CheckedChanged(object sender, EventArgs e)
         {
-            SeedDelay1.Value = XY_Button.Checked ? 2100 : 2500;
-            SeedDelay2.Value = XY_Button.Checked ? 1300 : 1200;
-            SeedDelay3.Value = XY_Button.Checked ? 900 : 800;
-            SeedDelay4.Value = XY_Button.Checked ? 1600 : 3500;
-            SeedDelay5.Value = XY_Button.Checked ? 100 : 1000;
+            SeedDelay1.Value = XY_Button.Checked ? 1800 : 2500;
+            SeedDelay2.Value = XY_Button.Checked ? 1100 : 1600;
+            SeedDelay3.Value = XY_Button.Checked ? 800 : 1200;
+            SeedDelay4.Value = XY_Button.Checked ? 1500 : 2000;
+            SeedDelay5.Value = XY_Button.Checked ? 300 : 600;
         }
         private void B_Start_Click(object sender, EventArgs e)
         {
@@ -220,22 +220,22 @@ namespace Pk3DSRNGTool
                 Count++;
                 await Task.Delay(100);
 
-                B_B.PerformClick();
-                await Task.Delay((int)SeedDelay1.Value);
+                B_B.PerformClick();                             //B
+                await Task.Delay((int)SeedDelay1.Value);        //1800?
 
-                B_Start.PerformClick();
-                await Task.Delay((int)SeedDelay2.Value);
+                B_Start.PerformClick();                         //Start
+                await Task.Delay((int)SeedDelay2.Value);        //1100?
 
-                B_OneClick.PerformClick();
-                await Task.Delay((int)SeedDelay3.Value);
+                B_OneClick.PerformClick();                      //Connect fails
+                await Task.Delay((int)SeedDelay3.Value);        //800?
 
-                B_OneClick.PerformClick();
-                await Task.Delay((int)SeedDelay4.Value);
+                B_OneClick.PerformClick();                      //Connect succeeds, read seed
+                await Task.Delay((int)SeedDelay4.Value);        //1500?
 
                 L_Count.Text = Count.ToString();
 
-                B_Disconnect.PerformClick();
-                await Task.Delay((int)SeedDelay5.Value);
+                B_Disconnect.PerformClick();                    //Disconnect, allow Rosalina inputs
+                await Task.Delay((int)SeedDelay5.Value);        //300?
 
             }
             B_Stop_Click(null, null);

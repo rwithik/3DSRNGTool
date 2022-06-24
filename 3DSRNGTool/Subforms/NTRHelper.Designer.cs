@@ -61,15 +61,16 @@
             this.SeedDelay1 = new System.Windows.Forms.NumericUpDown();
             this.BotList = new System.Windows.Forms.TabControl();
             this.SeedTab = new System.Windows.Forms.TabPage();
+            this.L_Delay_5 = new System.Windows.Forms.Label();
+            this.L_Delay_4 = new System.Windows.Forms.Label();
+            this.L_Delay_3 = new System.Windows.Forms.Label();
+            this.L_Delay_2 = new System.Windows.Forms.Label();
+            this.L_Delay_1 = new System.Windows.Forms.Label();
             this.IDTab = new System.Windows.Forms.TabPage();
             this.L_ID_Adv = new System.Windows.Forms.Label();
-            this.L_Delay_1 = new System.Windows.Forms.Label();
-            this.L_Delay_2 = new System.Windows.Forms.Label();
-            this.L_Delay_3 = new System.Windows.Forms.Label();
-            this.L_Delay_4 = new System.Windows.Forms.Label();
-            this.L_Delay_5 = new System.Windows.Forms.Label();
             this.ButtonGroupBox = new System.Windows.Forms.GroupBox();
             this.B_Select = new System.Windows.Forms.Button();
+            this.BotsGroupBox = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.StopFrame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StartFrame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Speed)).BeginInit();
@@ -82,6 +83,7 @@
             this.SeedTab.SuspendLayout();
             this.IDTab.SuspendLayout();
             this.ButtonGroupBox.SuspendLayout();
+            this.BotsGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // B_OneClick
@@ -222,10 +224,10 @@
             // 
             // B_Start
             // 
-            this.B_Start.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.B_Start.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.B_Start.Location = new System.Drawing.Point(158, 25);
             this.B_Start.Name = "B_Start";
-            this.B_Start.Size = new System.Drawing.Size(75, 24);
+            this.B_Start.Size = new System.Drawing.Size(75, 28);
             this.B_Start.TabIndex = 128;
             this.B_Start.Text = "Start";
             this.B_Start.UseVisualStyleBackColor = true;
@@ -233,10 +235,10 @@
             // 
             // B_B
             // 
-            this.B_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.B_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.B_B.Location = new System.Drawing.Point(126, 25);
             this.B_B.Name = "B_B";
-            this.B_B.Size = new System.Drawing.Size(26, 25);
+            this.B_B.Size = new System.Drawing.Size(26, 28);
             this.B_B.TabIndex = 127;
             this.B_B.Text = "B";
             this.B_B.UseVisualStyleBackColor = true;
@@ -244,10 +246,10 @@
             // 
             // B_MashA
             // 
-            this.B_MashA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.B_MashA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.B_MashA.Location = new System.Drawing.Point(13, 26);
             this.B_MashA.Name = "B_MashA";
-            this.B_MashA.Size = new System.Drawing.Size(75, 25);
+            this.B_MashA.Size = new System.Drawing.Size(75, 27);
             this.B_MashA.TabIndex = 125;
             this.B_MashA.Text = "Mash A";
             this.B_MashA.UseVisualStyleBackColor = true;
@@ -255,10 +257,10 @@
             // 
             // B_A
             // 
-            this.B_A.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.B_A.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.B_A.Location = new System.Drawing.Point(94, 25);
             this.B_A.Name = "B_A";
-            this.B_A.Size = new System.Drawing.Size(26, 25);
+            this.B_A.Size = new System.Drawing.Size(26, 28);
             this.B_A.TabIndex = 123;
             this.B_A.Text = "A";
             this.B_A.UseVisualStyleBackColor = true;
@@ -267,8 +269,8 @@
             // B_Stop
             // 
             this.B_Stop.Enabled = false;
-            this.B_Stop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.B_Stop.Location = new System.Drawing.Point(200, 385);
+            this.B_Stop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.B_Stop.Location = new System.Drawing.Point(203, 280);
             this.B_Stop.Name = "B_Stop";
             this.B_Stop.Size = new System.Drawing.Size(75, 30);
             this.B_Stop.TabIndex = 124;
@@ -278,8 +280,8 @@
             // 
             // B_Begin
             // 
-            this.B_Begin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.B_Begin.Location = new System.Drawing.Point(119, 385);
+            this.B_Begin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.B_Begin.Location = new System.Drawing.Point(122, 280);
             this.B_Begin.Name = "B_Begin";
             this.B_Begin.Size = new System.Drawing.Size(75, 30);
             this.B_Begin.TabIndex = 123;
@@ -307,7 +309,7 @@
             // ORAS_Button
             // 
             this.ORAS_Button.AutoSize = true;
-            this.ORAS_Button.Location = new System.Drawing.Point(240, 14);
+            this.ORAS_Button.Location = new System.Drawing.Point(289, 16);
             this.ORAS_Button.Name = "ORAS_Button";
             this.ORAS_Button.Size = new System.Drawing.Size(55, 17);
             this.ORAS_Button.TabIndex = 132;
@@ -318,7 +320,7 @@
             // 
             this.XY_Button.AutoSize = true;
             this.XY_Button.Checked = true;
-            this.XY_Button.Location = new System.Drawing.Point(179, 14);
+            this.XY_Button.Location = new System.Drawing.Point(229, 16);
             this.XY_Button.Name = "XY_Button";
             this.XY_Button.Size = new System.Drawing.Size(39, 17);
             this.XY_Button.TabIndex = 131;
@@ -330,25 +332,27 @@
             // L_Count
             // 
             this.L_Count.AutoSize = true;
-            this.L_Count.Location = new System.Drawing.Point(268, 67);
+            this.L_Count.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.L_Count.Location = new System.Drawing.Point(325, 67);
             this.L_Count.Name = "L_Count";
-            this.L_Count.Size = new System.Drawing.Size(13, 13);
+            this.L_Count.Size = new System.Drawing.Size(13, 15);
             this.L_Count.TabIndex = 6;
             this.L_Count.Text = "0";
             // 
             // L_Reseed
             // 
             this.L_Reseed.AutoSize = true;
-            this.L_Reseed.Location = new System.Drawing.Point(189, 67);
+            this.L_Reseed.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.L_Reseed.Location = new System.Drawing.Point(235, 67);
             this.L_Reseed.Name = "L_Reseed";
-            this.L_Reseed.Size = new System.Drawing.Size(81, 13);
+            this.L_Reseed.Size = new System.Drawing.Size(86, 15);
             this.L_Reseed.TabIndex = 5;
             this.L_Reseed.Text = "Reseed Count: ";
             // 
             // SeedDelay5
             // 
             this.SeedDelay5.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.SeedDelay5.Location = new System.Drawing.Point(95, 121);
+            this.SeedDelay5.Location = new System.Drawing.Point(138, 121);
             this.SeedDelay5.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -358,7 +362,7 @@
             this.SeedDelay5.Size = new System.Drawing.Size(55, 22);
             this.SeedDelay5.TabIndex = 4;
             this.SeedDelay5.Value = new decimal(new int[] {
-            100,
+            300,
             0,
             0,
             0});
@@ -366,9 +370,14 @@
             // SeedDelay4
             // 
             this.SeedDelay4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.SeedDelay4.Location = new System.Drawing.Point(95, 93);
+            this.SeedDelay4.Location = new System.Drawing.Point(138, 93);
             this.SeedDelay4.Maximum = new decimal(new int[] {
             10000,
+            0,
+            0,
+            0});
+            this.SeedDelay4.Minimum = new decimal(new int[] {
+            1000,
             0,
             0,
             0});
@@ -376,7 +385,7 @@
             this.SeedDelay4.Size = new System.Drawing.Size(55, 22);
             this.SeedDelay4.TabIndex = 3;
             this.SeedDelay4.Value = new decimal(new int[] {
-            1600,
+            1500,
             0,
             0,
             0});
@@ -384,9 +393,14 @@
             // SeedDelay3
             // 
             this.SeedDelay3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.SeedDelay3.Location = new System.Drawing.Point(95, 65);
+            this.SeedDelay3.Location = new System.Drawing.Point(138, 65);
             this.SeedDelay3.Maximum = new decimal(new int[] {
             10000,
+            0,
+            0,
+            0});
+            this.SeedDelay3.Minimum = new decimal(new int[] {
+            500,
             0,
             0,
             0});
@@ -394,7 +408,7 @@
             this.SeedDelay3.Size = new System.Drawing.Size(55, 22);
             this.SeedDelay3.TabIndex = 2;
             this.SeedDelay3.Value = new decimal(new int[] {
-            900,
+            800,
             0,
             0,
             0});
@@ -402,9 +416,14 @@
             // SeedDelay2
             // 
             this.SeedDelay2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.SeedDelay2.Location = new System.Drawing.Point(95, 37);
+            this.SeedDelay2.Location = new System.Drawing.Point(138, 37);
             this.SeedDelay2.Maximum = new decimal(new int[] {
             10000,
+            0,
+            0,
+            0});
+            this.SeedDelay2.Minimum = new decimal(new int[] {
+            1000,
             0,
             0,
             0});
@@ -412,7 +431,7 @@
             this.SeedDelay2.Size = new System.Drawing.Size(55, 22);
             this.SeedDelay2.TabIndex = 1;
             this.SeedDelay2.Value = new decimal(new int[] {
-            1300,
+            1100,
             0,
             0,
             0});
@@ -420,9 +439,14 @@
             // SeedDelay1
             // 
             this.SeedDelay1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.SeedDelay1.Location = new System.Drawing.Point(95, 9);
+            this.SeedDelay1.Location = new System.Drawing.Point(138, 9);
             this.SeedDelay1.Maximum = new decimal(new int[] {
             10000,
+            0,
+            0,
+            0});
+            this.SeedDelay1.Minimum = new decimal(new int[] {
+            1000,
             0,
             0,
             0});
@@ -430,7 +454,7 @@
             this.SeedDelay1.Size = new System.Drawing.Size(55, 22);
             this.SeedDelay1.TabIndex = 0;
             this.SeedDelay1.Value = new decimal(new int[] {
-            2100,
+            1800,
             0,
             0,
             0});
@@ -439,10 +463,10 @@
             // 
             this.BotList.Controls.Add(this.SeedTab);
             this.BotList.Controls.Add(this.IDTab);
-            this.BotList.Location = new System.Drawing.Point(40, 118);
+            this.BotList.Location = new System.Drawing.Point(15, 19);
             this.BotList.Name = "BotList";
             this.BotList.SelectedIndex = 0;
-            this.BotList.Size = new System.Drawing.Size(326, 178);
+            this.BotList.Size = new System.Drawing.Size(390, 178);
             this.BotList.TabIndex = 132;
             // 
             // SeedTab
@@ -464,10 +488,55 @@
             this.SeedTab.Location = new System.Drawing.Point(4, 22);
             this.SeedTab.Name = "SeedTab";
             this.SeedTab.Padding = new System.Windows.Forms.Padding(3);
-            this.SeedTab.Size = new System.Drawing.Size(318, 152);
+            this.SeedTab.Size = new System.Drawing.Size(382, 152);
             this.SeedTab.TabIndex = 0;
             this.SeedTab.Text = "Seed Bot";
             this.SeedTab.UseVisualStyleBackColor = true;
+            // 
+            // L_Delay_5
+            // 
+            this.L_Delay_5.AutoSize = true;
+            this.L_Delay_5.Location = new System.Drawing.Point(24, 123);
+            this.L_Delay_5.Name = "L_Delay_5";
+            this.L_Delay_5.Size = new System.Drawing.Size(44, 13);
+            this.L_Delay_5.TabIndex = 11;
+            this.L_Delay_5.Text = "B Delay";
+            // 
+            // L_Delay_4
+            // 
+            this.L_Delay_4.AutoSize = true;
+            this.L_Delay_4.Location = new System.Drawing.Point(24, 95);
+            this.L_Delay_4.Name = "L_Delay_4";
+            this.L_Delay_4.Size = new System.Drawing.Size(91, 13);
+            this.L_Delay_4.TabIndex = 10;
+            this.L_Delay_4.Text = "Disconnect Delay";
+            // 
+            // L_Delay_3
+            // 
+            this.L_Delay_3.AutoSize = true;
+            this.L_Delay_3.Location = new System.Drawing.Point(25, 67);
+            this.L_Delay_3.Name = "L_Delay_3";
+            this.L_Delay_3.Size = new System.Drawing.Size(86, 13);
+            this.L_Delay_3.TabIndex = 9;
+            this.L_Delay_3.Text = "Connect 2 Delay";
+            // 
+            // L_Delay_2
+            // 
+            this.L_Delay_2.AutoSize = true;
+            this.L_Delay_2.Location = new System.Drawing.Point(25, 39);
+            this.L_Delay_2.Name = "L_Delay_2";
+            this.L_Delay_2.Size = new System.Drawing.Size(86, 13);
+            this.L_Delay_2.TabIndex = 8;
+            this.L_Delay_2.Text = "Connect 1 Delay";
+            // 
+            // L_Delay_1
+            // 
+            this.L_Delay_1.AutoSize = true;
+            this.L_Delay_1.Location = new System.Drawing.Point(26, 11);
+            this.L_Delay_1.Name = "L_Delay_1";
+            this.L_Delay_1.Size = new System.Drawing.Size(59, 13);
+            this.L_Delay_1.TabIndex = 7;
+            this.L_Delay_1.Text = "Start Delay";
             // 
             // IDTab
             // 
@@ -481,7 +550,7 @@
             this.IDTab.Location = new System.Drawing.Point(4, 22);
             this.IDTab.Name = "IDTab";
             this.IDTab.Padding = new System.Windows.Forms.Padding(3);
-            this.IDTab.Size = new System.Drawing.Size(318, 152);
+            this.IDTab.Size = new System.Drawing.Size(382, 152);
             this.IDTab.TabIndex = 1;
             this.IDTab.Text = "ID Bot";
             this.IDTab.UseVisualStyleBackColor = true;
@@ -495,51 +564,6 @@
             this.L_ID_Adv.TabIndex = 127;
             this.L_ID_Adv.Text = "Advances";
             // 
-            // L_Delay_1
-            // 
-            this.L_Delay_1.AutoSize = true;
-            this.L_Delay_1.Location = new System.Drawing.Point(31, 11);
-            this.L_Delay_1.Name = "L_Delay_1";
-            this.L_Delay_1.Size = new System.Drawing.Size(43, 13);
-            this.L_Delay_1.TabIndex = 7;
-            this.L_Delay_1.Text = "Delay 1";
-            // 
-            // L_Delay_2
-            // 
-            this.L_Delay_2.AutoSize = true;
-            this.L_Delay_2.Location = new System.Drawing.Point(31, 39);
-            this.L_Delay_2.Name = "L_Delay_2";
-            this.L_Delay_2.Size = new System.Drawing.Size(43, 13);
-            this.L_Delay_2.TabIndex = 8;
-            this.L_Delay_2.Text = "Delay 2";
-            // 
-            // L_Delay_3
-            // 
-            this.L_Delay_3.AutoSize = true;
-            this.L_Delay_3.Location = new System.Drawing.Point(31, 67);
-            this.L_Delay_3.Name = "L_Delay_3";
-            this.L_Delay_3.Size = new System.Drawing.Size(43, 13);
-            this.L_Delay_3.TabIndex = 9;
-            this.L_Delay_3.Text = "Delay 3";
-            // 
-            // L_Delay_4
-            // 
-            this.L_Delay_4.AutoSize = true;
-            this.L_Delay_4.Location = new System.Drawing.Point(31, 95);
-            this.L_Delay_4.Name = "L_Delay_4";
-            this.L_Delay_4.Size = new System.Drawing.Size(43, 13);
-            this.L_Delay_4.TabIndex = 10;
-            this.L_Delay_4.Text = "Delay 4";
-            // 
-            // L_Delay_5
-            // 
-            this.L_Delay_5.AutoSize = true;
-            this.L_Delay_5.Location = new System.Drawing.Point(31, 123);
-            this.L_Delay_5.Name = "L_Delay_5";
-            this.L_Delay_5.Size = new System.Drawing.Size(43, 13);
-            this.L_Delay_5.TabIndex = 11;
-            this.L_Delay_5.Text = "Delay 5";
-            // 
             // ButtonGroupBox
             // 
             this.ButtonGroupBox.Controls.Add(this.B_Select);
@@ -547,7 +571,7 @@
             this.ButtonGroupBox.Controls.Add(this.B_A);
             this.ButtonGroupBox.Controls.Add(this.B_Start);
             this.ButtonGroupBox.Controls.Add(this.B_B);
-            this.ButtonGroupBox.Location = new System.Drawing.Point(40, 302);
+            this.ButtonGroupBox.Location = new System.Drawing.Point(43, 203);
             this.ButtonGroupBox.Name = "ButtonGroupBox";
             this.ButtonGroupBox.Size = new System.Drawing.Size(324, 67);
             this.ButtonGroupBox.TabIndex = 133;
@@ -556,33 +580,44 @@
             // 
             // B_Select
             // 
-            this.B_Select.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.B_Select.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.B_Select.Location = new System.Drawing.Point(239, 25);
             this.B_Select.Name = "B_Select";
-            this.B_Select.Size = new System.Drawing.Size(75, 24);
+            this.B_Select.Size = new System.Drawing.Size(75, 28);
             this.B_Select.TabIndex = 129;
             this.B_Select.Text = "Select";
             this.B_Select.UseVisualStyleBackColor = true;
             this.B_Select.Click += new System.EventHandler(this.B_Select_Click);
             // 
+            // BotsGroupBox
+            // 
+            this.BotsGroupBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BotsGroupBox.Controls.Add(this.BotList);
+            this.BotsGroupBox.Controls.Add(this.ButtonGroupBox);
+            this.BotsGroupBox.Controls.Add(this.B_Begin);
+            this.BotsGroupBox.Controls.Add(this.B_Stop);
+            this.BotsGroupBox.Location = new System.Drawing.Point(11, 118);
+            this.BotsGroupBox.Name = "BotsGroupBox";
+            this.BotsGroupBox.Size = new System.Drawing.Size(416, 323);
+            this.BotsGroupBox.TabIndex = 134;
+            this.BotsGroupBox.TabStop = false;
+            this.BotsGroupBox.Text = "Bots";
+            // 
             // NTRHelper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(414, 436);
-            this.Controls.Add(this.ButtonGroupBox);
-            this.Controls.Add(this.BotList);
-            this.Controls.Add(this.B_Stop);
+            this.ClientSize = new System.Drawing.Size(439, 451);
+            this.Controls.Add(this.BotsGroupBox);
             this.Controls.Add(this.B_Help);
-            this.Controls.Add(this.B_Begin);
             this.Controls.Add(this.B_OneClick);
             this.Controls.Add(this.L_NTRLog);
             this.Controls.Add(this.B_Disconnect);
             this.Controls.Add(this.B_Connect);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.IP);
-            this.MaximumSize = new System.Drawing.Size(430, 475);
-            this.MinimumSize = new System.Drawing.Size(430, 475);
+            this.MaximumSize = new System.Drawing.Size(455, 490);
+            this.MinimumSize = new System.Drawing.Size(455, 490);
             this.Name = "NTRHelper";
             this.Text = "NTRHelper";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NTRHelper_FormClosing);
@@ -600,6 +635,7 @@
             this.IDTab.ResumeLayout(false);
             this.IDTab.PerformLayout();
             this.ButtonGroupBox.ResumeLayout(false);
+            this.BotsGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -647,5 +683,6 @@
         private System.Windows.Forms.Label L_ID_Adv;
         private System.Windows.Forms.GroupBox ButtonGroupBox;
         private System.Windows.Forms.Button B_Select;
+        private System.Windows.Forms.GroupBox BotsGroupBox;
     }
 }
