@@ -16,6 +16,7 @@ namespace Pk3DSRNGTool
             ntrclient.Connect += OnConnected;
             ntrclient.Message += OnMsgArrival;
             ntrclient.setServer(IP.Text, 8000);
+            ORAS_Button.Checked = Program.mainform.IsORAS;
         }
         private void NTRHelper_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -49,7 +50,7 @@ namespace Pk3DSRNGTool
             catch
             {
                 OnDisconnected(false);
-                //FormUtil.Error("Unable to connect the console");
+                FormUtil.Error("Unable to connect the console");
             }
         }
 
@@ -214,30 +215,31 @@ namespace Pk3DSRNGTool
         {
             L_Count.Text = "0";
             uint Count = 0;
-            while (Botting && Program.mainform.DGV.Rows.Count == 0)
+            B_Disconnect.PerformClick();
+            await Task.Delay(500);
+            do
             {
-
                 Count++;
                 await Task.Delay(100);
 
-                B_B.PerformClick();                             //B
-                await Task.Delay((int)SeedDelay1.Value);        //1800?
+                B_B.PerformClick();
+                await Task.Delay((int)SeedDelay1.Value);
 
-                B_Start.PerformClick();                         //Start
-                await Task.Delay((int)SeedDelay2.Value);        //1100?
+                B_Start.PerformClick();
+                await Task.Delay((int)SeedDelay2.Value);
 
-                B_OneClick.PerformClick();                      //Connect fails
-                await Task.Delay((int)SeedDelay3.Value);        //800?
+                B_OneClick.PerformClick();
+                await Task.Delay((int)SeedDelay3.Value);
 
-                B_OneClick.PerformClick();                      //Connect succeeds, read seed
-                await Task.Delay((int)SeedDelay4.Value);        //1500?
+                B_OneClick.PerformClick();
+                await Task.Delay((int)SeedDelay4.Value);
 
                 L_Count.Text = Count.ToString();
 
-                B_Disconnect.PerformClick();                    //Disconnect, allow Rosalina inputs
-                await Task.Delay((int)SeedDelay5.Value);        //300?
-
+                B_Disconnect.PerformClick();
+                await Task.Delay((int)SeedDelay5.Value);
             }
+            while (Botting && Program.mainform.DGV.Rows.Count == 0);
             B_Stop_Click(null, null);
             Program.mainform.Focus();
         }
