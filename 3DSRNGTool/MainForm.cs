@@ -1968,7 +1968,10 @@ namespace Pk3DSRNGTool
                         Error("Fail to calibrate! Please check your initial seed! Error code: 0x" + ((uint)data).ToString("X8"));
                         return;
                     }
-                    Frame_min.Value = CurrentFrame;
+                    if ((uint)data != 0x42BDF8)
+                    {
+                        Frame_min.Value = CurrentFrame;
+                    }
                     CreateTimeline.Checked = CreateTimeline.Visible;
                     if (TTT.B_Cali.Visible)
                         return;
@@ -2014,6 +2017,7 @@ namespace Pk3DSRNGTool
                         case 0x42BDF8 when !IsORAS:
                             var delay5 = TinyStatus.getcooldown5(NTRHelper.ntrclient.ReadTinyRNG().Nextuint());
                             TTT.Calibrate(5, CurrentFrame, CurrentFrame + delay5);
+                            B_Calc.PerformClick();
                             break;
 
                         // Kyogre/Groundon
