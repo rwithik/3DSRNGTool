@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.RB_1Wild = new System.Windows.Forms.RadioButton();
             this.RB_2Wild = new System.Windows.Forms.RadioButton();
             this.label35 = new System.Windows.Forms.Label();
@@ -159,9 +159,9 @@
             // dgv_Seed_seed
             // 
             this.dgv_Seed_seed.DataPropertyName = "Seed";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.Format = "X8";
-            this.dgv_Seed_seed.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Format = "X8";
+            this.dgv_Seed_seed.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Seed_seed.HeaderText = "Seed";
             this.dgv_Seed_seed.Name = "dgv_Seed_seed";
             this.dgv_Seed_seed.Width = 65;
@@ -251,7 +251,7 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(264, 92);
+            this.label30.Location = new System.Drawing.Point(266, 92);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(14, 13);
             this.label30.TabIndex = 121;
@@ -260,7 +260,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(264, 44);
+            this.label29.Location = new System.Drawing.Point(266, 44);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(14, 13);
             this.label29.TabIndex = 120;
@@ -289,12 +289,12 @@
             this.Wild1_Fmax.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Wild1_Fmax.Location = new System.Drawing.Point(284, 39);
             this.Wild1_Fmax.Maximum = new decimal(new int[] {
-            4000,
+            100000,
             0,
             0,
             0});
             this.Wild1_Fmax.Name = "Wild1_Fmax";
-            this.Wild1_Fmax.Size = new System.Drawing.Size(54, 22);
+            this.Wild1_Fmax.Size = new System.Drawing.Size(65, 22);
             this.Wild1_Fmax.TabIndex = 94;
             this.Wild1_Fmax.Value = new decimal(new int[] {
             600,
@@ -343,12 +343,12 @@
             this.Wild1_Fmin.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Wild1_Fmin.Location = new System.Drawing.Point(202, 39);
             this.Wild1_Fmin.Maximum = new decimal(new int[] {
-            4000,
+            90000,
             0,
             0,
             0});
             this.Wild1_Fmin.Name = "Wild1_Fmin";
-            this.Wild1_Fmin.Size = new System.Drawing.Size(54, 22);
+            this.Wild1_Fmin.Size = new System.Drawing.Size(60, 22);
             this.Wild1_Fmin.TabIndex = 93;
             this.Wild1_Fmin.Value = new decimal(new int[] {
             250,
@@ -361,12 +361,12 @@
             this.Wild2_Fmin.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Wild2_Fmin.Location = new System.Drawing.Point(202, 87);
             this.Wild2_Fmin.Maximum = new decimal(new int[] {
-            10000,
+            90000,
             0,
             0,
             0});
             this.Wild2_Fmin.Name = "Wild2_Fmin";
-            this.Wild2_Fmin.Size = new System.Drawing.Size(54, 22);
+            this.Wild2_Fmin.Size = new System.Drawing.Size(60, 22);
             this.Wild2_Fmin.TabIndex = 95;
             this.Wild2_Fmin.Value = new decimal(new int[] {
             2000,
@@ -379,12 +379,12 @@
             this.Wild2_Fmax.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Wild2_Fmax.Location = new System.Drawing.Point(284, 87);
             this.Wild2_Fmax.Maximum = new decimal(new int[] {
-            10000,
+            100000,
             0,
             0,
             0});
             this.Wild2_Fmax.Name = "Wild2_Fmax";
-            this.Wild2_Fmax.Size = new System.Drawing.Size(54, 22);
+            this.Wild2_Fmax.Size = new System.Drawing.Size(65, 22);
             this.Wild2_Fmax.TabIndex = 96;
             this.Wild2_Fmax.Value = new decimal(new int[] {
             5000,
