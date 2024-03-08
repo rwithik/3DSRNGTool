@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using PKHeX.Core;
 using Pk3DSRNGTool.Core;
 
