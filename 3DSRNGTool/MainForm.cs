@@ -1577,7 +1577,7 @@ namespace Pk3DSRNGTool
                             setting6.SlotLevel = new[] { (byte)Filter_Lv.Value };
                             break;
                         case EncounterType.FriendSafari:
-                            slottype = (byte)(CB_3rdSlotUnlocked.Checked ? 50 : 49);
+                            slottype = (byte)(CB_3rdSlotUnlocked.Checked ? 55 : 54);
                             setting6._ivcnt = 2;
                             setting6._PIDroll_count = 4;
                             setting6.HA = CB_HAUnlocked.Checked;
@@ -2024,6 +2024,15 @@ namespace Pk3DSRNGTool
                         case 0x7BE43C when IsORAS:
                             var delay7 = TinyStatus.getcooldown7(NTRHelper.ntrclient.ReadTinyRNG().Nextuint());
                             TTT.Calibrate(7, CurrentFrame, CurrentFrame + delay7);
+                            break;
+
+                        case 0x759A4C:
+                        case 0x759E98:
+                        case 0x77341C:
+                        case 0x7CEC4C:
+                        case 0x7CEC68:
+                        case 0x7CED08:
+                            MessageBox.Show("Moving NPC: " + (uint)data);
                             break;
 
                         default:
